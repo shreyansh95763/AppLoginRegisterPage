@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/shreyansh95763/AppLoginRegisterPage/static/css/main.fd238d84.css",
+    "main.js": "/shreyansh95763/AppLoginRegisterPage/static/js/main.684ec42f.js",
+    "static/js/592.6a06751c.chunk.js": "/shreyansh95763/AppLoginRegisterPage/static/js/592.6a06751c.chunk.js",
+    "index.html": "/shreyansh95763/AppLoginRegisterPage/index.html",
+    "main.fd238d84.css.map": "/shreyansh95763/AppLoginRegisterPage/static/css/main.fd238d84.css.map",
+    "main.684ec42f.js.map": "/shreyansh95763/AppLoginRegisterPage/static/js/main.684ec42f.js.map",
+    "592.6a06751c.chunk.js.map": "/shreyansh95763/AppLoginRegisterPage/static/js/592.6a06751c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fd238d84.css",
+    "static/js/main.684ec42f.js"
+  ]
+}
