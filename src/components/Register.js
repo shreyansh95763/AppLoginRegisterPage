@@ -141,7 +141,7 @@ export const Register = () => {
                 </div>
                 <button onClick={submitRegister} className="logIn-button btn" type='submit' style={{ backgroundImage: "linear-gradient(180deg,#FAE59F 0%,#C4933F 100%)", color: "#545805" }}>Register</button>
                 <ToastContainer autoClose={3000} theme="colored" closeOnClick draggable/>
-                <button className="button-transparent btn" type='button'><NavLink className="btn-link" to="/login">Log In</NavLink> </button>
+                <button className="button-transparent btn" type='button'><NavLink className="btn-link" to="/">Log In</NavLink> </button>
             </form>
             <div className="grid grid-two-cols forget-section">
                 <div className="forget-icons icon-section">
