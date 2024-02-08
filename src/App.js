@@ -8,8 +8,8 @@ function App() {
     <div className="app-section">
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Login/>} />
-        <Route path='/Register' element={<Register />} />
+        <Route path='AppLoginRegisterPage/' element={<Login/>} />
+        <Route path='AppLoginRegisterPage/Register' element={<Register />} />
       </Routes>
     </BrowserRouter>
       {/* <Body /> */}
