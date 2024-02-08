@@ -1,33 +1,37 @@
 .app-section{
-  width: 30rem;
+  width: 25rem;
   min-height: 100vh;
   margin:0 auto;
-  background-color: rgb(52, 51, 51);
+  background-color: rgb(46, 45, 45);
+  font-family: sans-serif;
 }
 .header-section{
   background: linear-gradient(to bottom right, rgb(89, 92, 108), #b7b6cf); /* Dark on the left (#333) to light on the right (#fff) */
-  background-color: rgb(128, 129, 129);
-  padding-bottom: 2rem;
+  padding-bottom: 1rem 2rem;
+  color: rgb(232, 232, 232);
+
 }
 .main-heading-section{
   display:flex;
   justify-content: space-between;
   padding:0 1rem;
   margin: 0;
+  color:white;
 }
 .back-button-Reg{
-  font-size: 1.9rem;
+  font-size: 1.5rem;
   font-weight: 900;
   color: black;
   text-decoration: none;
 }
 
-.main-heading-section h2{
+.main-heading-section h3{
   text-transform: uppercase;
-  border-top: 2px solid #d8e301;
-  border-bottom: 2px solid #ced807; /* Adjust the line style and color as needed */
-  padding-bottom: 5px; 
-  color:gold
+  /* font-size: 1.2rem; */
+  border-top: 2px solid #beac03;
+  border-bottom: 2px solid #beac03;/* Adjust the line style and color as needed */
+  padding-top: .3rem; 
+  color:#d8c409;
 }
 .flag-section{
   display: flex;
@@ -41,16 +45,18 @@
 }
 .login-content{
   margin-left: 2rem;
+  padding-bottom: 2rem;
 }
 .login-content h4{
   margin: 0;
   margin-bottom: .7rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 650;
 
 }
 .login-content p{
   margin: 0;
+  font-size: .8rem;
 }
 
 /*           BODY SECTION      */
@@ -69,8 +75,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #c5c2c2;
-  border-bottom: 2px solid wheat;
+  color: #aaa7a7;
+  border-bottom: 2px solid rgb(169, 168, 167);
+  margin-top: .2rem;
+  padding-bottom: 0;
   /* color:rgb(210, 184, 37); */
 }
 .clicked{
@@ -78,8 +86,10 @@
   border-bottom: 3px solid rgb(210, 184, 37);
 }
 .icon-section h3{
-  margin-top: .2rem;
-  font-weight: 380;
+  margin-top: .15rem;
+  font-family: sans-serif;
+  font-size: 1rem;
+  font-weight: 350;
 }
 .display-flex{
   display:flex;
@@ -89,15 +99,16 @@
   margin:.8rem auto;
 }
 .inputName-section h3{
-  font-weight: 440;
+  font-size: 1rem;
+  font-weight: 400;
   color: whitesmoke;
   margin-left: .8rem;
 }
 input{
   font-size: .9rem;
-  line-height: 3.7;
-  width: 90%;
-  background-color: rgb(92, 92, 91);
+  line-height: 3;
+  width: 100%;
+  background-color: rgb(62, 62, 61);
   border-radius: 15px;
   font-weight: 550;
 }
@@ -113,13 +124,14 @@ input[type="number"] {
 }
 
 input::placeholder{
-  font-size: 1.05rem;
-  color: #c5c2c2;
+  font-size: .9rem;
+  font-weight: 500;
+  color: #6b6969;
   padding-left: 1.3rem;
 }
 .hide-button{
   margin-left: -2rem;
-  color: #949103;
+  color: #d0cf8d;
 }
 Checkbox {
   display: inline-block;
@@ -132,21 +144,23 @@ Checkbox {
   background-color: #fff;
 }
 .display-flex p{
-  font-size: 1rem;
+  font-size: .9rem;
   color: #8f8383;
 }
 .btn{
-  height: 3.4rem;
+  height: 2.5rem;
   width: 90%;
   border-radius: 6rem;
   margin: .8rem;
-  border:3px solid rgb(210, 184, 37);
-  font-size: 1.5rem;
+  border:2px solid rgb(210, 184, 37);
+  font-size: 1.2rem;
   font-weight: 550;
   
 }
 .logIn-button{
   background-color: rgb(140, 140, 222);
+  background: linear-gradient(180deg,#A9AAB5 0%,#6F7381 100%);
+  color: white;
   border:none;
 }
 .button-transparent{
@@ -157,6 +171,13 @@ Checkbox {
   font-weight: 550;
   text-decoration: none;
   color: #8f5206;
+}
+.toast-message {
+  background: rgb(215, 0, 0);
+  color: #fff;
+  font-size: 20px;
+  width: 34vw;
+  padding: 30px 20px;
 }
 .forget-section{
   margin: auto;
