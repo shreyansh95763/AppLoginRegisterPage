@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/AppLoginRegisterPage/static/css/main.87d1dee8.css",
-    "main.js": "/AppLoginRegisterPage/static/js/main.6a302a66.js",
+    "main.js": "/AppLoginRegisterPage/static/js/main.f8f9cf87.js",
     "static/js/592.6a06751c.chunk.js": "/AppLoginRegisterPage/static/js/592.6a06751c.chunk.js",
     "index.html": "/AppLoginRegisterPage/index.html",
     "main.87d1dee8.css.map": "/AppLoginRegisterPage/static/css/main.87d1dee8.css.map",
-    "main.6a302a66.js.map": "/AppLoginRegisterPage/static/js/main.6a302a66.js.map",
+    "main.f8f9cf87.js.map": "/AppLoginRegisterPage/static/js/main.f8f9cf87.js.map",
     "592.6a06751c.chunk.js.map": "/AppLoginRegisterPage/static/js/592.6a06751c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.87d1dee8.css",
-    "static/js/main.6a302a66.js"
+    "static/js/main.f8f9cf87.js"
   ]
 }
