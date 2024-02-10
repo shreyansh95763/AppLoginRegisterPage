@@ -56,14 +56,14 @@ export const Register = () => {
     }
       }
       if (redirectToLogin) {
-        return <Navigate to="/login" />;
+        return <Navigate to="/AppLoginRegisterPage/login" />;
       }
     return (<>
 
         <HeaderRegister />
         <div className='body-section'>
             <div className="grid" style={{ color: "#C4933F" }}>
-                <div className='icon-section'>
+                <div className='icon-sections'>
                     <div><PhoneIphoneIcon className='icons' style={{ fontSize: 30 }} /></div>
                     <h3>Register with phone</h3>
                 </div>
@@ -139,16 +139,16 @@ export const Register = () => {
                 <div className='display-flex'>
                     <Checkbox className='checkbox' /><p>Reminder password</p>
                 </div>
-                <button onClick={submitRegister} className="logIn-button btn" type='submit' style={{ backgroundImage: "linear-gradient(180deg,#FAE59F 0%,#C4933F 100%)", color: "#545805" }}>Register</button>
+                <button onClick={submitRegister} className="logIn-button btn-submit" type='submit' style={{ backgroundImage: "linear-gradient(180deg,#FAE59F 0%,#C4933F 100%)", color: "#545805" }}>Register</button>
                 <ToastContainer autoClose={3000} theme="colored" closeOnClick draggable/>
-                <button className="button-transparent btn" type='button'><NavLink className="btn-link" to="/">Log In</NavLink> </button>
+                <button className="button-transparent btn-submit" type='button'><NavLink className="btn-links"  to="/AppLoginRegisterPage/login">Log In</NavLink> </button>
             </form>
             <div className="grid grid-two-cols forget-section">
-                <div className="forget-icons icon-section">
+                <div className="forget-icons icon-sections">
                     <LockIcon style={{ color: "rgb(210, 184, 37)", fontSize: 70 }} />
                     <h4>Forget password</h4>
                 </div>
-                <div className="forget-icons icon-section">
+                <div className="forget-icons icon-sections">
                     <SupportAgentIcon style={{ color: "rgb(210, 184, 37)", fontSize: 70 }} />
                     <h4>Customer service</h4>
                 </div>

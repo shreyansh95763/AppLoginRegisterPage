@@ -2,12 +2,15 @@
   width: 25rem;
   min-height: 100vh;
   margin:0 auto;
-  background-color: rgb(46, 45, 45);
+  background-color: rgb(52, 51, 51);
   font-family: sans-serif;
+}
+.main-body{
+  margin: 0 .7rem;
 }
 .header-section{
   background: linear-gradient(to bottom right, rgb(89, 92, 108), #b7b6cf); /* Dark on the left (#333) to light on the right (#fff) */
-  padding-bottom: 1rem 2rem;
+  padding: 1rem .4rem;
   color: rgb(232, 232, 232);
 
 }
@@ -27,7 +30,7 @@
 
 .main-heading-section h3{
   text-transform: uppercase;
-  /* font-size: 1.2rem; */
+  font-size: 1.2rem;
   border-top: 2px solid #beac03;
   border-bottom: 2px solid #beac03;/* Adjust the line style and color as needed */
   padding-top: .3rem; 
@@ -69,9 +72,8 @@
 }
 .body-section{
   margin:0 1.7rem;
- 
 }
-.icon-section{
+.icon-sections{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -85,7 +87,7 @@
   color:rgb(210, 184, 37);
   border-bottom: 3px solid rgb(210, 184, 37);
 }
-.icon-section h3{
+.icon-sections h3{
   margin-top: .15rem;
   font-family: sans-serif;
   font-size: 1rem;
@@ -104,9 +106,9 @@
   color: whitesmoke;
   margin-left: .8rem;
 }
-input{
+.input-section input{
   font-size: .9rem;
-  line-height: 3;
+  line-height: 3rem;
   width: 100%;
   background-color: rgb(62, 62, 61);
   border-radius: 15px;
@@ -147,7 +149,7 @@ Checkbox {
   font-size: .9rem;
   color: #8f8383;
 }
-.btn{
+.btn-submit{
   height: 2.5rem;
   width: 90%;
   border-radius: 6rem;
@@ -166,11 +168,14 @@ Checkbox {
 .button-transparent{
   background-color: transparent;
 }
-.btn-link{
+.btn-links{
   font-size:1.5rem;
   font-weight: 550;
   text-decoration: none;
   color: #8f5206;
+}
+.btn-links:hover{
+  color:#61421c
 }
 .toast-message {
   background: rgb(215, 0, 0);
@@ -183,11 +188,289 @@ Checkbox {
   margin: auto;
   margin-top:2rem;
   padding-top: 1rem;
- 
 }
 .forget-icons{
   border:none
 }
 .forget-icons h4{
   margin: .2rem;
+  font-size: 1rem;
+}
+
+/*******************   Home Page Header Section  *******************/
+.home-body {
+  background-color: #262626;
+}
+
+.home-header {
+ background-color: #494949;
+ display: flex;
+ justify-content: space-between;
+ padding:0 1rem;
+}
+
+.left-header {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+}
+
+.heading{
+ display: flex;
+ justify-content: space-between;
+}
+.heading h3{
+ text-transform: uppercase;
+ font-size: 1rem;
+ margin-bottom: .8rem;
+ border-top: 2px solid #beac03;
+ border-bottom: 2px solid #beac03;
+ /* Adjust the line style and color as needed */
+ padding-top: .3rem;
+ padding-bottom: 0;
+ color: #d8c409;
+ border: 50%;
+}
+
+.header-flag-section {
+ margin:0;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
+.header-flag-section img {
+ width: 25px;
+ height: 25px;
+ border-radius: 50%;
+ /* margi: .5rem; */
+}
+
+.header-flag-section h5{
+ font-size: .75rem;
+ font-weight: 750;
+ color:#b6a310;
+ margin-left: .7rem;
+}
+.right-header{
+ display: flex;
+ flex-direction: column;
+}
+.right-header button {
+ background: linear-gradient(180deg, #F6E3A3 0%, #D2A753 100%);
+ color: #292d2e;
+ font-size: .8rem;
+ font-weight: 550;
+ line-height: 1.8rem;
+ width: 10rem;
+ border-radius: .5rem;
+ padding: .5rem;
+ display: flex;
+ text-align: center;
+ justify-content: space-around;
+ margin-bottom:.3rem;
+}
+/***************** UP Slider *************/
+.up-slider{
+ height: 3rem;
+ width: 100%;
+ display: flex;
+ align-items: center;
+ margin-top: 0rem;
+ padding: 0;
+}
+.up-slider button{
+ background: linear-gradient(180deg, #F6E3A3 0%, #D2A753 100%);
+ border:0;
+ border-radius: 5px;
+ font-size: 1.1rem;
+ font-weight: 700;
+ height: 2rem;
+ width: 6rem;
+ display: flex;
+ align-items: center;
+ justify-content: space-evenly;
+}
+.text-carousel-container{
+  display: relative;
+  overflow: hidden;
+  margin-left: 1rem;
+  width: 100%;
+  color: white;
+  height: 4rem /* Adjust height based on font size and line height */
+}
+.text-carousel-container div p{
+  position:absolute;
+  font-size: .9rem;
+  font-weight: 500;
+}
+.text-carousel-container > * {position: relative;top:100%; left: 0;
+  animation: 12s autoplay2 infinite ease-in-out;
+}
+@keyframes autoplay2 {
+  0% {top: 100%}
+  4% {top: 30%;}
+  33.33% {top: 30%;}
+  37.33% {top: -100%}
+  100% {top: -200%}
+}
+@keyframes autoplay1 {
+  0% {visibility: visible}
+  33.33% {visibility: hidden}
+}
+.text-carousel-container > *:nth-child(1){animation-delay: 0s}
+.text-carousel-container > *:nth-child(2){animation-delay: 4s}
+.text-carousel-container > *:nth-child(3){animation-delay: 8s}
+
+/***************** Menu boxs *************/
+.grid-three-cols{
+  grid-template-columns: repeat(3,1fr);
+}
+
+.gridpic-container{
+margin: 2rem 0rem .7rem 0;
+/* margin-top: 1rem; */
+}
+.bgColors{
+  background: linear-gradient(180deg, #F6E3A3 0%, #D2A753 100%);
+}
+.threegrid-btn{
+  margin: 0;
+  height: 6.5rem;
+  width: 95%;
+  /* margin: .5rem; */
+  border-radius:12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.threegrid-btn img{
+  margin-top: -1rem;
+  margin-bottom: .5rem;
+  height: 5rem;
+  width: 5rem;
+}
+.threegrid-btn h4{
+  font-size: 1.1rem;
+  font-weight: 650;
+  font-family: bahnschrift;
+}
+.menuBox2{
+  justify-content: space-evenly;
+  border-radius: 12px;
+}
+.menuBox2-divs{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+.menuBox2-divs img{
+  margin-top: .5rem;
+  padding:0;
+  padding-right: 1rem;
+  margin-bottom: .5rem;
+  height: 4.5rem;
+  width: 6.5rem;
+  border-right: .7px solid #595959;
+}
+.menuBox2-divs:last-child img{
+  border:none;
+}
+.menuBox2-divs h4{
+  font-size: 1rem;
+  font-weight: 650;
+  padding:0;
+  font-family: bahnschrift;
+}
+.menuBox3-container{
+  margin: .8rem 0rem .5rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+.menuBox3-divs{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  /* margin: 0 rem 0 0 ; */
+  height: 6.5rem;
+  width: 11.4rem;
+  border-radius:12px;
+}
+.menuBox3-container:last-child{
+  margin-right: 0;
+}
+.menuBox3-divs img{
+  height: 6rem;
+  width: 6rem;
+}
+.menuBox3-divs h4{
+  font-size: 1.1rem;
+  font-weight: 650;
+  font-family: bahnschrift;
+}
+/**************** Lottery section **********/
+.nav-heading{
+  border-left:3px solid #D2A753;
+  color: white;
+  margin-top: 1.1rem;
+  margin-bottom: .8rem;
+  padding-left: 1rem;
+  font-size: 1rem;
+  font-weight: 660;
+  font-family: sans-serif;
+}
+.lottery-section{
+  
+}
+.lottery-section-navigator{
+  height: 2.5rem;
+  width: 100%;
+  background-color: #313131;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.lottery-navlink{
+  text-decoration: none;
+  color: #6f7079;
+}
+.lottery-nav-btn{
+  height: 100%;
+  width: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+.lottery-nav-btn:active{
+  background-color: #D2A753;
+  color:#3f270a;
+}
+
+/************ Lottery pic container *************/
+.lotteryList-container{
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+}
+.lottery-pics-container{
+  width: 7.4rem;
+  height: 10rem;
+  margin: .4rem .2rem;
+}
+.lottery-pics-container img{
+  width: 7.4rem;
+  height: 10rem;
+}
+.lottery-pics-container h4{
+  position: relative;
+  color:#ffee6a;
+  font-size: .77rem;
+  gap: .2;
+  font-weight: 820;
+  margin-top: -1.2rem;
+  text-align: center;
 }

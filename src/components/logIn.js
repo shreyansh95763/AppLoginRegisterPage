@@ -1,4 +1,5 @@
 import { ToastContainer, toast } from "react-toastify";
+import { Navigate } from 'react-router-dom';
 import "react-toastify/dist/ReactToastify.css";
 import { NavLink } from "react-router-dom";
 import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
@@ -15,6 +16,7 @@ import { LoginByPhone } from "./loginByPhone";
 import { LoginByEmail } from "./loginByEmail";
 
 export const Login = () => {
+    const [redirectToHome, setRedirectToHome] = useState(false);
     const [data, setData] = useState({
         "email": "",
         "phone": "",
@@ -49,20 +51,25 @@ export const Login = () => {
             console.log(email);
             if(email){
                     if(email===storedemail && password===storedpassword){
+                        setRedirectToHome(true);
                         toast.success("Success Notification !");
                     }
                     else{
                         
-                        toast.error("Email or Password not matched !");
+                        toast.worn("Email or Password not matched !");
                     }
             }
-            else{
+            else if(phone){
                 if(phone===storedphone && password===storedpassword){
+                    setRedirectToHome(true);
                     toast.success("Success Notification !");
                 }
                 else{
-                    toast.error("Phone or Password not matched !");
+                    toast.warn("Phone or Password not matched !");
                 }
+            }
+            else{
+                toast.error("Please Enter the properties !")
             }
         }
         else{
@@ -71,15 +78,18 @@ export const Login = () => {
               });
         }
     }
+    if (redirectToHome) {
+        return <Navigate to="/AppLoginRegisterPage/" />;
+      }
     return (<>
         <HeaderLogIn />
         <div className='body-section'>
             <div className="grid grid-two-cols">
-                <div className={`icon-section ${loginMethod ? 'clicked' : ''}`} onClick={loginToP}>
+                <div className={`icon-sections ${loginMethod ? 'clicked' : ''}`} onClick={loginToP}>
                     <div><PhoneIphoneIcon className='icons' style={{ fontSize: 30,width:"5rem" }} /></div>
                     <h3>Login with phone</h3>
                 </div>
-                <div className={`icon-section ${!loginMethod ? 'clicked' : ''}`} onClick={loginToE}>
+                <div className={`icon-sections ${!loginMethod ? 'clicked' : ''}`} onClick={loginToE}>
                     <div><MailIcon style={{ fontSize: 30 }} /><PersonIcon style={{ fontSize: 30 }} /></div>
                     <h3>Email/Account</h3>
                 </div>
@@ -110,16 +120,16 @@ export const Login = () => {
                 <div className='display-flex'>
                     <Checkbox style={{borderRadius:"50%"}}/><p>Reminder password</p>
                 </div>
-                <button onClick={submitlogin}className="logIn-button btn" type='submit'>Log In</button>
+                <button onClick={submitlogin}className="btn-submit logIn-button" type='submit'>Log In</button>
                 <ToastContainer autoClose={3000} theme="colored" closeOnClick draggable/>
-                <button className="reginster-button btn" type='button'><NavLink className="btn-link" to="/Register">Register</NavLink> </button>
+                <button className="reginster-button btn-submit" type='button'><NavLink className="btn-links" to="/AppLoginRegisterPage/Register">Register</NavLink> </button>
             </form>
             <div className="grid grid-two-cols forget-section">
-                <div className="forget-icons icon-section">
+                <div className="forget-icons icon-sections">
                     <LockIcon style={{ color: "rgb(210, 184, 37)", fontSize: 70 }} />
                     <h4>Forget password</h4>
                 </div>
-                <div className="forget-icons icon-section">
+                <div className="forget-icons icon-sections">
                     <SupportAgentIcon style={{ color: "rgb(210, 184, 37)", fontSize: 70 }} />
                     <h4>Customer service</h4>
                 </div>
