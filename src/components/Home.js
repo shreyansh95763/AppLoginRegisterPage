@@ -6,6 +6,8 @@ import { MenuBox1 } from './componentsHome/menuBox1';
 import { MenuBox2 } from './componentsHome/menuBox2';
 import { MenuBox3 } from './componentsHome/menuBox3';
 import { Lottery } from './componentsHome/Lottery';
+import { WinningInfo } from './componentsHome/winningInformation/WinningInfo';
+import { BottomNavigationBar } from './bottomNavigationBar';
 export const Home = () => {
     // const styles=()=>{
     //     const navLink = document.getElementById('navlink');
@@ -23,8 +25,10 @@ export const Home = () => {
                 <MenuBox2 />
                 <MenuBox3 />
                 <Lottery />
+                <WinningInfo />
                 <NavLink className="btn-links btn-submits" to="/AppLoginRegisterPage/login/" id="nav"  style={{textDecoration:"none"}}><button className="btn-submit" type="submit" >Sign In</button></NavLink>
                 </div>
+                <BottomNavigationBar />
             </div>
         </>
     );
