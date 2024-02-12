@@ -4,7 +4,7 @@ export const LoginByPhone=(props)=>{
         <div className='input-section'>
                     <div className='inputName-section display-flex'><MailIcon style={{ color: "rgb(210, 184, 37)" }} /><h3>Phone Number</h3></div>
                     <input 
-                    type='phone'
+                    type="number"
                     name="phone"
                     value={props.phone}
                     onChange={props.handleInput}
@@ -15,3 +15,4 @@ export const LoginByPhone=(props)=>{
                 </div>
    )
 }
+console.log("type",LoginByPhone)

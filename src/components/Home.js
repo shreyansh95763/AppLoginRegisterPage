@@ -8,6 +8,7 @@ import { MenuBox3 } from './componentsHome/menuBox3';
 import { Lottery } from './componentsHome/Lottery';
 import { WinningInfo } from './componentsHome/winningInformation/WinningInfo';
 import { BottomNavigationBar } from './bottomNavigationBar';
+import { EarningChart } from './componentsHome/earningChart/earningChart';
 export const Home = () => {
     // const styles=()=>{
     //     const navLink = document.getElementById('navlink');
@@ -26,7 +27,7 @@ export const Home = () => {
                 <MenuBox3 />
                 <Lottery />
                 <WinningInfo />
-                <NavLink className="btn-links btn-submits" to="/AppLoginRegisterPage/login/" id="nav"  style={{textDecoration:"none"}}><button className="btn-submit" type="submit" >Sign In</button></NavLink>
+                <EarningChart />
                 </div>
                 <BottomNavigationBar />
             </div>

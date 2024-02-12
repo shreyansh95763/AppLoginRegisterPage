@@ -4,7 +4,7 @@ export const UpSlider = () => {
     return (
         <>
             <div className='up-slider'>
-                <VolumeUpIcon style={{ color: "#D2A753" }} />
+                <VolumeUpIcon style={{ color: "#D2A753"}} />
                 <div className="text-carousel-container">
                     <div className="text-carousel">
                         <p>Please Remember The Upi Id Of Your Paymenteach animation.</p>
@@ -17,7 +17,7 @@ export const UpSlider = () => {
                         {/* Add more paragraphs for additional lines of text */}
                     </div>
                 </div>
-                <button className='display-flex' type='button'><EnergySavingsLeafIcon />Detail</button>
+                <button className='display-flex' type='button'><EnergySavingsLeafIcon style={{fontSize:"1rem",color: "#313131"}} />Detail</button>
             </div>
         </>
     );

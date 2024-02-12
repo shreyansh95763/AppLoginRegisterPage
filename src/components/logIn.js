@@ -97,8 +97,8 @@ export const Login = () => {
             <form>
                 <div className='input-section'>
                     {loginMethod ?
-                        <LoginByPhone phone={data.phone} handleInput={handleChange} />
-                        : <LoginByEmail email={data.email} handleInput={handleChange} />}
+                        <LoginByPhone  phone={data.phone} handleInput={handleChange} />
+                        : <LoginByEmail  email={data.email} handleInput={handleChange} />}
                 </div>
 
                 <div className='input-section '>

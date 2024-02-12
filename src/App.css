@@ -12,7 +12,6 @@
   background: linear-gradient(to bottom right, rgb(89, 92, 108), #b7b6cf); /* Dark on the left (#333) to light on the right (#fff) */
   padding: 1rem .4rem;
   color: rgb(232, 232, 232);
-
 }
 .main-heading-section{
   display:flex;
@@ -21,8 +20,8 @@
   margin: 0;
   color:white;
   /* position: -webkit-sticky; */
-  position: sticky;
-  top:0;
+  /* position: sticky; */
+  /* top:0; */
 }
 .back-button-Reg{
   font-size: 1.5rem;
@@ -311,9 +310,9 @@ Checkbox {
  background: linear-gradient(180deg, #F6E3A3 0%, #D2A753 100%);
  border:0;
  border-radius: 5px;
- font-size: 1.1rem;
- font-weight: 700;
- height: 2rem;
+ font-size: .85rem;
+ font-weight: 540;
+ height: 1.6rem;
  width: 6rem;
  display: flex;
  align-items: center;
@@ -528,22 +527,26 @@ margin: 2rem 0rem .7rem 0;
   align-items: center;
 }
 /******************  Winning Information Section   ***********/
-
-
+.winning-heading{
+  font-size: 1.3rem;
+  color:#d9ac4f;
+  font-family: bahnschrift;
+}
 .info-container{
   height: 3.7rem;
-  background-color: #595959;
+  background-color: #3c3c3c;
   border-radius: 6px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  margin:.5rem 0;
+  margin:.35rem 0;
 }
 .name-winner{
   font-size: .8rem;
   font-weight: 550;
   font-family: bahnschrift;
   color: #a6a9ae;
+  margin: 0;
 }
 .info-container img{
   height: 2.5rem;
@@ -551,13 +554,13 @@ margin: 2rem 0rem .7rem 0;
   border-radius: 50%;
 }
 .winner-image{
-  height: 3.4rem;
+  height: 3rem;
   width: 5rem;
   background: linear-gradient(180deg, #F6E3A3 0%, #D2A753 100%);
   border-radius: 6px;
 }
 .winner-image img{
-  height: 3.4rem;
+  height: 3rem;
   width: 5rem;
 }
 .winning-amount{
@@ -567,9 +570,136 @@ margin: 2rem 0rem .7rem 0;
   align-items: center;
 }
 .winning-amount h4{
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin: 0;
-  color: #dea940;
-  font-weight: 760;
-  gap: .1rem;
+  color: #e99f0b;
+  font-weight: 860;
+  letter-spacing: -0.1em;
+  gap: -.1rem;
+}
+/*********************  Earning Chart   *************/
+.winning-chart{
+  height: 13rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+.winner-table{
+   /* position: relative; */
+    display: flex;
+    /* grid-template-columns: repeat(3,1fr); */
+    /* justify-items: center; */
+    justify-content: space-between;
+    width: 100%;
+    height: 9rem;
+    margin-bottom: -0.2rem;
+    background: url("https://www.bdggame.in/assets/png/stage-b481110d.png") ;
+    background-repeat: no-repeat;
+    background-position: center ;
+    background-size: cover;
+}
+.winner-section{
+  display: flex;
+  flex-direction: column;
+}
+.winner-avatar-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: -2.2rem;
+}
+.middle-winner{
+  margin-top: -5%;
+}
+.winner-cap{
+  height: 2.7rem;
+  position:relative;
+  width: 3rem;
+  margin:0;
+  margin-bottom: -2rem;
+  left:-20%
+  
+}
+.winner-avatar{
+  margin:0;
+  padding: 0;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  margin-bottom: -10%;
+}
+.winner-position{
+  position: relative;
+  margin:0;
+  height: 1.3rem;
+  width: 4rem;
+  
+}
+.winner-name{
+  margin-top:1rem;
+  text-align: center;
+}
+.winner-name p{
+  font-size: .8rem;
+  font-family: bahnschrift;
+  font-weight: 660;
+  color:#8f5206;
+  margin: 0;
+}
+.winner-name div{
+  background: linear-gradient(180deg, #F6E3A3 0%, #D2A753 100%);
+  color:#8f5206;
+  border-radius: 6rem;
+  font-size: .75rem;
+  font-weight: 660;
+  padding: .4rem;
+  margin-top: .5rem;
+}
+/***** Winner lists *******/
+.combine-list-container{
+  position: relative;
+  margin-top: -.5rem;
+}
+.winnerList{
+  background-color:  #3c3c3c;
+  height: 3.7rem;
+  border-radius: .5rem;
+  width: 100%;
+  display: flex;
+  justify-content:space-evenly;
+  align-items: center;
+  margin-bottom: .5rem;
+}
+.winner-left{
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: bahnschrift;
+}
+.winner-left img{
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  /* margin: 0 .rem; */
+}
+.winner-left h5{
+  font-size: 1.5rem;
+  margin: 0;
+  font-weight: 660;
+  color:#fae59f;
+}
+.amount-section-chart{
+  background: linear-gradient(180deg, #F6E3A3 0%, #D2A753 100%);
+  color:#8f5206;
+  border-radius: 6rem;
+  font-size: .98rem;
+  font-weight: 550;
+  padding: .4rem .8rem;
+  /* margin-top: .5rem; */
+}
+.extra-space{
+  height: 4rem;
 }
