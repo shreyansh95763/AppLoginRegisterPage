@@ -8,9 +8,9 @@ export const Popular=()=> {
     <div>
     <div className="display-flex lotteryList-container">
            {List.list.map((elem)=>(
-            <div className="lottery-pics-container original-pic ">
+            <div className="lottery-pics-container popular-pics ">
                 <img alt="lotter-pic" src={elem.image} />
-                <ProgressBar percentage={elem.percentage} />
+                <ProgressBar percentage={elem.percentage} text={elem.text} />
             </div>
            ))}
            

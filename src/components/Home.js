@@ -37,12 +37,13 @@ export const Home = () => {
                 {getIndex==='original' &&  <MiniGame />}
                 {getIndex==='slots' &&  <Slots />}
                 {getIndex==='sports' &&   <Sports />}
+                {getIndex==='popular' &&   <Popular />}
                 {getIndex==='casino' &&   <Casino />}
                 {getIndex==='pvc' &&  <PVC />}
                 {getIndex==='fishing' &&  <Fishing />}
                
                 
-               < Popular />
+               
                
                 
                 

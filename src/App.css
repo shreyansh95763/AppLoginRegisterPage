@@ -532,6 +532,31 @@ margin: 2rem 0rem .7rem 0;
 .original-pic img{
   border-radius: 1rem;
 }
+.popular-pics{
+  margin-bottom: 1.8rem;
+  background-color: #313131;
+  border-radius: 1rem;
+}
+.popular-pics img{
+  border-radius: 1rem;
+  width: 6.6rem;
+  height: 9.3rem;
+  margin: .4rem;
+}
+.percentage-container{
+  display: flex;
+  justify-content: space-around;
+}
+.percentage-container div:nth-child(1){
+  color: white;
+  font-size: .7rem;
+  /* width: 60%; */
+}
+.percentage-container div:nth-child(2){
+  color: rgb(47, 47, 47);
+  font-size: .8rem;
+  font-family: bahnschrift;
+}
  /***************** Bottom Navigation bar  ************/
  
 .bottom-navbar {
