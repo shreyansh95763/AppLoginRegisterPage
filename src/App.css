@@ -2,7 +2,7 @@
   width: 25rem;
   min-height: 100vh;
   margin:0 auto;
-  background-color: rgb(52, 51, 51);
+  background-color: rgb(45, 45, 45);
   font-family: sans-serif;
 }
 .main-body{
@@ -482,17 +482,39 @@ margin: 2rem 0rem .7rem 0;
 /************ Lottery pic container *************/
 .lotteryList-container{
   flex-wrap: wrap;
-  justify-content: space-between;
-
 }
 .lottery-pics-container{
   width: 7.4rem;
   height: 10rem;
-  margin: .4rem .2rem;
+  margin: .4rem .3rem;
+}
+.lottery-pics-container:nth-child(3n+1){
+  margin-left: 0;
+}
+.lottery-pics-container:nth-child(3n){
+  margin-right: 0;
 }
 .lottery-pics-container img{
   width: 7.4rem;
   height: 10rem;
+}
+.slots-big-container{
+  width: 11.1rem;
+  height: 10rem;
+  margin: .3rem .3rem;
+}
+.slots-big-container img{
+  width: 11.3rem;
+  height: 10rem;
+}
+.text-on-pic{
+  position: relative;
+  color:#ffee6a;
+  font-size: .77rem;
+  gap: .2;
+  font-weight: 820;
+  margin-top: -1.2rem;
+  text-align: center;
 }
 .lottery-pics-container h4{
   position: relative;
@@ -502,6 +524,13 @@ margin: 2rem 0rem .7rem 0;
   font-weight: 820;
   margin-top: -1.2rem;
   text-align: center;
+}
+.fish-container{
+  background: linear-gradient(180deg, #F6E3A3 0%, #D2A753 100%);
+  border-radius: .8rem;
+}
+.original-pic img{
+  border-radius: 1rem;
 }
  /***************** Bottom Navigation bar  ************/
  
@@ -702,4 +731,61 @@ margin: 2rem 0rem .7rem 0;
 }
 .extra-space{
   height: 4rem;
+}
+
+
+/********************     Customer Care section ********/
+.care-header{
+  background: linear-gradient(90deg,#C4933F 0%,#FAE59F 100%);
+  height: 13rem;
+  overflow: hidden;
+}
+.care-header-section{
+  display: flex;
+  margin-left: .5rem;
+  color: white;
+  justify-content: space-between;
+}
+.girl-image img{
+  height: 12rem;
+  overflow: hidden;
+}
+.listOfCares{
+  margin: auto .7rem;
+}
+.care-list{ 
+  width: 100%;
+  height: 3.5rem;
+  background-color: #434343;
+  color: whitesmoke;
+  margin:.5rem auto;
+  padding-left:1em;
+  padding-right: 1rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.care-left{
+  width: 35rem;
+  display: flex;
+  align-items: center;
+}
+.care-left img{
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  overflow: hi;
+}
+.care-left h5{
+  margin-left: 1rem;
+  font-size: 1rem;
+}
+.collection-section{
+  background-color: rgb(45, 45, 45);
+  padding-top: 1rem;
+  margin-top: -.3rem;
+  border-radius: 15px;
+  position: relative;
+
 }

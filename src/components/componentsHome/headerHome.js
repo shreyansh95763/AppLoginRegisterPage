@@ -1,6 +1,22 @@
 import DownloadForOfflineIcon from '@mui/icons-material/DownloadForOffline';
 import HeadsetMicIcon from '@mui/icons-material/HeadsetMic';
+import { useState } from 'react';
+import { Navigate } from 'react-router-dom';
 export const HeaderHome = () => {
+    const [redirectToHome, setRedirectToHome] = useState(false);
+    const [redirectToDownload , setRedirectToDownload] = useState(false);
+    const handleCareService=()=>{
+        setRedirectToHome(true);
+    }
+    const handleDownload=()=>{
+        window.location.href = "https://bdg888.gdevhmr.xyz/";
+    }
+    if (redirectToDownload) {
+        return <Navigate to="https://bdg888.gdevhmr.xyz/" />;
+      }
+    if (redirectToHome) {
+        return <Navigate to="/AppLoginRegisterPage/CustomerService" />;
+      }
     return (
         <>
             <div className="home-header">
@@ -12,8 +28,8 @@ export const HeaderHome = () => {
                     </div>
                 </div>
                 <div className='right-header'>
-                    <button type="submit"><DownloadForOfflineIcon style={{fontSize:30}} /> <div className='download-btn'><h5>Download</h5> <h5>App</h5></div> </button>
-                    <button type="submit"><HeadsetMicIcon style={{fontSize:30}}/> <div className='download-btn'><h5>Customer</h5> <h5>Service</h5></div></button>
+                    <button type="submit" onClick={handleDownload}>  <DownloadForOfflineIcon style={{fontSize:30}} /> <div className='download-btn'><h5>Download</h5> <h5>App</h5></div> </button>
+                    <button type="submit" onClick={handleCareService}><HeadsetMicIcon style={{fontSize:30}}/> <div className='download-btn'><h5>Customer</h5> <h5>Service</h5></div></button>
                 </div>
             </div>
         </>

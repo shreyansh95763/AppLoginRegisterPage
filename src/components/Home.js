@@ -1,4 +1,3 @@
-import {NavLink} from 'react-router-dom';
 import { HeaderHome } from './componentsHome/headerHome';
 import { CarouselHome } from './componentsHome/Carousel';
 import { UpSlider } from './componentsHome/upslider';
@@ -9,23 +8,45 @@ import { Lottery } from './componentsHome/Lottery';
 import { WinningInfo } from './componentsHome/winningInformation/WinningInfo';
 import { BottomNavigationBar } from './bottomNavigationBar';
 import { EarningChart } from './componentsHome/earningChart/earningChart';
+import { MiniGame } from './componentsHome/originalSection/miniGame';
+import { Slots } from './componentsHome/slotSection/slots';
+import { Sports } from './componentsHome/sports/Sports';
+import { Casino } from './componentsHome/casino/Casino';
+import { PVC } from './componentsHome/PVR/pvr';
+import { Fishing } from './componentsHome/Fishing/Fishing';
+import { useState } from 'react';
+import { Popular } from './componentsHome/popular/popular';
 export const Home = () => {
-    // const styles=()=>{
-    //     const navLink = document.getElementById('navlink');
-    //     navLink.style.textDecoration="none";
-    //     navLink.style.backgroundColor="red";
-    // }
-    return (
+    const [getIndex , setIndex] = useState('lottery');
+    const handleEvents=(newPage)=>{
+        setIndex(newPage);
+    }
+   
+    return (  
         <>
             <div className="home-body">
                 <HeaderHome />
                 <div className='main-body'>
                 <CarouselHome />
                 <UpSlider />
-                <MenuBox1 />
-                <MenuBox2 />
-                <MenuBox3 />
-                <Lottery />
+                <MenuBox1 handleEvents={handleEvents}/>
+                <MenuBox2 handleEvents={handleEvents}/>
+                <MenuBox3 handleEvents={handleEvents}/>
+
+                {getIndex==='lottery' &&  <Lottery />}
+                {getIndex==='original' &&  <MiniGame />}
+                {getIndex==='slots' &&  <Slots />}
+                {getIndex==='sports' &&   <Sports />}
+                {getIndex==='casino' &&   <Casino />}
+                {getIndex==='pvc' &&  <PVC />}
+                {getIndex==='fishing' &&  <Fishing />}
+               
+                
+               < Popular />
+               
+                
+                
+                
                 <WinningInfo />
                 <EarningChart />
                 </div>

@@ -10,6 +10,8 @@ import { InfoContainer8 } from "./infoCotainer8";
 
 export const WinningInfo=()=>{
     const [components, setComponents] = useState([
+        <InfoContainer8 key={8} />,
+        <InfoContainer7 key={7} />,
         <InfoContainer6 key={6} />,
         <InfoContainer5 key={5} />,
         <InfoContainer4 key={4} />,
@@ -23,31 +25,30 @@ export const WinningInfo=()=>{
       const cycleComponents = () => {
         // Remove the last component
         setComponents(prevComponents => {
-          const newComponents = [...prevComponents];
-          if((components[0]).key===1){components.push(<InfoContainer2 key={2} />)}
-          else if((components[0]).key===2){components.push(<InfoContainer3 key={3} />)}
-          else if((components[0]).key===3){components.push(<InfoContainer4 key={4} />)}
-          else if((components[0]).key===4){components.push(<InfoContainer5 key={5} />)}
-          else if((components[0]).key===5){components.push(<InfoContainer6 key={6} />)}
-          else if((components[0]).key===6){components.push(<InfoContainer7 key={7} />)}
-          else if((components[0]).key===7){components.push(<InfoContainer8 key={8} />)}
-          else if((components[0]).key===8){components.push(<InfoContainer1 key={1} />)}
+          let newComponents = [...prevComponents];
+          const newComponent = newComponents[components.length - 1];
+          newComponents = [newComponent, ...prevComponents];
           newComponents.pop();
           return newComponents;
         });
     
         // Add a new component to the top
-        const newComponent = components[components.length - 1];
+        // const newComponent = components[components.length - 1];
 
-        setComponents(prevComponents => [newComponent, ...prevComponents]);
+        // setComponents(prevComponents => {
+        //   const newComponent = components[components.length - 1];
+        //   const newComponents=[newComponent, ...prevComponents];
+        //   return newComponents;
+        // }
+        // );
       };
     
       // Cycle components at intervals
       useEffect(() => {
-        setInterval(cycleComponents, 2000); // Change duration as needed
+        const interval=setInterval(cycleComponents, 1500); // Change duration as needed
     
         // Clean up interval on unmount
-        // return () => clearInterval(interval);
+        return () => clearInterval(interval);
       }, []);
     return(<>
             <h5 className="nav-heading winning-heading" >Winning Information</h5>
