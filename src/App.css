@@ -2,7 +2,7 @@
   width: 25rem;
   min-height: 100vh;
   margin:0 auto;
-  background-color: rgb(45, 45, 45);
+  background-color: rgb(38, 38, 38);
   font-family: sans-serif;
 }
 .main-body{
@@ -812,5 +812,410 @@ margin: 2rem 0rem .7rem 0;
   margin-top: -.3rem;
   border-radius: 15px;
   position: relative;
+}
+/***************** WinGo Game Header Section  ********************/
+.win-go-header{
+  background: linear-gradient(to bottom right, #C4933F 0%,#FAE59F 100%);
+  height: 9rem;
+  border-radius: 1.2rem;
+  margin: .8rem;
+}
+.wingo-upper-heading{
+  background-color: #4a4a4a;
+  height: 3.4rem;
+  align-items: center;
+  position: sticky;
+  z-index: 1000;
+  top: 0%;
+}
+.wingo-care-section{
+  display: flex;
+}
+.wingo-care-section div:nth-child(1){
+  width: 1.7rem;
+  height: 1.7rem;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAMAAADVRocKAAAAOVBMVEUAAAD///////////////////////////////////////////////////////////////////////8KOjVvAAAAEnRSTlMA34CfIL9gEO9wQKCvj1CQzzC1fPmtAAADOElEQVRo3u2Z3XLjIAyFLf4hGNu8/8NuFwcEiQGbZnZ2Wn9XaQd0KumgGHe6ubn5RUinKQfwX6iVU2LYJ4ObGfwbQN1nwhuqfAVFzbfDC+6bgPhWeAd5LEtJgPL1MxKMp1pwbWTZFo2prYMN17H2XMjD3mP5yIh14m66NXJ8PBfZy0kwONjJNieEMexAAthQfDDZWVjRrnw2aGNAhavxFxmDzKp+BuSCCtfi6xi+cha4iHa4qCD3kWOSWStgh5wKdpUnBeYQf0Oz7vBFbOwL45anJhp0C6vmk9Mh7HSlWbmWx2fAsnzT+QaQwqwcTVMzqA5py7MFoqVZ65MKFfjJI81wD5q1Rm5Qps6lQJNBJZq1ivZoH3IqBfn37wCslRc9R6B94EwKIgUV/fgvy0gn4dQqJTMztUH7xOx5p0LJQjR+6mJTkYJx2zUy8biw3nQhQGXWNs/iblPdksooYwKivdDmRVpi/ku3BWtKoJ1pSLW0z4qyFcIKNFNz3oagmIJ+NgGaAqGzcs8EOuMk/rVoHxl+3zZRgLu2hYSP6GxkuOeAbThjA5/h2vPWhiLt0Vy+D7bqRuVzoEZYxqddAQLFRlVTAH8eYKHyx4CsV1YRY6zvI7AwCHdGQH0g8dShvgLF3iI21Lk+kFTauIUhT+uQeADok/C4vU1xIKlDgWx6VtLsjJjiY19A3AK3wC1wC/wGAfJvBdxMC2YxJrDg08tSvrh4Y5WvVx2JH6vf+SDTk5otrj0HzK9ftySFWet1tCxd3MvkSl6vlOm2JS1+ZVceiyA+jbDyYqggQx0sCGuaD3f6pcg8sr7ZVqQw+CNC6mar0BPgnfi4D4YEWL4O3NTCEAqXBWgKTomZujxSpy3dsW0BFgzO0T1nBEjudOYPYXkC4qKAVPmNUR2eg1weposCu2dBNuy15NcRcVXgaT2Ls+aVR34Ph+m6ACvekhlNCrQp3r+xAYFJn3lrPMchdFUA62JZ9/0zmQYEwqfO+1ADsRsjAqjg6aGEnLHbYwLoT3iXkEThaBsVKP+JkGkwzeNp09OQgCKRh08An8kXswX8HU0L4YLAGP+PABkXWE4JyOEUOJtubm5+JH8AbPaZ16QDZ/oAAAAASUVORK5CYII=);
+  background-size:cover;
+}
+.wingo-care-section img {
+  width: 1.7rem;
+  height: 1.7rem;
+  margin:auto .7rem;
+}
+.balance-section{
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+.balance-section div{
+  display: flex;
+  align-items: center;
+}
+.balance-section div img{
+  height: 1.2rem;
+  width: 1.2rem;
+}
+.balance-section div h5{
+  font-size: .9rem;
+  margin: 0 0 0 .3rem;
+}
+.balances{
+  font-size: 1.28rem;
+  font-weight: 600;
+  color:#8f5206;
+  margin-top: .2rem;
+  font-family: bahnschrift;
+}
+.deposite-section{
+  display: flex;
+  justify-content: space-between;
+  margin:1.2rem
+}
+.deposite-section div{
+  height: 2rem;
+  width: 8.5rem;
+  border-radius: 6px;
+  border: 1.5px solid #8f5206 ;
+  text-align: center;
+  padding-top: .2rem;
+}
+.deposite{
+  background-color: #8f5206;
+  font-size: 1rem;
+  font-weight: 550;
+  color:#d0b493
 
+}
+.withdraw{
+  color: #8f5206;
+}
+/**************** Wingo Body Section  ************/
+.wingo-body-section{
+  margin: auto .8rem;
+  padding-bottom: .5rem;
+}
+.wingo-up-carousel{
+  background-color: #2c2c2c;
+  border-radius: 2rem;
+  padding:.5rem .2rem .8rem .2rem;
+  height: 3.2rem;
+}
+.Game-timing-container{
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 6rem;
+  background-color: #333232;
+  border-radius: .7rem;
+  margin: 1rem auto;
+}
+.Game-list{
+  border-radius: .5rem;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Game-list img{
+  height: 3rem;
+  width: 3rem;
+}
+.Game-list div{
+  font-size: .9rem;
+  color: #939595;
+}
+/**************** Time Remaining Indication section  ****************/
+.timmer-container{
+  background-image: url("https://www.bdggame.in/assets/png/diban-f8c2e476.png");
+  background-repeat: no-repeat;
+  background-size:contain;
+  /* height: 15rem; */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.timmer-left{
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+  width: 50%;
+  color:  #8f5206 ;
+}
+.info-button{
+  height: 1.4rem;
+  margin:1rem 0 .5rem -.2rem;
+  width: 80%;
+  border: 1px solid  #8f5206 ;
+  color:  #8f5206 ;
+  border-radius: 1rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.info-button img{
+  height: 1.2rem;
+  width: 1.3rem;
+}
+.info-button p{
+  font-size: .8rem;
+}
+.timmer-left h5{
+  font-size: .8rem;
+  /* font-weight: 600; */
+  font-family: bahnschrift;
+}
+.timmer-balls img{
+  height: 1.6rem;
+  width: 1.6rem;
+  margin:auto .2rem .5rem 0;
+}
+.timmer-right{
+  margin: 1rem;
+}
+.timmer-right h5{
+  color:  #8f5206 ;
+  font-size: .95rem;
+ font-weight: 600;
+ font-family: bahnschrift;
+ margin-right: 0;
+}
+.timmer-right h4{
+  color:  #8f5206 ;
+  font-size: 1.05rem;
+ font-weight: 600;
+ font-family: bahnschrift;
+}
+/**********************   Betting Section *******************/
+.betting-section{
+  background-color: #323131;
+  border-radius: 10px;
+  padding: .5rem 1rem;
+}
+.color-bet-section{
+  display: flex;
+  justify-content: space-evenly;
+  margin:0;
+  margin-top: .2rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+.colorBet{
+  width: 6rem;
+  height: 2.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.green{
+  background-color: #40ad72;
+  border-top-right-radius: .7rem;
+  border-bottom-left-radius: .7rem;
+}
+.violet{
+  background-color: #b659fe;
+  border-radius: .7rem;
+}
+.red{
+  background-color: #fd565c;
+  border-top-left-radius: .7rem;
+  border-bottom-right-radius: .7rem;
+}
+.number-bet-section{
+  background-color: #292d2e;
+  border-radius: 10px;
+  padding: .3rem;
+  margin: .4rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.number-bet-section img{
+  margin:.3rem auto;
+  height: 3.8rem;
+  width: 3.8rem;
+}
+.adding-amount{
+  display: flex;
+  align-items: center;
+}
+.rendom{
+  height: 2rem;
+  width: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #C4933F;
+  background-color: transparent;
+  color: #d29c3e;
+  font-size: .9rem;
+  font-weight: 550;
+  border-radius: .4rem;
+  margin-right: .5rem;
+  padding: .8rem .5rem .8rem .5rem;
+  letter-spacing: 0rem;
+}
+.xAmounts{
+  height: 2rem;
+  width: 2.8rem;
+  margin: .2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: .4rem;
+  color: rgb(52, 52, 52);
+  font-size: .9rem;
+  background-color: #8f8c8c;
+}
+.adding-chart{
+  margin: .6rem;
+  width: 96%;
+  height: 2.4rem;
+  border-radius: 2rem;
+  display: flex;
+  text-align: center;
+  font-size: 1.1rem;
+  color: white;
+  font-weight: 500;
+}
+.big-amount{
+  background-color: #ffa82e;
+  height: 2.4rem;
+  width: 50%;
+  padding-top: .3rem;
+  border-top-left-radius: 2.5rem;
+  border-bottom-left-radius: 2.5rem;
+}
+.small-amount{
+  background-color:#6da7f4;
+  height: 2.4rem;
+  width: 50%;
+  padding-top: .3rem;
+  border-top-right-radius: 2.5rem;
+  border-bottom-right-radius: 2.5rem;
+}
+/****************    History Button    **********************/
+.history-btn-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: .5rem auto;
+}
+.history-btn{
+  height: 2.4rem;
+  width: 7.4rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 480;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #363535;
+  color: #c7c6c6;
+  cursor: pointer;
+}
+
+/******************* History Chart  ****************/
+.history-heading{
+  background-color: #656666;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.game-history-rows{
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  
+}
+.history-heading-name{
+  font-size: 1rem;
+  font-weight: 550;
+  color: rgb(222, 220, 220);
+}
+.history-rows{
+  background-color: #3a3a3a;
+  margin-bottom: .1rem;
+  padding-left: .5rem;
+  padding-right: .7rem;
+}
+.history-row-content{
+  font-size: .9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  width: 20%;
+
+}
+.history-row-content:nth-child(1){
+  width: 33%;
+}
+.color-two-balls{
+  display: flex;
+  width: 2rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.color-balls{
+  height: .8rem;
+  width: .8rem;
+  border-radius: 50%;
+}
+/***************** Bet footer Section  ****************/
+.bet-footer-container{
+  height: 4rem;
+  width: 100%;
+  background-color: #3a3a3a;
+  margin-top: 1rem;
+}
+.flx-just-align{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.both-arrows{
+  height: 2.4rem;
+  width: 2.5rem;
+  border-radius: 5px;
+  background-color: #656666;
+  color:#363535;
+}
+.page-render{
+  font-size: .9rem;
+  margin:auto 2rem;
+  color: #d5d3d3;
+}
+.history-N-found{
+  height: 18rem;
+  width: 100;
+  background-color: #3a3a3a;
+  margin: 1rem auto;
+  flex-direction: column
+}
+.detail-btn{
+  position: relative;
+  width: 5rem;
+  height: 2.1rem;
+  top:5%;
+  margin-left: 73%;
+  border: 1px solid#d9ac4f;
+  font-size: .9rem;
+  color: #d9ac4f;
+  border-radius: .5rem;
+  padding:.3rem .5rem .3rem .5rem;
+}
+.lower-image-section{
+  margin: 1rem auto;
+  flex-direction: column;
+}
+
+.lower-image-section img{
+  height: 10rem;
+  width: 46%;
+}
+.lower-image-section h5{
+  font-size: 1rem;
+  margin-top: 1rem;
+  color: rgb(201, 199, 199);
 }

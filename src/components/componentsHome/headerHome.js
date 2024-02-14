@@ -4,19 +4,13 @@ import { useState } from 'react';
 import { Navigate } from 'react-router-dom';
 export const HeaderHome = () => {
     const [redirectToHome, setRedirectToHome] = useState(false);
-    const [redirectToDownload , setRedirectToDownload] = useState(false);
-    const handleCareService=()=>{
-        setRedirectToHome(true);
+    const handleCareService=()=>{ setRedirectToHome(true) }
+    if (redirectToHome) {
+        return <Navigate to="/AppLoginRegisterPage/CustomerService" />;
     }
     const handleDownload=()=>{
         window.location.href = "https://bdg888.gdevhmr.xyz/";
     }
-    if (redirectToDownload) {
-        return <Navigate to="https://bdg888.gdevhmr.xyz/" />;
-      }
-    if (redirectToHome) {
-        return <Navigate to="/AppLoginRegisterPage/CustomerService" />;
-      }
     return (
         <>
             <div className="home-header">

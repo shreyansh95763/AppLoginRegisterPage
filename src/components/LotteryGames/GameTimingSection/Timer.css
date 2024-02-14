@@ -1,0 +1,30 @@
+.timer-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    margin-bottom: .3rem;
+    border-radius: 2rem ;
+}
+
+.digit-container {
+    display: flex;
+}
+
+.digit-box {
+    font-size: 1.2rem;
+    color: #8f5206;
+    background-color: #fae59f;
+    font-weight: 799.9;
+    margin: 0 0.17rem;
+    padding: 0.3rem;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  
+  .separator {
+    margin: 0 0.2rem;
+  }
+
+  

@@ -15,7 +15,6 @@ export const Lottery=()=>{
     const handleEvents=(newPage)=>{
         setIndex(newPage);
         setButtonStyle({
-
             [newPage]:{backgroundColor: "#D2A753",color:"#3f270a",fontFamily: "bahnschrift"}
         })
     }
