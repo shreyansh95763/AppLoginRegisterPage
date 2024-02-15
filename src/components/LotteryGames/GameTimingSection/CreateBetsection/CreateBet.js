@@ -1,6 +1,10 @@
 import Balls from "./balls.json"
 import { AddAmount } from "./Amount-select-section";
 export const CreateBet=()=>{
+    const [modal, setModal] = useState(false);
+  const toggleModal = () => {
+    setModal(!modal);
+  };
     return(<>
         <div className="betting-section">
             <div className="color-bet-section">
@@ -19,8 +23,8 @@ export const CreateBet=()=>{
                 <AddAmount />
             </div>
             <div className="adding-chart">
-                <div className="big-amount">Big</div>
-                <div className="small-amount">Small</div>
+                <div className="big-amount" onClick={toggleModal}>Big</div>
+                <div className="small-amount" onClick={toggleModal}>Small</div>
             </div>
         </div>
     </>)

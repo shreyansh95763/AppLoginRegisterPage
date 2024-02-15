@@ -1219,3 +1219,75 @@ margin: 2rem 0rem .7rem 0;
   margin-top: 1rem;
   color: rgb(201, 199, 199);
 }
+/********************** Chart Section **************/
+.header-chart{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 3rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #8f8c8c;
+}
+.chart-body-section{
+  color:white;
+  margin: .5rem;
+}
+.chart-body-section p{
+  margin: .5rem auto;
+  font-size: .9rem;
+}
+.chart-upper-section{
+  display: flex;
+  justify-content: space-between;
+}
+.chart-upper-numbers{
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+}
+.table-name{
+  font-size: .9rem;
+}
+.upper-number{
+  display: flex;
+  font-size: .9rem;
+  padding:0rem .1rem;
+  width: 1.3em;
+  height: 1.3rem;
+  margin: .1rem;
+  color: #d9ac4f;
+  border: 1px solid #d9ac4f;
+  border-radius: 50%;
+  padding-left: .3rem;
+}
+.table-number{
+  display: flex;
+  font-size: .9rem;
+  width: .6rem;
+  margin: .1rem;
+  color:#b0b0b2
+}
+
+.bottom-balls{
+  color: white;
+}
+.balls-circular{
+  height: 1.1rem;
+  width: 1.1rem;
+  font-size: .78rem;
+  padding:0 0 .15rem .2rem;
+  border: 1px solid rgb(204, 202, 202);
+  color: rgb(160, 161, 162);
+  border-radius: 50%;
+}
+.balls-circular:last-child{
+  margin-left: 1rem;
+  margin-right: .5rem;
+  background-color: #40ad72;
+  color: white;
+}
+/******************** Toggle Bet Amount Adding For Bet ***************/

@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { BetHistory } from "./BetHistory/BetHistory"
 import { HistoryNotFound } from "./HistoryNotFound"
+import { Chart } from "./BetHistory/Chart/chart"
 
 export const BetHistoryBtn=()=>{
     const [getPage, setPage] = useState('btn1')
@@ -20,7 +21,7 @@ export const BetHistoryBtn=()=>{
             <div className="history-btn" style={buttonStyle.btn3} onClick={()=>{handleClick('btn3')}} >My history</div>
         </div>
         {getPage==='btn1' && <BetHistory />}
-        {getPage==='btn2' && <HistoryNotFound />}
+        {getPage==='btn2' && <Chart />}
         {getPage==='btn3' && <HistoryNotFound />}
 
     </>)
