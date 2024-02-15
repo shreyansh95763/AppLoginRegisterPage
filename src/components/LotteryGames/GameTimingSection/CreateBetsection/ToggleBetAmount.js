@@ -1,6 +1,6 @@
 export const ToggleBetAmount=()=>{
     return(<>
-        <div>
+        <div className="Toggle-container">
             
         </div>
     </>)

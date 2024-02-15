@@ -1,5 +1,7 @@
 import Balls from "./balls.json"
 import { AddAmount } from "./Amount-select-section";
+import { ToggleBetAmount } from "./ToggleBetAmount";
+import { useState } from "react";
 export const CreateBet=()=>{
     const [modal, setModal] = useState(false);
   const toggleModal = () => {
@@ -27,5 +29,6 @@ export const CreateBet=()=>{
                 <div className="small-amount" onClick={toggleModal}>Small</div>
             </div>
         </div>
+        {modal && <ToggleBetAmount />}
     </>)
 }
