@@ -22,7 +22,7 @@ export const TimmerSection=(props)=>{
 
             <div className="timmer-right">
                 <h5>Time Remaining</h5>
-                <div > <Timer duration={props.duration} /></div>
+                <div > <Timer duration={props.duration} timeLefts={props.timeLefts}/></div>
                 <h4>20240213010970</h4>
             </div>
         </div>

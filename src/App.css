@@ -1228,7 +1228,7 @@ margin: 2rem 0rem .7rem 0;
   font-size: 1rem;
   font-weight: 700;
   color: white;
-  border-top-left-radius: 10px;
+  border-top-left-radius: 10px; 
   border-top-right-radius: 10px;
   background-color: #8f8c8c;
 }
@@ -1261,7 +1261,7 @@ margin: 2rem 0rem .7rem 0;
   margin: .1rem;
   color: #d9ac4f;
   border: 1px solid #d9ac4f;
-  border-radius: 50%;
+  border-radius: 50%; 
   padding-left: .3rem;
 }
 .table-number{
@@ -1291,3 +1291,218 @@ margin: 2rem 0rem .7rem 0;
   color: white;
 }
 /******************** Toggle Bet Amount Adding For Bet ***************/
+.model {
+  position:fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0%;
+  right: 0;
+  bottom: 0;
+}
+
+.overlay {
+  position: absolute;
+  background-color:#000000;
+  opacity: 80%;
+  height: 50%;
+  width:100%;
+  top: 0%;
+  
+}
+.model-contents {
+  position: absolute;
+  height: 60%;
+  width:29%;
+  top: 70%;
+  bottom: 0%;
+  left: 49.4%;
+  transform: translate(-50%, -50%);
+  background-color: #292929;
+  opacity: 2;
+  /* padding: 14px 28px; */
+  border-top-left-radius: 13px;
+  border-top-right-radius: 13px;
+  /* max-width: 600px;
+  min-width: 0px; */
+}
+.header-toggle{
+  height: 30%;
+  width: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;align-items: center;
+  padding-top: .5rem;
+  background: linear-gradient(180deg, #373737,rgb(127, 127, 127));
+} 
+/* .header-toggle::after{
+   content: ""; 
+    position:absolute;
+    right: 0;
+    bottom: 0; 
+    width: 50%;
+    height: 0.78667rem;
+    background-image: -webkit-linear-gradient(99deg,#292929 50%,transparent 50%);
+    background-image: linear-gradient(-9deg,#292929 50%,transparent 50%);
+} */
+.content-toggle{
+  height: 55%;
+  margin :auto 1rem
+}
+.bottom-btn-toggle{
+  height: 15%;
+  display: flex;
+}
+.select-section{
+  width: 70%;
+  height: 1.7rem;
+  border-radius: .5rem;
+  text-align: center;
+  color:green;
+  background-color: #4d4d4d;
+}
+
+.content-toggle-rows{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  margin: .7rem auto;
+  color: white;
+}
+.balance-btn-container{
+  display: flex;  
+}
+.balance-btn{
+  background-color: #393939;
+  border-radius: 5px;
+  min-width: 1.7rem;
+  padding:5px 7px;
+  margin: 5px;
+  text-align: center;
+  font-size: 1rem;
+  color: rgb(159, 158, 158);
+  font-weight: 550;
+}
+.toggle-checkbox{
+  display: flex;
+  color:rgb(186, 182, 182);
+  align-items: center;
+}
+.checkbox-input{
+  border-radius: 50%;
+  height: 1.4rem;
+  width: 1.4rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+  background-color: transparent;
+  border: 2.5px solid rgb(215, 212, 212);
+}
+.check-texts{
+  color:#d29c3e;
+  margin-left: .5rem;
+  font-size: .9rem;
+  font-weight: 550;
+}
+.bottom-btn-toggle div:first-child{
+  width: 35%;
+  background-color: #595959;
+  color: rgb(183, 181, 181);
+}
+.btn-toggle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 530;
+}
+.bottom-btn-toggle div:last-child{
+  width:65%;
+  background-color: #d6963b;
+  color: #422907;
+  
+}
+
+.counter-container {
+  display: flex;
+  align-items: center;
+}
+
+.btn-incDec-toggle{
+  cursor: pointer;
+  height: 1.5rem;
+  width: 1.5rem;
+ 
+}
+
+.count {
+  margin: auto 1rem;
+  font-size: 1rem;
+  background-color: rgb(95, 85, 108);
+  width: 5rem;
+  height: 1.5rem;
+  text-align: center;
+  border-radius: 2rem;
+} 
+ 
+/***************** Animation *******************/
+.helicopter {
+  position: absolute;
+  color: rgb(199, 58, 58);
+  width: 80px;
+  height: 50px;
+  border-radius: 10px;
+  animation: moveHelicopter 20s linear infinite; /* Define animation */
+  bottom: 0;
+  left:0;
+}
+
+
+/* Define keyframes for the helicopter animation */
+@keyframes moveHelicopter {
+  0% {
+    transform: translate(0);
+  }
+ /* 20%{
+  transform: translate(10vw,-40vh);
+ }
+ 40%{
+  transform:translate(20vw,-30vh); */
+ /* } */
+ 60%{
+  transform: translate(30vw,-35vh);
+ }
+ 70%{
+  transform: translate(35vw,-30vh);
+ }
+ 80%{
+  transform: translate(37vw,-35vh);
+ }
+  100% {
+    transform: translate(43vw,-50vh); /* Move the helicopter across the screen */
+  }
+}
+
+/* Define keyframes for the path line animation */
+@keyframes followPath {
+  0% {
+    transform: translate(0);
+  }
+  /* Adjust the keyframes to match the movement of the helicopter */
+  60% {
+    left: 30vw;
+    bottom: 35vh;
+  }
+  70% {
+    left: 35vw;
+    bottom: 30vh;
+  }
+  80% {
+    left: 37vw;
+    bottom: 35vh;
+  }
+  100% {
+    left: 43vw;
+    bottom: 50vh; /* Move the line to the final position */
+  }
+}

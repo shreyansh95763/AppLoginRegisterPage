@@ -5,6 +5,7 @@ import { useState } from "react";
 export const CreateBet=()=>{
     const [modal, setModal] = useState(false);
   const toggleModal = () => {
+    console.log(modal);
     setModal(!modal);
   };
     return(<>
@@ -24,11 +25,11 @@ export const CreateBet=()=>{
                 <div className="rendom">Rendom</div>
                 <AddAmount />
             </div>
-            <div className="adding-chart">
+            <div className="adding-chart" onClick={toggleModal}>
                 <div className="big-amount" onClick={toggleModal}>Big</div>
                 <div className="small-amount" onClick={toggleModal}>Small</div>
             </div>
         </div>
-        {modal && <ToggleBetAmount />}
+        {modal && <ToggleBetAmount  toggleModal={toggleModal} />}
     </>)
 }

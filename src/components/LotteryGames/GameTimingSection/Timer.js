@@ -1,24 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import './Timer.css'; // Import CSS file for styling
 
-function Timer({ duration }) {
-  const [timeLeft, setTimeLeft] = useState(duration);
-
+function Timer({ duration ,timeLefts }) {
+  const [ time , setTime] = useState(timeLefts);
+  const [timeLeft, setTimeLeft] = useState(time);
+  
+  if(time !==  timeLefts){
+    console.log(time);
+    console.log(timeLeft);
+    console.log(timeLefts);
+    setTime(timeLefts);
+    setTimeLeft(timeLefts);
+  }
+  
   useEffect(() => {
-    
-    const timer = setTimeout(() => {
-      if (timeLeft === 0) {
-        setTimeLeft(duration); // Reset the timer when it reaches 00
-      } else {
+    const timer = setInterval(() => {
+      if (timeLeft > 0) {
         setTimeLeft(timeLeft - 1);
+      } else {
+        setTimeLeft(duration);
       }
     }, 1000);
-
-    // if (timeLeft === 0) {
-    //   clearTimeout(timer);
-    // }
+   
     return () => clearTimeout(timer);
-  }, [timeLeft,duration]);
+  }, [duration,timeLeft]);
 
   const minutes = Math.floor(timeLeft / 60);
   const seconds = timeLeft % 60;
