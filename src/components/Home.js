@@ -16,16 +16,7 @@ import { PVC } from './componentsHome/PVR/pvr';
 import { Fishing } from './componentsHome/Fishing/Fishing';
 import { useState } from 'react';
 import { Popular } from './componentsHome/popular/popular';
-import { useScrollBoost } from "react-scrollbooster";
 export const Home = () => {
-
-const Component = () => {
-  const [viewport, scrollbooster] = useScrollBoost({
-    direction: "vertical",
-    friction: 0.2,
-    scrollMode: "transform"
-    // ...optional options
-  });
     const [getIndex , setIndex] = useState('lottery');
     const handleEvents=(newPage)=>{
         setIndex(newPage);
@@ -33,7 +24,7 @@ const Component = () => {
    
     return (  
         <>
-            <div className="home-body" ref={viewport}>
+            <div className="home-body">
                 <HeaderHome />
                 <div className='main-body'>
                 <CarouselHome />
@@ -51,12 +42,7 @@ const Component = () => {
                 {getIndex==='pvc' &&  <PVC />}
                 {getIndex==='fishing' &&  <Fishing />}
                
-                
-               
-               
-                
-                
-                
+
                 <WinningInfo />
                 <EarningChart />
                 </div>

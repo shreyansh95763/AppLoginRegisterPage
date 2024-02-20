@@ -4,9 +4,13 @@
   margin:0 auto;
   background-color: rgb(38, 38, 38);
   font-family: sans-serif;
+  overflow: hidden; /* This prevents scrolling beyond the content */
+  overscroll-behavior: none; /* This prevents scrolling bounce on mobile devices */
 }
 .main-body{
   margin: 0 .7rem;
+  overflow: hidden; /* This prevents scrolling beyond the content */
+  overscroll-behavior: none; /* This prevents scrolling bounce on mobile devices */
 }
 .header-section{
   background: linear-gradient(to bottom right, rgb(89, 92, 108), #b7b6cf); /* Dark on the left (#333) to light on the right (#fff) */
