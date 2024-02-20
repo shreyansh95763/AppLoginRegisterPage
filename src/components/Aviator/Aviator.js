@@ -44,7 +44,6 @@ export const Aviator = () => {
         ctx.moveTo(a,b)
         ctx.lineTo(prevX,canvas.height);
         ctx.closePath();
-
         ctx.fillStyle="red";
         ctx.fill();
 
@@ -81,11 +80,11 @@ export const Aviator = () => {
   const helicopterStyle = {
     position: "absolute",
     zIndex: "10",
-    width: "100px",
-    height: "80px",
+    width: "12rem",
+    height: "7rem",
     borderRadius: "10px",
     animation: "moveHelicopter 20s linear infinite",
-    bottom: "-3%",
+    bottom: "0%",
     left: "-5%",
   };
 
@@ -133,7 +132,6 @@ export const Aviator = () => {
         }}
       ></canvas>
       <img
-        // className="helicopter"
         style={helicopterStyle}
         alt="helicopter"
         ref={helicopterRef}
