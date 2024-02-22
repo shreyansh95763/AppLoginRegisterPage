@@ -31,16 +31,6 @@ export const WinningInfo=()=>{
           newComponents.pop();
           return newComponents;
         });
-    
-        // Add a new component to the top
-        // const newComponent = components[components.length - 1];
-
-        // setComponents(prevComponents => {
-        //   const newComponent = components[components.length - 1];
-        //   const newComponents=[newComponent, ...prevComponents];
-        //   return newComponents;
-        // }
-        // );
       };
     
       // Cycle components at intervals

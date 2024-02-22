@@ -6,7 +6,7 @@ import { Home } from "./components/Home";
 import { CustomerCare } from './components/CustomerCare/CusromerService';
 import { CustomerCollection } from './components/CustomerCare/CustomerCollection';
 import { WinGo } from './components/LotteryGames/WinGo1Min';
-import { Aviator } from './components/Aviator/Aviator';
+import { MainAviator } from './components/Aviator/AviatorMainPage';
 
 function App() {
   return (<>
@@ -19,7 +19,7 @@ function App() {
         <Route path='/AppLoginRegisterPage/CustomerService' element={<CustomerCare />} />
         <Route path='/AppLoginRegisterPage/CustomerService/SeviceCollection' element={<CustomerCollection />} />
         <Route path='/AppLoginRegisterPage/WinGo' element={<WinGo />} />
-        <Route path="/AppLoginRegisterPage/Aviator" element={<Aviator /> } />
+        <Route path="/AppLoginRegisterPage/Aviator" element={<MainAviator /> } />
       </Routes>
     </BrowserRouter>
       {/* <Body /> */}
