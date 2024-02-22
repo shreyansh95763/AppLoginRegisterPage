@@ -1,0 +1,39 @@
+{"lists":[
+    {
+        "id":"grid1",
+        "name":"TYPay-QR",
+        "amount":"500"
+    },
+    {
+        "id":"grid2",
+        "name":"OKPay-QR",
+        "amount":"500"
+    },
+    {
+        "id":"grid3",
+        "name":"GYPay-APP",
+        "amount":"100"
+    },
+    {
+        "id":"grid4",
+        "name":"BYPay-APP",
+        "amount":"100"
+    },
+    {
+        "id":"grid5",
+        "name":"IMPay-QR",
+        "amount":"100"
+    },
+    {
+        "id":"grid6",
+        "name":"ICEPay-APP",
+        "amount":"100"
+    },
+    {
+        "id":"grid7",
+        "name":"777Pay-QR",
+        "amount":"100"
+    }
+]
+
+}

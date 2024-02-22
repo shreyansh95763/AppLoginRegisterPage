@@ -5,8 +5,8 @@ import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 export const ResultBar = () => {
-    const [buttonClicked,setButtonClicked] = useState(true);
-    const handleClickEvent=()=>{
+    const [buttonClicked, setButtonClicked] = useState(true);
+    const handleClickEvent = () => {
         setButtonClicked(!buttonClicked);
     }
 
@@ -33,14 +33,25 @@ export const ResultBar = () => {
         setList([lastElement, ...updatedList]);
     };
 
-    return (
+    return (<>
         <div className="result-bar">
             {list.map((data, index) => (
                 <div key={index} className="result-bar-element" style={{ color: `${data.color}` }}>
                     {data.number}
                 </div>
             ))}
-            <div className='result-bar-history' onClick={handleClickEvent} >{buttonClicked ?<div><HistoryIcon /> <ArrowDropUpIcon style={{fontSize:30}}/></div> : <><HistoryIcon style={{color:"red"}} /> <ArrowDropDownIcon style={{fontSize:30,color:"red"}} /></>} </div>
+            <div className='result-bar-history' onClick={handleClickEvent} >{buttonClicked ? <div><HistoryIcon /> <ArrowDropUpIcon style={{ fontSize: 30 }} /></div> : <><HistoryIcon style={{ color: "red" }} /> <ArrowDropDownIcon style={{ fontSize: 30, color: "red" }} /></>} </div>
         </div>
+        {/* {buttonClicked && <div className='history-result-bar'>
+            <h5>ROUND HISTORY </h5>
+            <div className='result-bar'>
+            {list.map((data, index) => (
+                <div key={index} className="result-bar-element" style={{ color: `${data.color}` }}>
+                    {data.number}
+                </div>
+            ))}
+            </div>
+        </div>} */}
+    </>
     );
 };

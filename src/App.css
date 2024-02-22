@@ -2,7 +2,7 @@
   width: 25rem;
   min-height: 100vh;
   margin: 0 auto;
-  background-color: rgb(38, 38, 38);
+  background-color: rgb(32, 32, 32);
   font-family: sans-serif;
 }
 
@@ -1682,13 +1682,13 @@ Checkbox {
 
 /***************** Aviator Section *******************/
 .nav-container {
-  position: fixed;
+  position: absolute;
   top: 0%;
   left: 0%;
-  display: flex;
-  justify-content: space-evenly;
   width: 100%;
   height: 11.4%;
+  display: flex;
+  justify-content: space-evenly;
   background-color: rgb(97, 71, 52);
   color: rgb(26, 25, 25);
 }
@@ -1764,16 +1764,7 @@ Checkbox {
   border: 2px solid rgb(255, 255, 255);
 }
 
-/* .aviator-div{
-  position: fixed;
-  top: 15%;
-  left: 30%;
-  height: 85%;
-  width: 70%;
-  background: rgb(185, 205, 10);
-  border: 3px solid white;
-  border-radius: 1rem;
-} */
+/*************************   Aviator Section ***********************/
 .aviator-container::before {
   content: '';
   position: absolute;
@@ -1782,16 +1773,19 @@ Checkbox {
   width: 130rem;
   height: 130rem;
   background-image: url('C:/Users/SHREYANSH/Desktop/Projects/bdgGame/bdggame/src/Assets/chakra.png');
-  background-size: cover; /* Adjust as needed */
-  z-index: 1; /* Ensure the image is above the background color */
- animation: rotateAnimation 20s infinite linear; 
+  background-size: cover;
+  /* Adjust as needed */
+  z-index: 1;
+  /* Ensure the image is above the background color */
+  animation: rotateAnimation 20s infinite linear;
 }
-.aviator-container::after{
+
+.aviator-container::after {
   content: '15.72X';
   position: absolute;
-  top:15%;
+  top: 15%;
   left: 18%;
-  width:68%;
+  width: 68%;
   height: 75%;
   /* background: linear-gradient(to bottom right,red, transparent 70%) */
 }
@@ -1800,98 +1794,124 @@ Checkbox {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
 }
-.marquee-left{
+
+.marquee-left {
   position: absolute;
   z-index: 20;
-  top:7rem;
-  left:-17.5rem;
+  top: 7rem;
+  left: -17.5rem;
   width: 4rem;
   background-color: #000000;
 }
-.marquee-bottom{
+
+.marquee-bottom {
   position: absolute;
   z-index: 20;
-  top:88%;
-  left:5%;
+  top: 88%;
+  left: 5%;
   width: 90%;
 }
-.dot-marquee-bottom{
+
+.dot-marquee-bottom {
   /* margin:1.8rem; */
-  margin:1.8rem 3rem;
+  margin: 1.8rem 3rem;
   height: .5rem;
   width: .5rem;
   border-radius: 50%;
   background-color: blue;
 }
-.dot-marquee{
-  margin:1.8rem;
+
+.dot-marquee {
+  margin: 1.8rem;
   height: .5rem;
   width: .5rem;
   border-radius: 50%;
   background-color: white;
 }
+
 /********************  Result Bar of Aviator     *****************/
-.result-bar-container{
+.result-bar-container {
   position: fixed;
-  top:20.6%;
+  top: 20.6%;
   left: 30%;
-  height:5%;
+  height: 5%;
   width: 70%;
 }
-.result-bar{
+
+.result-bar {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   /* width: 90%; */
 }
-.result-bar-element{
+
+.result-bar-element {
   font-size: .9rem;
   font-weight: 550;
   background-color: #1d1d1d;
   opacity: 80%;
   border-radius: 3rem;
   padding: .2rem .3rem;
- }
- .result-bar-history{
+}
+
+.result-bar-history {
   background-color: #363636;
   border: 1px solid white;
   opacity: 80%;
-  color:rgb(153, 150, 150);
+  color: rgb(153, 150, 150);
   border-radius: 3rem;
   margin-left: .5rem;
   padding: 0rem .5rem;
- }
+}
+
+.history-result-bar {
+  z-index: 51;
+  border-radius: 1.5rem;
+  background-color: #e7d4d4;
+  position: fixed;
+  top: 20.5%;
+  height: 15%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: white;
+}
+
 /****************** AVIATER ABOVE BAR *****************/
-.aviator-bar{
+.aviator-bar {
   background-color: #262626;
   position: fixed;
   /* left: 0%; */
-  top:11.4%;
+  top: 11.4%;
   height: 8%;
   width: 100%;
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
 }
-.aviator-bar-left{
-position: absolute;
-display: flex;
-justify-content: space-evenly;
-align-items: center;
-width: 20%;
+
+.aviator-bar-left {
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 20%;
 }
-.aviator-bar-left div{
+
+.aviator-bar-left div {
   background-color: #b56c12;
   border-radius: 1rem;
-  padding:.1rem .2rem;
+  padding: .1rem .2rem;
   font-size: 1rem;
 }
-.aviator-bar-right{
-  position:absolute;
+
+.aviator-bar-right {
+  position: absolute;
   width: 15%;
   right: 0;
   display: flex;
@@ -1900,16 +1920,196 @@ width: 20%;
   /* color:black; */
   /* background-color: yellow; */
 }
-.aviator-bar-right h5{
-  color:rgb(35, 190, 35);
+
+.aviator-bar-right h5 {
+  color: rgb(35, 190, 35);
   font-size: 1.3rem;
-  margin:0;
+  margin: 0;
   font-weight: 600;
 }
-.aviator-bar-right p{
+
+.aviator-bar-right p {
   color: #595959;
   font-size: 1rem;
-  margin:0;
+  margin: 0;
   /* margin-left: .2rem; */
 }
 
+/************************* Payment Section     ********************/
+.heading-payment {
+  position: sticky;
+  /* position:fixed; */
+  background-color: #404040;
+  top: 0%;
+  width: 100%;
+  height: 18%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .8rem;
+  color: white;
+}
+
+.heading-payment h5 {
+  font-size: 1.3rem;
+  color: white;
+  margin: 0;
+}
+
+.heading-payment p {
+  font-size: .9rem;
+  color: #faf446;
+  margin: 0;
+}
+
+.payment-gold-card {
+  background-image: url("https://bdggame.in/assets/png/TotalAssetsBg-a504074b.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.aluminium-portion {
+  bottom: 0;
+  height: 1.2rem;
+  width: 2rem;
+  margin: 1.4rem 0 0 1rem;
+}
+
+.payment-deposite-body {
+  padding: .5rem 1rem .5rem 1rem;
+}
+
+.payment-option {
+  /* display: flex;
+  flex-wrap: wrap; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.payment-option-section {
+  width: 7.2rem;
+  height: 6.3rem;
+  border-radius: 7px;
+  margin-bottom: .6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #363535;
+  color: #8f5206;
+}
+
+.qr-section {
+  height: 2.7rem;
+  width: 2.2rem;
+}
+
+.qr-of-bonus {
+  margin-top: -2rem;
+}
+
+.offs-container {
+  margin-top: -7%;
+  margin-left: 85%;
+  display: flex;
+}
+
+.offs-containers {
+  margin-top: 9%;
+
+}
+
+.offs-container p {
+  margin-left: -45%;
+  padding-top: 27%;
+  color: #edce30;
+}
+
+.offs {
+  height: 2.2rem;
+  width: 2.4rem;
+}
+
+.payment-option-section p {
+  font-size: .75rem;
+  font-weight: 600;
+}
+
+.channel-container {
+  background-color: #333232;
+  border-radius: 8px;
+  padding: .5rem .5rem .4rem .5rem;
+  width: 100%;
+}
+.channel-container h4{
+  font-size: 1.1rem;
+  color: #fae59f;
+}
+.channel-container h4 img{
+  height: 1.9rem;
+  width: 1.9rem;
+}
+  .channels-divs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  
+}
+
+.channel-div {
+  width: 10rem;
+  height: 4.5rem;
+  background-color: #1d1d1d;
+  border-radius: 7px;
+  color: rgb(132, 132, 131);
+  margin-bottom: .9rem;
+  padding-top: .9rem;
+}
+
+.channel-div h5 {
+  font-size: .95rem;
+  margin-left: .7rem;
+
+}
+.Amount{
+  margin-top: 1rem;
+}
+.de-Amount{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
+.de-Amount-container{
+  height: 2.4rem;
+  width: 6.5rem;
+  display: flex;
+  justify-content: space-between;
+  color: #8d8c8c;
+  background-color: #262626;
+  border-radius: 10px;
+  padding:.4rem;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+}
+.de-Amount-container div{
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.input-amount-section{
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  align-items: center;
+  margin:.4rem auto ;
+  background-color: #232323;
+  border-radius: 5rem;
+  padding: .7rem 1rem .7rem 1rem ;
+}
+.input-amount-section div{
+  font-size: 1.4rem;
+  font-weight: 600;
+  color:#C4933F;
+}
+.input-amount-section img{
+  height: 1.5rem;
+  width: 1.5rem;
+}

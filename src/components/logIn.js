@@ -1,17 +1,17 @@
 import { ToastContainer, toast } from "react-toastify";
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
 import { Navigate } from 'react-router-dom';
 import "react-toastify/dist/ReactToastify.css";
-import { NavLink } from "react-router-dom";
+import { Checkbox } from '@mui/material';
 import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
 import MailIcon from '@mui/icons-material/Mail';
 import PersonIcon from '@mui/icons-material/Person';
 import LockIcon from '@mui/icons-material/Lock';
 import SupportAgentIcon from '@mui/icons-material/SupportAgent';
-import { Checkbox } from '@mui/material';
-import { HeaderLogIn } from "./headerLogIn";
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import VisibilityIcon from '@mui/icons-material/Visibility';
-import { useState } from "react";
+import { HeaderLogIn } from "./headerLogIn";
 import { LoginByPhone } from "./loginByPhone";
 import { LoginByEmail } from "./loginByEmail";
 

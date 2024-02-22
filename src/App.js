@@ -7,6 +7,7 @@ import { CustomerCare } from './components/CustomerCare/CusromerService';
 import { CustomerCollection } from './components/CustomerCare/CustomerCollection';
 import { WinGo } from './components/LotteryGames/WinGo1Min';
 import { MainAviator } from './components/Aviator/AviatorMainPage';
+import { Deposite } from './components/Deposite/Deposite';
 
 function App() {
   return (<>
@@ -20,6 +21,8 @@ function App() {
         <Route path='/AppLoginRegisterPage/CustomerService/SeviceCollection' element={<CustomerCollection />} />
         <Route path='/AppLoginRegisterPage/WinGo' element={<WinGo />} />
         <Route path="/AppLoginRegisterPage/Aviator" element={<MainAviator /> } />
+        <Route path="/AppLoginRegisterPage/Payment" element={<Deposite />} />
+        {/* <Route path="/AppLoginRegisterPage/Payment/Withdraw" element={<Withd />} /> */}
       </Routes>
     </BrowserRouter>
       {/* <Body /> */}
