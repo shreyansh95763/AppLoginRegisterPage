@@ -241,9 +241,12 @@ Checkbox {
 
 .home-header {
   background-color: #494949;
+  position: sticky;
+  top: 0%;
   display: flex;
   justify-content: space-between;
   padding: 0 1rem;
+  z-index: 10;
 }
 
 .left-header {
@@ -2112,6 +2115,23 @@ Checkbox {
 .input-amount-section img{
   height: 1.5rem;
   width: 1.5rem;
+}
+.input-amount-section div input{
+  position: absolute;
+  margin:-1rem 0 auto -3rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color:#C4933F;
+  background-color: transparent;
+  border: none;
+}
+.input-amount-section div input::placeholder{
+  color: rgb(212, 212, 212);
+  padding-left: -1rem;
+}
+.input-amount-section div input:focus{
+  border: none;
+  outline: none;
 }
 .amount-restriction-info{
   font-size: .8rem;
