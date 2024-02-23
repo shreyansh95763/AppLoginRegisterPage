@@ -7,7 +7,8 @@ import { CustomerCare } from './components/CustomerCare/CusromerService';
 import { CustomerCollection } from './components/CustomerCare/CustomerCollection';
 import { WinGo } from './components/LotteryGames/WinGo1Min';
 import { MainAviator } from './components/Aviator/AviatorMainPage';
-import { Deposite } from './components/Deposite/Deposite';
+import { Deposite } from './components/LotteryGames/Deposite/Deposite';
+import { Withdrawal } from './components/LotteryGames/Withdrawal/Withdrawal';
 
 function App() {
   return (<>
@@ -22,7 +23,7 @@ function App() {
         <Route path='/AppLoginRegisterPage/WinGo' element={<WinGo />} />
         <Route path="/AppLoginRegisterPage/Aviator" element={<MainAviator /> } />
         <Route path="/AppLoginRegisterPage/Payment" element={<Deposite />} />
-        {/* <Route path="/AppLoginRegisterPage/Payment/Withdraw" element={<Withd />} /> */}
+        <Route path="/AppLoginRegisterPage/Payment/Withdraw" element={<Withdrawal />} />
       </Routes>
     </BrowserRouter>
       {/* <Body /> */}

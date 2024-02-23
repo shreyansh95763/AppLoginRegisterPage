@@ -6,8 +6,8 @@ import { UpSliderWingo } from "./UpSliderWingo"
 
 export const WinGo=()=>{
     return(<>
-        <HeaderWinGo />
         <div className="wingo-body-section">
+            <HeaderWinGo />
             <UpSliderWingo />
             <GameListWingo />
             <CreateBet />

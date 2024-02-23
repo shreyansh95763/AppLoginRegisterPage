@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { TimmerSection } from "./TimerSection";
 
 export const GameListWingo=()=>{
@@ -51,7 +51,6 @@ export const GameListWingo=()=>{
         })
     }
     return(<>
-    {console.log("akjfkjaj")}
         <div className="Game-timing-container">
             <div className="Game-list" style={buttonStyle.divmin1} onClick={()=>{handleEvents('min1',60)}}>
                 <img alt="clock-logo" src={getIndex==='min1'? "https://www.bdggame.in/assets/png/time_a-a8df1213.png" : "https://www.bdggame.in/assets/png/time-5d4e96a3.png"} />

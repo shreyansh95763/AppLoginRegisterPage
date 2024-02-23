@@ -2,13 +2,20 @@ import { Navigate } from 'react-router-dom';
 import { MainHeaderWinGo } from './MainHeaderWinGo';
 import { useState } from 'react';
 export const HeaderWinGo = () => {
-    const [redirectToWinGo , setRedirectToWinGo] = useState(false);
+    const [redirectToDeposite , setRedirectToDeposite] = useState(false);
+    const [redirectToWithdraw , setRedirectToWithdraw] = useState(false);
     const goTopayment=()=>{
-        setRedirectToWinGo(true);
+        setRedirectToDeposite(true);
     }
-    if (redirectToWinGo) {
+    if (redirectToDeposite) {
         return <Navigate to="/AppLoginRegisterPage/Payment" />;
-      }
+    }
+    const goToWithdraw=()=>{
+        setRedirectToWithdraw(true);
+    }
+    if (redirectToWithdraw) {
+        return <Navigate to="/AppLoginRegisterPage/Payment/Withdraw" />;
+    }
     return (<>
         <MainHeaderWinGo />
         <div className="header-section win-go-header">
@@ -21,7 +28,7 @@ export const HeaderWinGo = () => {
             </div>
             <div className='deposite-section'>
                 <div className='deposite' onClick={goTopayment} style={{cursor:"pointer"}}>Deposite</div>
-                <div className='withdraw' style={{cursor:"pointer"}}>Withdraw</div>
+                <div className='withdraw' onClick={goToWithdraw} style={{cursor:"pointer"}}>Withdraw</div>
             </div>
         </div>
         
