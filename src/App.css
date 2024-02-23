@@ -2042,11 +2042,11 @@ Checkbox {
   padding: .5rem .5rem .4rem .5rem;
   width: 100%;
 }
-.channel-container h4{
+.deposite-logo-heading{
   font-size: 1.1rem;
   color: #fae59f;
 }
-.channel-container h4 img{
+.deposite-logo-heading img{
   height: 1.9rem;
   width: 1.9rem;
 }
@@ -2096,7 +2096,7 @@ Checkbox {
 }
 .input-amount-section{
   display: flex;
-  width: 90%;
+  width: 96%;
   justify-content: space-between;
   align-items: center;
   margin:.4rem auto ;
@@ -2112,4 +2112,64 @@ Checkbox {
 .input-amount-section img{
   height: 1.5rem;
   width: 1.5rem;
+}
+.amount-restriction-info{
+  font-size: .8rem;
+  color: #D2A753;
+  margin-left: .5rem;
+}
+.deposite-amount-button{
+  margin:1rem auto;
+  color: #8f5206;
+  width: 100%;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+  border-radius: 5rem;
+  background: linear-gradient(180deg, #F6E3A3 0%, #D2A753 100%);
+}
+.recharge-instruction-container{
+  border: 1.5px solid white;
+  border-radius: .5rem;
+  width:96%;
+  margin:.5rem;
+}
+.recharge-instruction-container p{
+   text-align: left;
+    position: relative;
+    padding-left: 0.33333rem;
+    font-weight: 400;
+    font-size: .8rem;
+    color: #a6a9ae;
+    /* line-height: .53333rem; */
+    margin: 1.3rem 0;
+    margin-left: 2rem;
+}
+.recharge-instruction-container p::after{
+  position: absolute;
+    content: "";
+    width: 0.3rem;
+    height: 0.3rem;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background: #D9AC4F;
+    left: -0.6667rem;
+    top: 0.667rem;
+
+}
+.deposite-history-section{
+  display: flex;
+  flex-direction: column;
+}
+.deposite-history-div{
+  display: flex;
+  justify-content: space-between;
+  color: #a6a9ae;
+  font-size: .95rem;
+  margin-top: .7rem;
+}
+.deposite-history-div div:first-child{
+  width: 30%;
 }

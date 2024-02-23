@@ -11,7 +11,7 @@ export const SelectChannel=()=>{
     }
     return(<>
         <div className="channel-container">
-            <h4><img alt="select channel icon " src="https://bdggame.in/assets/png/quickpay2-f8a11ddc.png" /> Select Channel</h4>
+            <h4 className="deposite-logo-heading"><img alt="select channel icon " src="https://bdggame.in/assets/png/quickpay2-f8a11ddc.png" /> Select Channel</h4>
             <div className="channels-divs">
             {Channels.lists.map((val)=>(
             <div style={gridStyle[val.id]} onClick={()=>{handleClick(`${val.id}`)}} className="channel-div">
