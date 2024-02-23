@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/AppLoginRegisterPage/static/css/main.d0b52120.css",
-    "main.js": "/AppLoginRegisterPage/static/js/main.127025ac.js",
+    "main.css": "/AppLoginRegisterPage/static/css/main.dc01f0c9.css",
+    "main.js": "/AppLoginRegisterPage/static/js/main.39fa0f02.js",
     "static/js/592.6a06751c.chunk.js": "/AppLoginRegisterPage/static/js/592.6a06751c.chunk.js",
     "static/media/chakra.png": "/AppLoginRegisterPage/static/media/chakra.1abba15c6e939b74f2e7.png",
     "index.html": "/AppLoginRegisterPage/index.html",
-    "main.d0b52120.css.map": "/AppLoginRegisterPage/static/css/main.d0b52120.css.map",
-    "main.127025ac.js.map": "/AppLoginRegisterPage/static/js/main.127025ac.js.map",
+    "main.dc01f0c9.css.map": "/AppLoginRegisterPage/static/css/main.dc01f0c9.css.map",
+    "main.39fa0f02.js.map": "/AppLoginRegisterPage/static/js/main.39fa0f02.js.map",
     "592.6a06751c.chunk.js.map": "/AppLoginRegisterPage/static/js/592.6a06751c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d0b52120.css",
-    "static/js/main.127025ac.js"
+    "static/css/main.dc01f0c9.css",
+    "static/js/main.39fa0f02.js"
   ]
 }
