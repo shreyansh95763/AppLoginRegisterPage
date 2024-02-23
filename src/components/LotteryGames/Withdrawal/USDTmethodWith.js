@@ -13,14 +13,17 @@ export const USDTWithdraw=()=>{
         const val = e.target.value;
         setUsdtAmount(val); // Update the usdtAmount state
         setAmount(val * 82.88); // Calculate amount based on the new usdtAmount value
-    
+    }
+    const handleClick=()=>{
+        setUsdtAmount('');
+        setAmount('');
     }
     return(<>
         <div className="channel-container">
             <h4 className="usdt-heading"><img alt="usdt-logo" src="https://bdggame.in/assets/png/3-6bb1e3bd.png" /><span>Select amount of USDT</span></h4>
         <div className="input-amount-section" style={{height:"3rem",marginBottom:"2rem"}}>
                 <div style={{borderRight:"1px solid white",paddingRight:"1rem"}}>{'₹'}</div><hr />
-                <div style={{marginLeft:"-20rem"}}>
+                <div style={{marginLeft:"-20rem",marginTop:"-.4rem"}}>
                 <input
                  type="number" 
                  value={amount} 
@@ -33,7 +36,7 @@ export const USDTWithdraw=()=>{
             </div>
         <div className="input-amount-section" style={{height:"3rem",marginBottom:"2rem"}}>
                 <div style={{borderRight:"1px solid white",paddingRight:"1rem"}}><img alt="usdt logo" src="https://bdggame.in/assets/png/3-6bb1e3bd.png" /></div><hr />
-                <div style={{marginLeft:"-20rem"}}>
+                <div style={{marginLeft:"-20rem",marginTop:"-.4rem"}}>
                 <input
                  type="number" 
                  value={usdtAmount} 
@@ -46,7 +49,7 @@ export const USDTWithdraw=()=>{
             </div>
             <div className="with-bal-div">
                 <div>Withdrawable Balance <span style={{color:"#d9ac4f"}}>{'₹'}0.00</span></div>
-                <div className="all-btn">All</div>
+                <div className="all-btn" onClick={()=>{handleClick()}}>All</div>
             </div>
             
             <div style={{fontFamily: "Georgia, serif",margin:"2.4rem auto",latterSpacing:".5rem",color:"white",fontWeight:"660", background: "linear-gradient(180deg, #A9AAB5 0%, #6F7381 100%)"}} className="deposite-amount-button">Withdraw</div>

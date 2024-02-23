@@ -11,7 +11,7 @@ export const WithdrawByBank=()=>{
         <div className="channel-container">
         <div className="input-amount-section" style={{height:"3rem",marginBottom:"2rem"}}>
                 <div style={{borderRight:"1px solid white",paddingRight:"1rem"}}>{'₹'}</div><hr />
-                <div style={{marginLeft:"-20rem"}}>
+                <div style={{marginLeft:"-20rem",marginTop:"-.4rem"}}>
                 <input
                  type="number" 
                  value={amount} 

@@ -1941,7 +1941,6 @@ Checkbox {
 /************************* Payment Section     ********************/
 .heading-payment {
   position: sticky;
-  /* position:fixed; */
   background-color: #404040;
   top: 0%;
   width: 100%;
@@ -1951,6 +1950,7 @@ Checkbox {
   align-items: center;
   padding: .8rem;
   color: white;
+  z-index: 11;
 }
 
 .heading-payment h5 {

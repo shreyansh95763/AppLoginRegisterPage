@@ -8,7 +8,7 @@ import { SelectChannel } from "./SelectChannel"
 export const Deposite=()=>{
     return(<>
         <HeaderPayment heading='Deposit' history="Deposit History"/>
-            <HeaderGoldenContainer color="#8f5206" />
+            <HeaderGoldenContainer name="Balance" color="#8f5206" />
         <div className="payment-deposite-body">
             <PaymentOptions />
             <SelectChannel />

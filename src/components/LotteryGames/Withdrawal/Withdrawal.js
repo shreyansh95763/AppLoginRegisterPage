@@ -5,7 +5,7 @@ import { WithdrawPaymentOption } from "./PaymentOptionWith"
 export const Withdrawal = () => {
     return (<>
         <HeaderPayment heading="Withdrawal" history="Withdrawal History" />
-        <HeaderGoldenContainer color="white"/>
+        <HeaderGoldenContainer name="Available balance" color="white"/>
         <div className="payment-deposite-body">
             <WithdrawPaymentOption />
             
