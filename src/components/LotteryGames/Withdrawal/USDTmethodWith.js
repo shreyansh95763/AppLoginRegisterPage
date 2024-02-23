@@ -3,16 +3,24 @@ import { useState } from "react";
 export const USDTWithdraw=()=>{
     const [amount , setAmount] = useState('');
     const handleChange = (e) => {
-        setAmount (
-            [e.target.value]
-        )
+        const val = e.target.value;
+        setAmount(val); // Update the amount state
+        setUsdtAmount(val * 0.012065131259984995); // Calculate usdtAmount based on the new amount value
+    
+    }
+    const [usdtAmount , setUsdtAmount] = useState('');
+    const handleChangeUsdt = (e) => {
+        const val = e.target.value;
+        setUsdtAmount(val); // Update the usdtAmount state
+        setAmount(val * 82.88); // Calculate amount based on the new usdtAmount value
+    
     }
     return(<>
         <div className="channel-container">
             <h4 className="usdt-heading"><img alt="usdt-logo" src="https://bdggame.in/assets/png/3-6bb1e3bd.png" /><span>Select amount of USDT</span></h4>
         <div className="input-amount-section" style={{height:"3rem",marginBottom:"2rem"}}>
                 <div style={{borderRight:"1px solid white",paddingRight:"1rem"}}>{'₹'}</div><hr />
-                <div style={{marginLeft:"-25rem"}}>
+                <div style={{marginLeft:"-20rem"}}>
                 <input
                  type="number" 
                  value={amount} 
@@ -25,12 +33,12 @@ export const USDTWithdraw=()=>{
             </div>
         <div className="input-amount-section" style={{height:"3rem",marginBottom:"2rem"}}>
                 <div style={{borderRight:"1px solid white",paddingRight:"1rem"}}><img alt="usdt logo" src="https://bdggame.in/assets/png/3-6bb1e3bd.png" /></div><hr />
-                <div style={{marginLeft:"-25rem"}}>
+                <div style={{marginLeft:"-20rem"}}>
                 <input
                  type="number" 
-                //  value={amount} 
-                //  onChange={handleChange} 
-                 placeholder="Please Enter UDST amount" 
+                 value={usdtAmount} 
+                 onChange={handleChangeUsdt} 
+                 placeholder="Please Enter USDT amount" 
                  autoComplete="off" />
                 </div>
                 <div></div>
