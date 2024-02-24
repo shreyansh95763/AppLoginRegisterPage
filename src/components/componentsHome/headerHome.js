@@ -9,7 +9,7 @@ export const HeaderHome = () => {
         return <Navigate to="/AppLoginRegisterPage/CustomerService" />;
     }
     const handleDownload=()=>{
-        window.location.href = "https://bdg888.gdevhmr.xyz/";
+        window.location.href = "https://ghsj.cawjyuo.icu/uwssz";
     }
     return (
         <>

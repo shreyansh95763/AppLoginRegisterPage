@@ -2261,3 +2261,254 @@ Checkbox {
   font-size: 1.1rem;
   margin-left: .8rem;
 }
+/***************************** Activity section ***********************/
+.activity-body-container{
+  margin:.7rem;
+}
+.award-section-container{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
+.award-section{
+  height: 7rem;
+  width: 7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  cursor:pointer;
+}
+.award-section img{
+  height: 2.1rem;
+  width: 2.1rem;
+}
+.award-section p{
+  color: #d9ac4f;
+  font-size: .9rem;
+}
+.game-list-div{
+  width: 100%;
+  height: 12.5rem;
+  margin:1rem auto;
+  background-color: #404040;
+  border-radius: 10px;
+}
+.game-list-div img{
+  border-radius: 10px;
+  width: 100%;
+  height: 9.7rem;
+}
+.game-list-div h5{
+  color:#d9ac4f;
+  font-size: 1.1rem;
+  margin-left: .5rem;
+  margin-top: .4rem;
+  font-weight: 600;
+}
+/************ Award Section  *********/
+.award-heading-container{
+  display: flex;
+  margin-top: 1rem;
+  color: white;
+}
+.award-heading-container img{
+  height: 8rem;
+  width: 7.5rem;
+}
+.award-content h5{
+  font-size: 1.2rem;
+  font-weight: 540;
+}
+.award-content div{
+  font-size: .8rem;
+  font-weight: 540;
+  gap: .1rem;
+}
+.weekly-tasks-container{
+  background-color: #3d3c3c;
+  border-radius: 1rem;
+  width: 100%;
+  padding-bottom: .5rem;
+  margin-bottom: .7rem;
+}
+.weekly-tasks-first-div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 94%;
+  color:#828283
+
+}
+.weekly-tasks-first-div div:first-child{
+  /* background-color: #D9AC4F; */
+  height: 2.4rem;
+  border-bottom-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+  padding: .5rem 1rem;
+  /* color: #61421c; */
+  font-weight: 550;
+
+}
+.weekly-tasks-second-div{
+  display: flex;
+  width: 94%;
+  gap: .6rem;
+  margin:3% .5rem 0 .5rem;
+
+}
+.weekly-tasks-second-div img{
+  height: 1.5rem;
+  width: 1.5rem;
+}
+.weekly-tasks-second-div h5{
+  font-size: .9rem;
+  color:#D9AC4F;
+}
+.weekly-tasks-second-div p{
+  font-size: .9rem;
+  color: white;
+}
+.weekly-tasks-third-div{
+  width: 94%;
+  background-color: #2f2f2f;
+  padding: .7rem;
+  width: 94%;
+  margin-left: 3%;
+  border-radius: 10px;
+  color:#706e6e;
+  font-size: .8rem;
+}
+.weekly-tasks-four-div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 94%;
+  margin-left: 3%;
+  color: white;
+  margin:.7rem auto;
+}
+.wallet-four-div{
+  display: flex;
+  align-items: center;
+}
+.wallet-four-div img{
+  width: 1.3rem;
+  height: 1.3rem;
+  margin-right: .5rem;
+}
+.weekly-tasks-five-div{
+  width: 94%;
+  margin-left: 3%;
+  height: 2.3rem;
+  font-size: 1.2rem;
+  font-weight: 550;
+  border-radius: 2rem;
+  border: 1.5px solid #D9AC4F;
+  color:#D9AC4F;
+  text-align: center;
+  padding-top: .4rem ;
+  margin-bottom: 1rem;
+}
+.rebate-container{
+  margin:1rem .5rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #515050;
+  border-radius: .5rem;
+  padding:.5rem;
+}
+.rebate-first-div{
+  color: white;
+  font-size: 1rem;
+  /* margin:.5rem 0; */
+}
+.rebate-second-div{
+  border: 1px solid #D2A753;
+  color: #D2A753;
+  width: 8rem;
+  border-radius: 7px;
+  font-size: .8rem;
+  padding: .3rem;
+  display: flex;
+  margin:.5rem 0;
+
+}
+.rebate-third-div img{
+  height: 1.5rem;
+  width: 1.5rem;
+  margin-right: .4rem;
+}
+.rebate-third-div{
+  font-size: 1.4rem;
+  font-weight: 550;
+  color: #D9AC4F;
+  display: flex;
+  align-items: center;
+  /* margin:.5rem 0; */
+
+}
+.rebate-fourth-div{
+  background-color: #353434;
+  border-radius: 10px;
+  font-size: .8rem;
+  color: #807e7e;
+  padding:.6rem;
+  margin:.5rem 0;
+  
+}
+.rebate-fifth-div{
+  display: grid;
+  grid-template-columns:repeat(2,1fr);
+  /* margin:.5rem 0; */
+
+}
+.rebate-fifth-div div{
+  background-color: #f0c46b;
+  width: 95%;
+  border-radius: 5px;
+  padding:.3rem;
+  padding-left: .5rem;
+  color:#815304;
+}
+.rebate-six-div{
+  color: #efbb60;
+  font-size: .9rem;
+  margin:.5rem 0;
+}
+.rebate-history-heading{
+  border-left: 3px solid  #efbb60;
+  font-size: 1.3rem;
+  font-weight: 550;
+  color: white;
+  margin: .5rem;
+  padding-left: .5rem;
+}
+.jackpot-ruls{
+  display: grid;
+  grid-template-columns:repeat(2,1fr);
+  margin:.6rem;
+  color:white
+}
+.jackpot-ruls div{
+  width: 95%;
+  height: 2.8rem;
+  padding: .5rem 0 0 1rem;
+  background-color: #313131;
+  border-radius: 7px;
+}
+.Jackpot-history{
+  background-color: #3c3c3c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  width: 94%;
+  height: 16rem;
+  margin:3%;
+  color:#A9AAB5
+}
+.Jackpot-history img{
+  width: 10rem;
+  height: 12rem;
+}

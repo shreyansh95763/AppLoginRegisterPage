@@ -9,6 +9,10 @@ import { WinGo } from './components/LotteryGames/WinGo1Min';
 import { MainAviator } from './components/Aviator/AviatorMainPage';
 import { Deposite } from './components/LotteryGames/Deposite/Deposite';
 import { Withdrawal } from './components/LotteryGames/Withdrawal/Withdrawal';
+import { ActivityMain } from './components/Activity/ActivityMain';
+import { ActivityAward } from './components/Activity/ActivityAward/ActivityAward';
+import { ActivityRebate } from './components/Activity/ActivityRebate.js/ActivityRebate';
+import { JackpotMain } from './components/Activity/Jackpot/JackpotMain';
 
 function App() {
   return (<>
@@ -21,6 +25,10 @@ function App() {
         <Route path='/AppLoginRegisterPage/CustomerService' element={<CustomerCare />} />
         <Route path='/AppLoginRegisterPage/CustomerService/SeviceCollection' element={<CustomerCollection />} />
         <Route path='/AppLoginRegisterPage/WinGo' element={<WinGo />} />
+        <Route path='/AppLoginRegisterPage/Activity' element={<ActivityMain />} />
+        <Route path='/AppLoginRegisterPage/Activity/Award' element={<ActivityAward />} />
+        <Route path='/AppLoginRegisterPage/Activity/Rebate' element={<ActivityRebate />} />
+        <Route path='/AppLoginRegisterPage/Activity/Jackpot' element={<JackpotMain />} />
         <Route path="/AppLoginRegisterPage/Aviator" element={<MainAviator /> } />
         <Route path="/AppLoginRegisterPage/Payment" element={<Deposite />} />
         <Route path="/AppLoginRegisterPage/Payment/Withdraw" element={<Withdrawal />} />
