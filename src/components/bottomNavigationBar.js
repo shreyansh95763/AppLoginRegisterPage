@@ -4,16 +4,15 @@ import DiamondIcon from '@mui/icons-material/Diamond';
 import WalletIcon from '@mui/icons-material/Wallet';
 import PersonIcon from '@mui/icons-material/Person';
 import { NavLink } from "react-router-dom"
-
-export const BottomNavigationBar=()=>{
-    return(<>
-        
-<nav class="bottom-navbar">
-  <NavLink className="bottom-navlink" to="/AppLoginRegisterPage"><HomeIcon style={{fontSize:41, color:"#D2A753"}} />home</NavLink>
-  <NavLink className="bottom-navlink" to="/AppLoginRegisterPage/Activity"><EmojiEventsIcon style={{fontSize:41, color:"#D2A753"}} />Activity</NavLink>
-  <NavLink className="bottom-navlink" to="/AppLoginRegisterPage/Aviator"><DiamondIcon style={{fontSize:85, color:"#D2A753",clipPath:"polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)",padding:"0rem .5rem .4rem .5rem",marginTop:"-2rem",backgroundColor:"#333",borderRadius:"5px"}} /> Promotion</NavLink>
-  <NavLink className="bottom-navlink" to="/AppLoginRegisterPage/login"><WalletIcon style={{fontSize:41, color:"#D2A753"}} />Wallet</NavLink>
-  <NavLink className="bottom-navlink" to="/AppLoginRegisterPage/login"><PersonIcon style={{fontSize:41, color:"#D2A753"}} />Account</NavLink>
-</nav>
-    </>)
+export const BottomNavigationBar = () => {
+  return (<>
+    
+    <nav class="bottom-navbar">
+      <NavLink className="bottom-navlink" to="/AppLoginRegisterPage"><HomeIcon style={{ fontSize: 41, color: "#D2A753" }} />home</NavLink>
+      <NavLink className="bottom-navlink" to="/AppLoginRegisterPage/Activity"><EmojiEventsIcon style={{ fontSize: 41, color: "#D2A753" }} />Activity</NavLink>
+      <NavLink className="bottom-navlink" to="/AppLoginRegisterPage/Promotion"><DiamondIcon style={{ fontSize: 85, color: "#D2A753", clipPath: "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)", padding: "0rem .5rem .4rem .5rem", marginTop: "-2rem", backgroundColor: "#333", borderRadius: "5px" }} /> Promotion</NavLink>
+      <NavLink className="bottom-navlink" to="/AppLoginRegisterPage/Wallet"><WalletIcon style={{ fontSize: 41, color: "#D2A753" }} />Wallet</NavLink>
+      <NavLink className="bottom-navlink" to="/AppLoginRegisterPage/login"><PersonIcon style={{ fontSize: 41, color: "#D2A753" }} />Account</NavLink>
+    </nav>
+  </>)
 }

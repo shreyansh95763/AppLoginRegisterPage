@@ -5,7 +5,8 @@ export const HeaderPayment=(props)=>{
     const [redirectToHome, setRedirectToHome] = useState(false);
     const handleBackButton=()=>{ setRedirectToHome(true) }
     if (redirectToHome) {
-        return <Navigate to="/AppLoginRegisterPage/WinGo" />;
+        // return <Navigate to="/AppLoginRegisterPage/WinGo" />;
+        window.history.back();
     }
     return(<>
         <div className='heading-payment'>

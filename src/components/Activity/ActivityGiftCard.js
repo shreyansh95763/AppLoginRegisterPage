@@ -7,7 +7,7 @@ import { CardActionArea } from '@mui/material';
 
 export default function ActionAreaCard() {
   return (<><div style={{display:"grid",gridTemplateColumns:"repeat(2,1fr)"}} >
-    <Card sx={{height:"14rem", maxWidth: "96%",background:"#404040" }}>
+    <Card sx={{height:"14rem", maxWidth: "94%",background:"#404040" }}>
       <CardActionArea>
         <CardMedia
           component="img"
@@ -21,7 +21,7 @@ export default function ActionAreaCard() {
           <p style={{color:"#a6a9ae",fontSize:".8rem",marginLeft:".8rem"}}>Enter the redemption code to receive gift rewards</p>
       </CardActionArea>
     </Card>
-    <Card sx={{ height:"14rem",maxWidth: "96%",background:"#404040" }}>
+    <Card sx={{ height:"14rem",maxWidth: "94%",background:"#404040" }}>
       <CardActionArea>
         <CardMedia
           component="img"

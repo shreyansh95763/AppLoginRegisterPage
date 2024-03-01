@@ -42,8 +42,10 @@ export const Register = () => {
         const{phone,email,password,confirmPassword,username } = data;
         if(email && phone && password && confirmPassword && username){
         if(password !== confirmPassword){
-            // alert("Password Not Matched !");
             toast.error("Password Not Matched !")
+        }
+        else if(username===''|| username===null || phone==='' || phone===null || email==='' || email===null || password==='' || password===null || confirmPassword==='' || confirmPassword===null){
+            toast.error("Not Give Empty Content");
         }
         else{
         localStorage.setItem('userData',JSON.stringify(data));
@@ -87,6 +89,7 @@ export const Register = () => {
                         value={data.phone}
                         onChange={handleInput}
                         placeholder='Please input your phone'
+                        inputMode="numeric"
                         required />
                 </div>
                 <div className='input-section'>
@@ -97,6 +100,7 @@ export const Register = () => {
                         value={data.email}
                         onChange={handleInput}
                         placeholder='Please input your email'
+                        inputMode="email"
                         required />
                 </div>
                 <div className='input-section '>

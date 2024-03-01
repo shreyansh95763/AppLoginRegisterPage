@@ -8,13 +8,13 @@ export const HeaderWinGo = () => {
         setRedirectToDeposite(true);
     }
     if (redirectToDeposite) {
-        return <Navigate to="/AppLoginRegisterPage/Payment" />;
+        return <Navigate to="/AppLoginRegisterPage/Deposite" />;
     }
     const goToWithdraw=()=>{
         setRedirectToWithdraw(true);
     }
     if (redirectToWithdraw) {
-        return <Navigate to="/AppLoginRegisterPage/Payment/Withdraw" />;
+        return <Navigate to="/AppLoginRegisterPage/Withdraw" />;
     }
     return (<>
         <MainHeaderWinGo />

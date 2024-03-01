@@ -13,6 +13,16 @@ import { ActivityMain } from './components/Activity/ActivityMain';
 import { ActivityAward } from './components/Activity/ActivityAward/ActivityAward';
 import { ActivityRebate } from './components/Activity/ActivityRebate.js/ActivityRebate';
 import { JackpotMain } from './components/Activity/Jackpot/JackpotMain';
+import { GamePage1 } from './components/Activity/ActivityGamePages.js/GamePage1';
+import {  ActivityDetaile3 } from './components/Activity/ActivityGamePages.js/ActivityDetail3';
+import { ActivityDetaile2 } from './components/Activity/ActivityGamePages.js/ActivityDetail2';
+import { ActivityDetaile7 } from './components/Activity/ActivityGamePages.js/ActivityDetaile7';
+import { ActivityDetaile5 } from './components/Activity/ActivityGamePages.js/ActivityDetaile5';
+import { ActivityDetaile6 } from './components/Activity/ActivityGamePages.js/ActivityDetail6';
+import { PromotionMain } from './components/Promotion/PomotionMain';
+import { WalletMain } from './components/Wallet/WalletMain';
+import { AccountMain } from './components/Accounts/AccountMain';
+import { AccountVIPpage } from './components/Accounts/VIP/AccountVIP';
 
 function App() {
   return (<>
@@ -29,9 +39,19 @@ function App() {
         <Route path='/AppLoginRegisterPage/Activity/Award' element={<ActivityAward />} />
         <Route path='/AppLoginRegisterPage/Activity/Rebate' element={<ActivityRebate />} />
         <Route path='/AppLoginRegisterPage/Activity/Jackpot' element={<JackpotMain />} />
+        <Route path='/AppLoginRegisterPage/Activity/FirstRecharge' element={<GamePage1 />} />
+        <Route path='/AppLoginRegisterPage/Activity/ActivityDetail2' element={<ActivityDetaile2 />} />
+        <Route path='/AppLoginRegisterPage/Activity/ActivityDetail3' element={<ActivityDetaile3 />} />
+        <Route path='/AppLoginRegisterPage/Activity/ActivityDetail5' element={<ActivityDetaile5 />} />
+        <Route path='/AppLoginRegisterPage/Activity/ActivityDetail6' element={<ActivityDetaile6 />} />
+        <Route path='/AppLoginRegisterPage/Activity/ActivityDetail7' element={<ActivityDetaile7 />} />
+        <Route path="/AppLoginRegisterPage/Promotion" element={<PromotionMain /> } />
         <Route path="/AppLoginRegisterPage/Aviator" element={<MainAviator /> } />
-        <Route path="/AppLoginRegisterPage/Payment" element={<Deposite />} />
-        <Route path="/AppLoginRegisterPage/Payment/Withdraw" element={<Withdrawal />} />
+        <Route path="/AppLoginRegisterPage/Wallet" element={<WalletMain /> } />
+        <Route path="/AppLoginRegisterPage/Account" element={<AccountMain /> } />
+        <Route path="/AppLoginRegisterPage/Account/VIP" element={<AccountVIPpage /> } />
+        <Route path="/AppLoginRegisterPage/Deposite" element={<Deposite />} />
+        <Route path="/AppLoginRegisterPage/Withdraw" element={<Withdrawal />} />
       </Routes>
     </BrowserRouter>
       {/* <Body /> */}

@@ -9,6 +9,7 @@ export const LoginByEmail = ({email,handleInput}) => {
                 onChange={handleInput}
                 placeholder='Please input your email'
                 autoComplete="off"
+                inputMode="email"
                 required
             />
         </div>

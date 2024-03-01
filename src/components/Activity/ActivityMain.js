@@ -12,7 +12,6 @@ export const ActivityMain=()=>{
         <AwardSection />
         <ActionAreaCard />
         <ActivityGameSection />
-
         </div>
         <BottomNavigationBar />
     </>)

@@ -1,29 +1,36 @@
 {"lists":[
     {
+        "id":"game1",
         "image":"https://ossimg.bdgadminbdg.com/IndiaBDG/banner/Banner_20240110082959xdnc.png",
         "name":"Member First Deposit Bonus"
     },
     {
+        "id":"game2",
         "image":"https://ossimg.bdgadminbdg.com/IndiaBDG/banner/Banner_20240110083018keqf.png",  
         "name":"1 MINUTE LOTTERY GAME"
     },
     {
+        "id":"game3",
         "image":"https://ossimg.bdgadminbdg.com/IndiaBDG/banner/Banner_202311281826169uqu.png",
         "name":"Aviator Lucky Bonus"
     },
     {
+        "id":"game4",
         "image":"https://ossimg.bdgadminbdg.com/IndiaBDG/banner/Banner_20240110083259g1n2.png",
         "name":"Unlimited Daily Cash Rebate"
     },
     {
+        "id":"game5",
         "image":"https://ossimg.bdgadminbdg.com/IndiaBDG/banner/Banner_20231125140934fs6w.png",
         "name":"BDG Game RESCUE BONUS"
     },
     {
+        "id":"game6",
         "image":"https://ossimg.bdgadminbdg.com/IndiaBDG/banner/Banner_20231125141026uw34.png",
         "name":"Mystery Random Bonus"
     },
     {
+        "id":"game7",
         "image":"https://ossimg.bdgadminbdg.com/IndiaBDG/banner/Banner_20240205200652hdfn.png",
         "name":"Banking Tutorial"
     }

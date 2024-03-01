@@ -10,6 +10,7 @@ export const LoginByPhone=(props)=>{
                     onChange={props.handleInput}
                     placeholder='Please input your Phone'
                     autoComplete='off'
+                    inputMode='numeric'
                     required
                      />
                 </div>

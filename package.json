@@ -24,6 +24,7 @@
     "styled-components": "^6.1.8",
     "web-vitals": "^2.1.4"
   },
+
   "scripts": {
     "start": "react-scripts start",
     "predeploy": "npm run build",
@@ -54,4 +55,5 @@
     "eslint-plugin-react": "^7.33.2",
     "gh-pages": "^6.1.1"
   }
+  
 }
