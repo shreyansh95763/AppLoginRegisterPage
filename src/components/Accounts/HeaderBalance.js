@@ -1,14 +1,16 @@
 import { useNavigate } from "react-router-dom";
+// import { StackActions } from '@react-navigation/native';
 
 export const HeaderBalance = () => {
     const navigate = useNavigate();
     const navToWithdraw = () => {
-        return navigate("/AppLoginRegisterPage/Withdraw");
+        return navigate("Withdraw");
     }
     const navToDeposite = () => {
-        return navigate("/AppLoginRegisterPage/Deposite");
+        return navigate("Deposite");
     }
     const navToWallet=()=>{
+        
         return navigate("/AppLoginRegisterPage/Wallet");
     }
     const navToVIP=()=>{

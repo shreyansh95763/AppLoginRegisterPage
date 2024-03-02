@@ -1,4 +1,14 @@
+import { useNavigate } from "react-router-dom";
 export const ServiceCenter = () => {
+    const Navigate = useNavigate();
+  // handle click event of logout button
+  const handleLogout =() => {
+    // remove the token and user from the session storage
+    sessionStorage.removeItem('token');
+    sessionStorage.removeItem('user');
+    Navigate("/AppLoginRegisterPage/login")
+
+  }
     return (<>
         <div className="service-center-container">
             <h5>Service Center</h5>
@@ -30,6 +40,6 @@ export const ServiceCenter = () => {
                 </div>
             </div>
         </div>
-        <div className="weekly-tasks-five-div logout" style={{color:"#d9ac4f",border:"1px solid #d9ac4f",margin:"2rem auto",background:"transparent"}}><img alt="logout" src="https://bdggame.in/assets/png/logout-3fc8c261.png" /> Log out</div>
+        <div className="weekly-tasks-five-div logout" style={{color:"#d9ac4f",border:"1px solid #d9ac4f",margin:"2rem auto",background:"transparent"}} onClick={handleLogout}><img alt="logout" src="https://bdggame.in/assets/png/logout-3fc8c261.png" /> Log out</div>
     </>)
 }

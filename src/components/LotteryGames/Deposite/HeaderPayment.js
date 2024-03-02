@@ -1,12 +1,14 @@
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import { useState } from 'react';
-import { Navigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 export const HeaderPayment=(props)=>{
+    const navigate = useNavigate();
     const [redirectToHome, setRedirectToHome] = useState(false);
     const handleBackButton=()=>{ setRedirectToHome(true) }
     if (redirectToHome) {
         // return <Navigate to="/AppLoginRegisterPage/WinGo" />;
-        window.history.back();
+        // window.history.back();
+        navigate("..", { relative: "path" });
     }
     return(<>
         <div className='heading-payment'>

@@ -1,20 +1,22 @@
 import { Navigate } from 'react-router-dom';
 import { MainHeaderWinGo } from './MainHeaderWinGo';
 import { useState } from 'react';
-export const HeaderWinGo = () => {
+export const HeaderWinGo = (props) => {
     const [redirectToDeposite , setRedirectToDeposite] = useState(false);
     const [redirectToWithdraw , setRedirectToWithdraw] = useState(false);
     const goTopayment=()=>{
         setRedirectToDeposite(true);
     }
     if (redirectToDeposite) {
-        return <Navigate to="/AppLoginRegisterPage/Deposite" />;
+        return <Navigate to="Deposite" />;
+        // window.history.forward('/Deposite');
     }
     const goToWithdraw=()=>{
         setRedirectToWithdraw(true);
     }
     if (redirectToWithdraw) {
-        return <Navigate to="/AppLoginRegisterPage/Withdraw" />;
+        return <Navigate to="Withdraw" />;
+        // props.history.push('/Withdraw');
     }
     return (<>
         <MainHeaderWinGo />

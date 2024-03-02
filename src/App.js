@@ -50,8 +50,10 @@ function App() {
         <Route path="/AppLoginRegisterPage/Wallet" element={<WalletMain /> } />
         <Route path="/AppLoginRegisterPage/Account" element={<AccountMain /> } />
         <Route path="/AppLoginRegisterPage/Account/VIP" element={<AccountVIPpage /> } />
-        <Route path="/AppLoginRegisterPage/Deposite" element={<Deposite />} />
-        <Route path="/AppLoginRegisterPage/Withdraw" element={<Withdrawal />} />
+        <Route path="/AppLoginRegisterPage/WinGo/Deposite" element={<Deposite />} />
+        <Route path="/AppLoginRegisterPage/Account/Deposite" element={<Deposite />} />
+        <Route path="/AppLoginRegisterPage/WinGo/Withdraw" element={<Withdrawal />} />
+        <Route path="/AppLoginRegisterPage/Account/Withdraw" element={<Withdrawal />} />
       </Routes>
     </BrowserRouter>
       {/* <Body /> */}
