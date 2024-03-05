@@ -6,6 +6,7 @@ export const ServiceCenter = () => {
     // remove the token and user from the session storage
     sessionStorage.removeItem('token');
     sessionStorage.removeItem('user');
+    localStorage.removeItem('token');
     Navigate("/AppLoginRegisterPage/login")
 
   }

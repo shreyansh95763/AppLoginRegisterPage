@@ -2,10 +2,10 @@ import { useNavigate } from "react-router-dom"
 export const WalletTransferView=()=>{
     const navigate = useNavigate();
     const navToWithdraw=()=>{
-        return navigate("/AppLoginRegisterPage/Withdraw")
+        return navigate("Withdraw")
     }
     const navToDeposite=()=>{
-        return navigate("/AppLoginRegisterPage/Deposite")
+        return navigate("Deposite")
     }
 
     return(<>

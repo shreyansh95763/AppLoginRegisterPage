@@ -4,9 +4,9 @@ export const LoginByPhone=(props)=>{
         <div className='input-section'>
                     <div className='inputName-section display-flex'><MailIcon style={{ color: "rgb(210, 184, 37)" }} /><h3>Phone Number</h3></div>
                     <input 
-                    type="number"
-                    name="phone"
-                    value={props.phone}
+                    type="phone"
+                    name="mobile"
+                    value={props.mobile}
                     onChange={props.handleInput}
                     placeholder='Please input your Phone'
                     autoComplete='off'

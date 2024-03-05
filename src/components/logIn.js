@@ -14,13 +14,15 @@ import VisibilityIcon from "@mui/icons-material/Visibility";
 import { HeaderLogIn } from "./headerLogIn";
 import { LoginByPhone } from "./loginByPhone";
 import { LoginByEmail } from "./loginByEmail";
+import { useBalance } from "../redux/store";
 import axios from "axios";
 
 export const Login = () => {
+  const bals = useBalance();
   const [redirectToHome, setRedirectToHome] = useState(false);
   const [data, setData] = useState({
     email: "",
-    phone: "",
+    mobile: "",
     password: "",
   });
 
@@ -37,6 +39,14 @@ export const Login = () => {
   };
   const handleChange = (e) => {
     const { name, value } = e.target;
+    // var a= 5;
+    // console.log(a);
+    // a = true;
+    // console.log(a);
+    let a= 5;
+    console.log(a);
+    a = true;
+    console.log(a);
     setData((prev) => ({
       ...prev,
       [name]: value,
@@ -44,23 +54,32 @@ export const Login = () => {
   };
   const submitlogin = async (e) => {
     e.preventDefault();
+    const formData = new FormData();
+    {loginMethod ?
+    (formData.append('identity', data.mobile))
+    : (formData.append('identity', data.email))}
+    formData.append('password', data.password);
 
     try {
+      console.log(formData.identity,data.mobile);
       const response = await axios.post(
-        "https://aviatorapi.yashkirti.com/index.php/api/Mobile_app/usertests_login",
+        "https://tcdaman.foundercode.org/admin/index.php/Mahajongapi/login",
+        formData,
         {
-          email: data.email,
-          phone: data.phone,
-          password: data.password,
-        }
+          headers: {
+              'Content-Type': 'multipart/form-data',
+             
+          }
+      }
       );
       // Handle successful login response
       console.log(response.data);
     //   props.history.push('/dashboard');
-      if (response.data.error==='200') {
+      if (response.data.status==='200') {
         toast.success(response.data.msg);
-        sessionStorage.setItem('token', response.data.data.id);
-        sessionStorage.setItem('user', JSON.stringify(response.data.data.f_name));
+        sessionStorage.setItem('token', response.data.id);
+        localStorage.setItem('token',JSON.stringify(response.data.id));
+        bals.setDeposite(response.data.id);
         setTimeout(() => {
             setRedirectToHome(true);
           }, 1000);
@@ -145,7 +164,7 @@ export const Login = () => {
         <form>
           <div className="input-section">
             {loginMethod ? (
-              <LoginByPhone phone={data.phone} handleInput={handleChange} />
+              <LoginByPhone mobile={data.mobile} handleInput={handleChange} />
             ) : (
               <LoginByEmail emails={data.email} handleInput={handleChange} />
             )}

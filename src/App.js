@@ -23,6 +23,7 @@ import { PromotionMain } from './components/Promotion/PomotionMain';
 import { WalletMain } from './components/Wallet/WalletMain';
 import { AccountMain } from './components/Accounts/AccountMain';
 import { AccountVIPpage } from './components/Accounts/VIP/AccountVIP';
+import { DepositeHistoryMain } from './components/LotteryGames/Deposite/DepositeHistory/DepositeHistoryMain';
 
 function App() {
   return (<>
@@ -52,8 +53,12 @@ function App() {
         <Route path="/AppLoginRegisterPage/Account/VIP" element={<AccountVIPpage /> } />
         <Route path="/AppLoginRegisterPage/WinGo/Deposite" element={<Deposite />} />
         <Route path="/AppLoginRegisterPage/Account/Deposite" element={<Deposite />} />
+        <Route path="/AppLoginRegisterPage/Wallet/Deposite" element={<Deposite />} />
         <Route path="/AppLoginRegisterPage/WinGo/Withdraw" element={<Withdrawal />} />
+        <Route path="/AppLoginRegisterPage/Wallet/Withdraw" element={<Withdrawal />} />
         <Route path="/AppLoginRegisterPage/Account/Withdraw" element={<Withdrawal />} />
+        <Route path="AppLoginRegisterPage/Account/Withdraw/withdraw-history" element={<DepositeHistoryMain />} />
+        <Route path="AppLoginRegisterPage/Account/Deposite/deposite-history" element={<DepositeHistoryMain />} />
       </Routes>
     </BrowserRouter>
       {/* <Body /> */}

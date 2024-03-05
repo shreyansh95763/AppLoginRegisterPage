@@ -19,7 +19,7 @@ export const Register = () => {
     const [showPasswordConfirm, setShowPasswordConfirm] = useState(true);
     const [redirectToLogin, setRedirectToLogin] = useState(false);
     const [data, setData] = useState({
-        "name": "",
+
         "mobile": "",
         "email": "",
         "password": "",
@@ -40,18 +40,22 @@ export const Register = () => {
     };
     const submitRegister = async (e) => {
         e.preventDefault();
+        const formData = new FormData();
+        formData.append('mobile', data.mobile);
+        formData.append('email', data.email);
+        formData.append('password', data.password);
+        formData.append('confirmed_password', data.confirmPassword);
 
-        const { name, mobile, email, password, confirmPassword } = data;
+        // const { mobile, email, password, confirmPassword } = data;}
 
         try {
             const response = await axios.post(
-                "https://aviatorapi.yashkirti.com/index.php/api/Mobile_app/registertest",
+                "http://tcdaman.foundercode.org/admin/index.php/Mahajongapi/register",
+                formData,
                 {
-                    name,
-                    email,
-                    mobile,
-                    password,
-                    confrim_password : confirmPassword,
+                    headers: {
+                        'Content-Type': 'multipart/form-data',
+                    }
                 }
             );
 
@@ -59,11 +63,9 @@ export const Register = () => {
 
             if (response.data.success === '200') {
                 toast.success("Registration Successful!");
-                // sessionStorage.setItem('token', response.data.data.id);
-                // sessionStorage.setItem('user', JSON.stringify(response.data.name));
-                setTimeout(()=>{
-                setRedirectToLogin(true);
-            },1000)
+                setTimeout(() => {
+                    setRedirectToLogin(true);
+                }, 1000)
             } else {
                 toast.error(response.data.msg);
             }
@@ -73,40 +75,22 @@ export const Register = () => {
                 position: "top-right",
             });
         }
-
-        //     const{mobile,email,password,confirmPassword,name } = data;
-        //     if(email && mobile && password && confirmPassword && name){
-        //     if(password !== confirmPassword){
-        //         toast.error("Password Not Matched !")
-        //     }
-        //     else if(name===''|| name===null || mobile==='' || mobile===null || email==='' || email===null || password==='' || password===null || confirmPassword==='' || confirmPassword===null){
-        //         toast.error("Not Give Empty Content");
-        //     }
-        //     else{
-        //     localStorage.setItem('userData',JSON.stringify(data));
-        //     toast.success("Resistration Successful !");
-        //    setRedirectToLogin(true);
-        //     }
     }
-    // else{
-    // toast.error("Please Enter All Properties")
-    // }
-    //   }
-if (redirectToLogin) {
-    return <Navigate to="/AppLoginRegisterPage/login" />;
-}
-return (<>
+    if (redirectToLogin) {
+        return <Navigate to="/AppLoginRegisterPage/login" />;
+    }
+    return (<>
 
-    <HeaderRegister />
-    <div className='body-section'>
-        <div className="grid" style={{ color: "#C4933F" }}>
-            <div className='icon-sections'>
-                <div><PhoneIphoneIcon className='icons' style={{ fontSize: 30 }} /></div>
-                <h3>Register with phone</h3>
+        <HeaderRegister />
+        <div className='body-section'>
+            <div className="grid" style={{ color: "#C4933F" }}>
+                <div className='icon-sections'>
+                    <div><PhoneIphoneIcon className='icons' style={{ fontSize: 30 }} /></div>
+                    <h3>Register with phone</h3>
+                </div>
             </div>
-        </div>
-        <form>
-            <div className='input-section '>
+            <form>
+                {/* <div className='input-section '>
                 <div className='inputName-section display-flex'><PersonIcon style={{ color: "rgb(210, 184, 37)" }} /><h3>User name</h3></div>
                 <input
                     type='text'
@@ -115,84 +99,85 @@ return (<>
                     onChange={handleInput}
                     placeholder='Please Enter name'
                     required />
-            </div>
-            <div className='input-section'>
-                <div className='inputName-section display-flex'><PhoneIphoneIcon style={{ color: "rgb(210, 184, 37)" }} /><h3>Phone number</h3></div>
-                <input
-                    type='phone'
-                    name="mobile"
-                    value={data.mobile}
-                    onChange={handleInput}
-                    placeholder='Please input your phone'
-                    inputMode="numeric"
-                    required />
-            </div>
-            <div className='input-section'>
-                <div className='inputName-section display-flex'><MailIcon style={{ color: "rgb(210, 184, 37)" }} /><h3>Email Addresss</h3></div>
-                <input
-                    type='email'
-                    name="email"
-                    value={data.email}
-                    onChange={handleInput}
-                    placeholder='Please input your email'
-                    inputMode="email"
-                    required />
-            </div>
-            <div className='input-section '>
-                <div className='inputName-section display-flex'><LockIcon style={{ color: "rgb(210, 184, 37)" }} /><h3>Set password</h3></div>
-                <div className="display-flex" >
+            </div> */}
+                <div className='input-section'>
+                    <div className='inputName-section display-flex'><PhoneIphoneIcon style={{ color: "rgb(210, 184, 37)" }} /><h3>Phone number</h3></div>
                     <input
-                        type={showPassword ? 'password' : 'text'}
-                        name="password"
-                        id="passwordInput"
-                        value={data.password}
+                        type='phone'
+                        name="mobile"
+                        value={data.mobile}
                         onChange={handleInput}
-                        placeholder='Please Enter Set Password'
-                        required
-                    />
-                    <div className="hide-button" onClick={visibility}>{showPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}</div> </div>
-            </div>
-            <div className='input-section '>
-                <div className='inputName-section display-flex'><LockIcon style={{ color: "rgb(210, 184, 37)" }} /><h3>Confirm password</h3></div>
-                <div className="display-flex" >
+                        placeholder='Please input your phone'
+                        inputMode="numeric"
+                        required />
+                </div>
+                <div className='input-section'>
+                    <div className='inputName-section display-flex'><MailIcon style={{ color: "rgb(210, 184, 37)" }} /><h3>Email Addresss</h3></div>
                     <input
-                        type={showPasswordConfirm ? 'password' : 'text'}
-                        id="passwordInput"
-                        name="confirmPassword"
-                        value={data.confirmPassword}
+                        type='email'
+                        name="email"
+                        value={data.email}
                         onChange={handleInput}
-                        placeholder='Please Enter Confirm Password'
-                        autoComplete='off'
-                        required
-                    />
-                    <div className="hide-button" onClick={visibilityConfirm}>{showPasswordConfirm ? <VisibilityOffIcon /> : <VisibilityIcon />}</div> </div>
+                        placeholder='Please input your email'
+                        inputMode="email"
+                        required />
+                </div>
+                <div className='input-section '>
+                    <div className='inputName-section display-flex'><LockIcon style={{ color: "rgb(210, 184, 37)" }} /><h3>Set password</h3></div>
+                    <div className="display-flex" >
+                        <input
+                            type={showPassword ? 'password' : 'text'}
+                            name="password"
+                            id="passwordInput"
+                            value={data.password}
+                            onChange={handleInput}
+                            placeholder='Please Enter Set Password'
+                            required
+                        />
+                        <div className="hide-button" onClick={visibility}>{showPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}</div> </div>
+                </div>
+                <div className='input-section '>
+                    <div className='inputName-section display-flex'><LockIcon style={{ color: "rgb(210, 184, 37)" }} /><h3>Confirm password</h3></div>
+                    <div className="display-flex" >
+                        <input
+                            type={showPasswordConfirm ? 'password' : 'text'}
+                            id="passwordInput"
+                            name="confirmPassword"
+                            value={data.confirmPassword}
+                            onChange={handleInput}
+                            placeholder='Please Enter Confirm Password'
+                            autoComplete='off'
+                            required
+                        />
+                        <div className="hide-button" onClick={visibilityConfirm}>{showPasswordConfirm ? <VisibilityOffIcon /> : <VisibilityIcon />}</div> </div>
+                </div>
+
+                <div className='display-flex'>
+                    <Checkbox className='checkbox' /><p>Reminder password</p>
+                </div>
+                <button onClick={submitRegister} className="logIn-button btn-submit" type='submit' style={{ backgroundImage: "linear-gradient(180deg,#FAE59F 0%,#C4933F 100%)", color: "#545805" }}>Register</button>
+                <ToastContainer autoClose={3000} theme="colored" closeOnClick draggable />
+                <button className="button-transparent btn-submit" type='button'><NavLink className="btn-links" to="/AppLoginRegisterPage/login">Log In</NavLink> </button>
+            </form>
+            <div className="grid grid-two-cols forget-section">
+                <div className="forget-icons icon-sections">
+                    <LockIcon style={{ color: "rgb(210, 184, 37)", fontSize: 70 }} />
+                    <h4>Forget password</h4>
+                </div>
+                <div className="forget-icons icon-sections">
+                    <SupportAgentIcon style={{ color: "rgb(210, 184, 37)", fontSize: 70 }} />
+                    <h4>Customer service</h4>
+                </div>
             </div>
-            {/* <div className='input-section '>
+        </div>
+    </>
+    )
+}
+
+                {/* <div className='input-section '>
                     <div className='inputName-section display-flex'><PersonIcon style={{ color: "rgb(210, 184, 37)" }} /><h3>Invite code</h3></div>
                     <input 
                     type='number' 
                     name
                     placeholder='Please Enter your invite code' />
                 </div> */}
-
-            <div className='display-flex'>
-                <Checkbox className='checkbox' /><p>Reminder password</p>
-            </div>
-            <button onClick={submitRegister} className="logIn-button btn-submit" type='submit' style={{ backgroundImage: "linear-gradient(180deg,#FAE59F 0%,#C4933F 100%)", color: "#545805" }}>Register</button>
-            <ToastContainer autoClose={3000} theme="colored" closeOnClick draggable />
-            <button className="button-transparent btn-submit" type='button'><NavLink className="btn-links" to="/AppLoginRegisterPage/login">Log In</NavLink> </button>
-        </form>
-        <div className="grid grid-two-cols forget-section">
-            <div className="forget-icons icon-sections">
-                <LockIcon style={{ color: "rgb(210, 184, 37)", fontSize: 70 }} />
-                <h4>Forget password</h4>
-            </div>
-            <div className="forget-icons icon-sections">
-                <SupportAgentIcon style={{ color: "rgb(210, 184, 37)", fontSize: 70 }} />
-                <h4>Customer service</h4>
-            </div>
-        </div>
-    </div>
-</>
-)
-}

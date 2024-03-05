@@ -1,7 +1,8 @@
 import { useNavigate } from "react-router-dom";
-// import { StackActions } from '@react-navigation/native';
+import { useBalance } from "../../redux/store";
 
 export const HeaderBalance = () => {
+    const bals = useBalance();
     const navigate = useNavigate();
     const navToWithdraw = () => {
         return navigate("Withdraw");
@@ -19,7 +20,7 @@ export const HeaderBalance = () => {
     return (<>
         <div className="balance-container">
             <div style={{fontSize:"1rem", margin:".7rem 0 .5rem 1rem"}}>Total Balance</div>
-            <div style={{fontSize:"1.3rem", fontWeight:"550", margin:"0 0 0 1rem"}}>{'₹'}0.00</div>
+            <div style={{fontSize:"1.3rem", fontWeight:"550", margin:"0 0 0 1rem"}}>{'₹'}{bals.deposite}.00</div>
             <hr style={{height:"2px"}}></hr>
             <div className="items-transfer-container">
                 <div className="items-transfer" onClick={navToWallet}>

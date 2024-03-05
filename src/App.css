@@ -2976,20 +2976,24 @@ Checkbox {
 .right-header-div3{
   display: flex;
   justify-content: space-between;
-  font-size: .8rem;
-  width: 80%;
+  font-size: .75rem;
+  width: 97%;
 }
 
 .right-header-div2{
   background-color: #755323;
   border-radius: 1rem;
   font-size: .9rem;
-  width: 60%;
+  width: 70%;
   height: 1.6rem;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   padding:.2rem .5rem;
   color: white;
+  margin:.3rem .4rem;
+}
+.right-header-div2 p{
+  border-right: 1.5px solid white;
 }
 .balance-container{
   background-color: #3e3e3e;
@@ -3353,4 +3357,50 @@ Checkbox {
 .vip-container-no-data img{
   height: 12rem;
   width: 12rem;
+}
+/***************** DEPOSITE HISTORY  ***************************/
+.scrollbar-container{
+  /* border: 1px dashed white; */
+  border-radius: .5rem;
+  display: flex;
+  overflow-x: scroll;
+  /* overflow-x */
+}
+.scrollbar-div{
+  background: linear-gradient(180deg, #FAE59F 0%, #C4933F 95.05%);
+  color: #8f5206 !important;
+  height: 3rem;
+  min-width: 7rem;
+  border-radius: 10px;
+  margin: 0 .4rem .8rem .4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.scrollbar-div img{
+  height: 1.8rem;
+  width: 1.7rem;
+  margin: .3rem;
+}
+.scrollbar-div h5{
+  font-size: 1.2rem;
+  font-weight: 550;
+  font-family: inter;
+}
+.no-data-deposite{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 12rem;
+  margin-bottom: 0;
+}
+.no-data-deposite img{
+  height: 8rem;
+  width: 8rem;
+}
+.no-data-deposite h5{
+  font-size: 1.1rem;
+  font-weight: 550;
+  color: #cac9c9;
 }
