@@ -24,6 +24,9 @@ import { WalletMain } from './components/Wallet/WalletMain';
 import { AccountMain } from './components/Accounts/AccountMain';
 import { AccountVIPpage } from './components/Accounts/VIP/AccountVIP';
 import { DepositeHistoryMain } from './components/LotteryGames/Deposite/DepositeHistory/DepositeHistoryMain';
+import WithHistoryMain from './components/LotteryGames/Withdrawal/WithdrawalHistorys/WithHistoryMain';
+import { BetHistory } from './components/Accounts/BetHistory';
+import { Attendence } from './components/Activity/Attendence/Attendence';
 
 function App() {
   return (<>
@@ -40,6 +43,7 @@ function App() {
         <Route path='/AppLoginRegisterPage/Activity/Award' element={<ActivityAward />} />
         <Route path='/AppLoginRegisterPage/Activity/Rebate' element={<ActivityRebate />} />
         <Route path='/AppLoginRegisterPage/Activity/Jackpot' element={<JackpotMain />} />
+        <Route path='/AppLoginRegisterPage/Activity/Attendence' element={<Attendence />} />
         <Route path='/AppLoginRegisterPage/Activity/FirstRecharge' element={<GamePage1 />} />
         <Route path='/AppLoginRegisterPage/Activity/ActivityDetail2' element={<ActivityDetaile2 />} />
         <Route path='/AppLoginRegisterPage/Activity/ActivityDetail3' element={<ActivityDetaile3 />} />
@@ -50,6 +54,7 @@ function App() {
         <Route path="/AppLoginRegisterPage/Aviator" element={<MainAviator /> } />
         <Route path="/AppLoginRegisterPage/Wallet" element={<WalletMain /> } />
         <Route path="/AppLoginRegisterPage/Account" element={<AccountMain /> } />
+        <Route path="/AppLoginRegisterPage/Account/bet-history" element={<BetHistory /> } />
         <Route path="/AppLoginRegisterPage/Account/VIP" element={<AccountVIPpage /> } />
         <Route path="/AppLoginRegisterPage/WinGo/Deposite" element={<Deposite />} />
         <Route path="/AppLoginRegisterPage/Account/Deposite" element={<Deposite />} />
@@ -57,7 +62,7 @@ function App() {
         <Route path="/AppLoginRegisterPage/WinGo/Withdraw" element={<Withdrawal />} />
         <Route path="/AppLoginRegisterPage/Wallet/Withdraw" element={<Withdrawal />} />
         <Route path="/AppLoginRegisterPage/Account/Withdraw" element={<Withdrawal />} />
-        <Route path="AppLoginRegisterPage/Account/Withdraw/withdraw-history" element={<DepositeHistoryMain />} />
+        <Route path="AppLoginRegisterPage/Account/Withdraw/withdraw-history" element={<WithHistoryMain />} />
         <Route path="AppLoginRegisterPage/Account/Deposite/deposite-history" element={<DepositeHistoryMain />} />
       </Routes>
     </BrowserRouter>

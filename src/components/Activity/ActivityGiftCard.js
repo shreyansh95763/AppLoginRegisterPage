@@ -4,8 +4,14 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 export default function ActionAreaCard() {
+  const Navigate = useNavigate();
+  const navToAttendence=()=>{
+    return Navigate("Attendence");
+  }
+
   return (<><div style={{display:"grid",gridTemplateColumns:"repeat(2,1fr)"}} >
     <Card sx={{height:"14rem", maxWidth: "94%",background:"#404040" }}>
       <CardActionArea>
@@ -21,7 +27,7 @@ export default function ActionAreaCard() {
           <p style={{color:"#a6a9ae",fontSize:".8rem",marginLeft:".8rem"}}>Enter the redemption code to receive gift rewards</p>
       </CardActionArea>
     </Card>
-    <Card sx={{ height:"14rem",maxWidth: "94%",background:"#404040" }}>
+    <Card onClick={navToAttendence} sx={{ height:"14rem",maxWidth: "94%",background:"#404040" }}>
       <CardActionArea>
         <CardMedia
           component="img"

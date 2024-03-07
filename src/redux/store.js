@@ -18,7 +18,10 @@ export const useBalance = ()=>{
 } 
 
 export const ContextProvider =(props)=>{
-  const [deposite,setDeposite] = useState(0)
+  const [deposite,setDeposite] = useState({
+    id:'',
+    wallet:''
+  })
   return(
   <BalanceContext.Provider value={{deposite,setDeposite}}>
     {props.children}

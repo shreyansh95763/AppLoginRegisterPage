@@ -1,10 +1,10 @@
 import { HeaderGoldenContainer } from "../Deposite/HeaderContainer"
-import { HeaderPayment } from "../Deposite/HeaderPayment"
+import { HeaderPaymentWith } from "./HeaderPaymentWith"
 import { WithdrawPaymentOption } from "./PaymentOptionWith"
 
 export const Withdrawal = () => {
     return (<>
-        <HeaderPayment heading="Withdrawal" history="Withdrawal History" />
+        <HeaderPaymentWith heading="Withdrawal" history="Withdrawal History" key='1' />
         <HeaderGoldenContainer name="Available balance" color="white"/>
         <div className="payment-deposite-body">
             <WithdrawPaymentOption />

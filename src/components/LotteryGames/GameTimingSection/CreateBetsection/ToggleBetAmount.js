@@ -13,6 +13,7 @@ export const ToggleBetAmount = (props) => {
     setCount(count + 1);
   };
   const decrement = () => {
+    if(count>0)
     setCount(count - 1);
   };
   const [buttonStyle, setButtonStyle] = useState({
@@ -53,6 +54,14 @@ export const ToggleBetAmount = (props) => {
     }
   };
 
+  const handleChange = (event) => {
+    let value = event.target.value;
+    value = parseInt(value);
+    value = Math.min(value, 9999);
+    // if(value<9999){
+      setCount (value)
+  
+}
 
   return (<>
     <div className="model">
@@ -60,7 +69,7 @@ export const ToggleBetAmount = (props) => {
       <div className="model-contents">
         <div className="header-toggle">
           <h3>Win Go 1Min</h3>
-          <div className="select-section">Select Green</div>
+          <div className="select-section" style={{color:`${props.cols}`}}>Select {props.str}</div>
 
         </div>
         <div className="content-toggle">
@@ -78,11 +87,17 @@ export const ToggleBetAmount = (props) => {
               <div>Quantity</div>
               <div className="balance-btn-container">
                 <div className="counter-container">
-                  {/* <button  onClick={decrement}>-</button> */}
-                  <img alt="dec-Image" onClick={decrement} className="btn-incDec-toggle" src="https://bdggame.in/assets/svg/reduce-dd5ca960.svg" />
-                  <span className="count" >{count}</span>
-                  {/* <button className="btn-incDec-toggle" >+</button> */}
-                  <img alt="inc-Image" onClick={increment} className="btn-incDec-toggle" src="	https://bdggame.in/assets/svg/add-85167b54.svg " />
+                  <img alt="dec-Images" onClick={decrement} className="btn-incDec-toggle" src="https://bdggame.in/assets/svg/reduce-dd5ca960.svg" />
+                  <span   >
+                  <input
+                  className="count"
+                 type="number" 
+                 value={count} 
+                 onChange={handleChange} 
+                 placeholder="0" 
+                 autoComplete="off" />
+                </span>
+                  <img alt="inc-Images" onClick={increment} className="btn-incDec-toggle" src="	https://bdggame.in/assets/svg/add-85167b54.svg " />
                 </div>
               </div>
             </div>

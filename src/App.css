@@ -1581,13 +1581,14 @@ Checkbox {
 .select-section {
   width: 70%;
   height: 1.7rem;
+  padding-top: .1rem;
   border-radius: .5rem;
   text-align: center;
   color: green;
   background-color: #4d4d4d;
 }
 
-.content-toggle-rows {
+.content-toggle-rows {   
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1667,16 +1668,26 @@ Checkbox {
   width: 1.5rem;
 
 }
-
 .count {
   margin: auto 1rem;
-  font-size: 1rem;
+  font-size: 1.2rem;
   background-color: rgb(95, 85, 108);
-  width: 5rem;
-  height: 1.5rem;
+  width: 6rem;
+  height: 1.7rem;
   text-align: center;
   border-radius: 2rem;
-  color: rgb(168, 57, 57);
+  font-weight: 550;
+  color: rgb(189, 188, 188);
+  border:none
+}
+.count:focus{
+  outline: none;
+}
+.count::placeholder{
+  font-size: 1.2rem;
+  font-weight: 550;
+  color: white;
+  margin-right: 1.4rem;
 }
 
 
@@ -2870,13 +2881,15 @@ Checkbox {
 }
 .wallet-percentage{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   color: rgb(228, 227, 226);
+  margin: .5rem;
 }
 .main-wallet-percentage{
-  text-align: center;
-  width: 25%;
+  /* text-align: center; */
+  width: 30%;
+  height: 30%;
 }
 .main-wallet-percentage p{
  font-size: .8rem;
@@ -2884,8 +2897,9 @@ Checkbox {
  color: #a1a0a0;
 }
 .main-wallet-percentage h5{
-  font-size: 1.15rem;
-  margin: .5rem;
+  font-size: .95rem;
+  font-weight: 550;
+  margin-top: .5rem;
 }
 .main-wallet-percentage div{
   border: .6rem solid rgb(188, 188, 188);
@@ -2991,9 +3005,6 @@ Checkbox {
   padding:.2rem .5rem;
   color: white;
   margin:.3rem .4rem;
-}
-.right-header-div2 p{
-  border-right: 1.5px solid white;
 }
 .balance-container{
   background-color: #3e3e3e;
@@ -3392,15 +3403,58 @@ Checkbox {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 12rem;
+  height: 16rem;
   margin-bottom: 0;
 }
 .no-data-deposite img{
-  height: 8rem;
-  width: 8rem;
+  height: 10rem;
+  width: 10rem;
 }
 .no-data-deposite h5{
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 550;
   color: #cac9c9;
+}
+/************** Activity => Attendence Section  **************/
+.attendence-container{
+  background-image: url("https://bdggame.in/assets/png/headerBg-ca048249.png");
+  background-repeat: no-repeat;
+  background-position:bottom;
+  height: 18rem;
+  background-size: cover;
+  background-color: #404040;
+  padding:.5rem;
+  color:white;
+  display: flex;
+  justify-content: space-between;    vertical-align: baseline;
+}
+.attendence-container div:first-child{
+  width: 60%;
+}
+.hero-header{
+  display: inline-block;
+    width: 75%;
+    margin: .8rem .1rem;
+    padding: 0.4rem 0.9rem 0.4rem 0.3rem;
+    color: #8f5206;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    background: #D9AC4F;
+    -webkit-clip-path: polygon(100% 0, 90% 50%, 100% 100%, 0 100%, 0 0);
+    clip-path: polygon(100% 0, 90% 50%, 100% 100%, 0 100%, 0 0);
+    word-break: break-all;
+}
+.attendance-header-btn{
+  width: 10rem;
+    height: 2rem;
+    padding: 0.4rem 0;
+    margin-top: 1.3rem;
+    text-align: center;
+    color: #8f5206;
+    font-size: 1rem;
+    line-height: 1rem;
+    border: none;
+    border-radius: 9rem;
+    background: linear-gradient(180deg, #FAE59F 0%, #C4933F 100%);
+    cursor: pointer;
 }

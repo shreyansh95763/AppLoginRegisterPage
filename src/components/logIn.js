@@ -79,7 +79,11 @@ export const Login = () => {
         toast.success(response.data.msg);
         sessionStorage.setItem('token', response.data.id);
         localStorage.setItem('token',JSON.stringify(response.data.id));
-        bals.setDeposite(response.data.id);
+        // bals.setDeposite(response.data.id);
+        bals.setDeposite((prev)=>({
+          id:response.data.id
+        }))
+        console.log("Response",response.data.id);
         setTimeout(() => {
             setRedirectToHome(true);
           }, 1000);

@@ -5,7 +5,7 @@ import { ScrollbarPayment } from "./ScrollbarTransaction"
 
 export const DepositeHistoryMain = () => {
     return (<>
-        <HistoryHeader />
+        <HistoryHeader name="Deposite History" />
         <div style={{padding:".8rem"}}>
             <ScrollbarPayment />
             <DepositeHistoryList />

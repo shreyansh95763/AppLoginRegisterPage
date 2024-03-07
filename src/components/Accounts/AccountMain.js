@@ -20,9 +20,13 @@ export const AccountMain = () => {
                 if (response.ok) {
                     const data = await response.json();
                     setUserData(data.user);
-                    console.log("username",data.user)
+                    console.log("ids",(localStorage.getItem('token')))
+                    bals.setDeposite((prev) => ({
+                          ...prev,
+                        id: data.user.id,
+                        //   wallet:prev.wallet
+                    }));
                     console.log("Balance",bals);
-                    bals.setDeposite(data.user.id);
 
                 } else {
                     throw new Error('Failed to fetch data');
@@ -32,8 +36,7 @@ export const AccountMain = () => {
             }
         };
 
-        fetchData(bals.deposite);
-        console.log("lkjhgfh",bals.deposite);
+        fetchData(JSON.parse(localStorage.getItem("token")));
     }, []);
 
     return (
@@ -41,7 +44,7 @@ export const AccountMain = () => {
             {userData && (
                 <>
                     <HeaderAccount name={userData.username} id={userData.custid} login={userData.updated_at} />
-                    <HeaderBalance />
+                    <HeaderBalance wallets={userData.wallet} />
                     <TransactionName  />
                     <SettingPannelContainer />
                     <ServiceCenter />
