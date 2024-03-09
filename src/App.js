@@ -27,6 +27,7 @@ import { DepositeHistoryMain } from './components/LotteryGames/Deposite/Deposite
 import WithHistoryMain from './components/LotteryGames/Withdrawal/WithdrawalHistorys/WithHistoryMain';
 import { BetHistory } from './components/Accounts/BetHistory';
 import { Attendence } from './components/Activity/Attendence/Attendence';
+import { Main5DLottery } from './components/Lottery5DGame/Main5DLottey';
 
 function App() {
   return (<>
@@ -38,6 +39,7 @@ function App() {
         <Route path='/AppLoginRegisterPage/Register' element={<Register />} />
         <Route path='/AppLoginRegisterPage/CustomerService' element={<CustomerCare />} />
         <Route path='/AppLoginRegisterPage/CustomerService/SeviceCollection' element={<CustomerCollection />} />
+        <Route path='/AppLoginRegisterPage/Lottery-5D' element={<Main5DLottery />} />
         <Route path='/AppLoginRegisterPage/WinGo' element={<WinGo />} />
         <Route path='/AppLoginRegisterPage/Activity' element={<ActivityMain />} />
         <Route path='/AppLoginRegisterPage/Activity/Award' element={<ActivityAward />} />

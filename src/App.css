@@ -1482,31 +1482,42 @@ Checkbox {
   border-radius: 50%;
   padding-left: .3rem;
 }
+
 .table-number {
   display: flex;
   font-size: .9rem;
-  width: .6rem;
+  width: .7rem;
   margin: .1rem;
   color: #b0b0b2
 }
+
 .bottom-balls {
   color: white;
 }
+
 .balls-circular {
   height: 1.1rem;
-  width: 1.1rem;
+  width: 1.8rem;
   font-size: .78rem;
-  padding: 0 0 .15rem .2rem;
+  padding: 0 0 .5rem .17rem;
   border: 1px solid rgb(204, 202, 202);
   color: rgb(160, 161, 162);
   border-radius: 50%;
 }
 
-.balls-circular:last-child {
-  margin-left: 1rem;
-  margin-right: .5rem;
-  background-color: #40ad72;
+.balls-circular:nth-child(11) {
+  margin-left: .5rem;
+  background-color: #1f6741;
   color: white;
+}
+
+.balls-circular:nth-child(12) {
+
+  margin-right: .5rem;
+  background-color: transparent;
+  color: rgb(206, 66, 211);
+  border: 1px solid rgb(206, 66, 211);
+
 }
 
 /******************** Toggle Bet Amount Adding For Bet ***************/
@@ -1588,7 +1599,7 @@ Checkbox {
   background-color: #4d4d4d;
 }
 
-.content-toggle-rows {   
+.content-toggle-rows {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1668,6 +1679,7 @@ Checkbox {
   width: 1.5rem;
 
 }
+
 .count {
   margin: auto 1rem;
   font-size: 1.2rem;
@@ -1678,12 +1690,14 @@ Checkbox {
   border-radius: 2rem;
   font-weight: 550;
   color: rgb(189, 188, 188);
-  border:none
+  border: none
 }
-.count:focus{
+
+.count:focus {
   outline: none;
 }
-.count::placeholder{
+
+.count::placeholder {
   font-size: 1.2rem;
   font-weight: 550;
   color: white;
@@ -2744,21 +2758,25 @@ Checkbox {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  color:#76501a;
+  color: #76501a;
 }
-.promotion-header-section h5{
+
+.promotion-header-section h5 {
   font-size: 1.6rem;
 }
-.promotion-header-section p{
+
+.promotion-header-section p {
   font-size: .85rem;
 }
-.total-commission{
+
+.total-commission {
   background-color: #755323;
   padding: .2rem .4rem;
   color: #fcf3a7;
   border-radius: 2rem;
 }
-.subordinate-body{
+
+.subordinate-body {
   display: flex;
   width: 90%;
   color: wheat;
@@ -2766,17 +2784,21 @@ Checkbox {
   border-top-right-radius: 1rem;
   border-top-left-radius: 1rem;
 }
-.subordinate-section{
+
+.subordinate-section {
   text-align: center;
 }
-.subordinate-section p{
-  margin:0;
+
+.subordinate-section p {
+  margin: 0;
 }
-.subordinate-section p:nth-child(2n+1){
-  color:rgb(201, 199, 199);
+
+.subordinate-section p:nth-child(2n+1) {
+  color: rgb(201, 199, 199);
 }
-.subordinate-section div{
-  background-color:#fae59f;
+
+.subordinate-section div {
+  background-color: #fae59f;
   color: rgb(143, 82, 6);
   height: 2.5rem;
   font-size: 1rem;
@@ -2784,7 +2806,8 @@ Checkbox {
   padding-top: .5rem;
   margin-bottom: .5rem;
 }
-.promotion-body-container{
+
+.promotion-body-container {
   background-color: #404040;
   border-radius: 10px;
   margin: .7rem;
@@ -2792,116 +2815,138 @@ Checkbox {
   display: flex;
   justify-content: space-between;
 }
-.promotion-left-body{
+
+.promotion-left-body {
   display: flex;
   align-items: center;
   color: white;
 }
-.promotion-left-body img{
+
+.promotion-left-body img {
   width: 2.4rem;
   height: 2.4rem;
 }
-.promotion-left-body h5{
+
+.promotion-left-body h5 {
   font-size: 1rem;
   margin-left: .5rem;
 }
-.promotion-right-body{
+
+.promotion-right-body {
   display: flex;
   align-items: center;
 }
-.promotion-right-body p{
+
+.promotion-right-body p {
   font-size: .8rem;
   color: #ecbe6d;
   margin: 0;
   margin-right: .4rem;
 }
-.promotion-footer-container{
+
+.promotion-footer-container {
   background-color: #3e3e3e;
   border-radius: .6rem;
-  margin:.7rem;
+  margin: .7rem;
   padding: .6rem;
 }
-.promotion-footer-heading{
+
+.promotion-footer-heading {
   font-size: 1.15rem;
-  color: rgb(220, 147, 57); 
+  color: rgb(220, 147, 57);
   font-weight: 550;
-  font-family:bahnschrift;
+  font-family: bahnschrift;
 }
-.promotion-footer-heading img{
+
+.promotion-footer-heading img {
   height: 2.3rem;
   width: 2.3rem;
   margin-left: 1rem;
   margin-right: .5rem;
 }
-.promotion-footer{
+
+.promotion-footer {
   display: grid;
-  grid-template-columns : repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
-.promotion-footer div div:first-child{
+
+.promotion-footer div div:first-child {
   font-size: 1.1rem;
   font-weight: 510;
   color: white;
 }
-.promotion-footer div div{
+
+.promotion-footer div div {
   font-size: .9rem;
 }
-.promotion-footer div{
+
+.promotion-footer div {
   color: #888889;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
 /*******************   Wallet Section    *************************/
-.wallet-header{
+.wallet-header {
   text-align: center;
-  color: rgb(164, 99, 20); 
+  color: rgb(164, 99, 20);
   padding-top: .5rem;
   padding-bottom: 2rem;
 }
-.wallet-header img{
+
+.wallet-header img {
   width: 3rem;
   height: 3rem;
 }
-.wallet-header div{
+
+.wallet-header div {
   font-size: 1.7rem;
   font-weight: 520;
 }
-.wallet-header p{
+
+.wallet-header p {
   font-family: inter;
 }
-.wallet-transfer-view-container{
+
+.wallet-transfer-view-container {
   background: #393939;
   height: auto;
   text-align: center;
   border-radius: .6rem;
-  margin:0 .7rem .7rem .7rem;
-  padding: 1.5rem 0rem 1.5rem 0rem ;
+  margin: 0 .7rem .7rem .7rem;
+  padding: 1.5rem 0rem 1.5rem 0rem;
   margin-top: -1.4rem;
 }
-.wallet-percentage{
+
+.wallet-percentage {
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: rgb(228, 227, 226);
   margin: .5rem;
 }
-.main-wallet-percentage{
+
+.main-wallet-percentage {
   /* text-align: center; */
   width: 30%;
   height: 30%;
 }
-.main-wallet-percentage p{
- font-size: .8rem;
- font-family: inter;
- color: #a1a0a0;
+
+.main-wallet-percentage p {
+  font-size: .8rem;
+  font-family: inter;
+  color: #a1a0a0;
 }
-.main-wallet-percentage h5{
+
+.main-wallet-percentage h5 {
   font-size: .95rem;
   font-weight: 550;
   margin-top: .5rem;
 }
-.main-wallet-percentage div{
+
+.main-wallet-percentage div {
   border: .6rem solid rgb(188, 188, 188);
   text-align: center;
   border-radius: 50%;
@@ -2910,33 +2955,39 @@ Checkbox {
   font-weight: 550;
   color: rgb(192, 123, 38);
 }
-.items-transfer-container{
+
+.items-transfer-container {
   display: flex;
   justify-content: space-evenly;
 }
-.items-transfer{
+
+.items-transfer {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
 }
-.items-transfer img{
+
+.items-transfer img {
   height: 3rem;
   width: 3rem;
 }
-.items-transfer div{
+
+.items-transfer div {
   font-size: .9rem;
   font-weight: 500;
   color: rgb(192, 123, 38);
   font-family: inter;
 }
-.wallet-body-container{
-  margin:.7rem;
+
+.wallet-body-container {
+  margin: .7rem;
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
-.wallets-container{
+
+.wallets-container {
   background-color: #363636;
   border-radius: .5rem;
   display: flex;
@@ -2950,51 +3001,59 @@ Checkbox {
   padding-top: 1.4rem;
 
 }
-.wallets-container h5{
+
+.wallets-container h5 {
   font-size: 1rem;
   font-family: 550;
 }
-.wallets-container p{
+
+.wallets-container p {
   font-size: .9rem;
   font-family: inter;
   color: #8c8a8a;
 }
+
 /********************* Account Section   ***************************/
-.account-main-heading-section{
+.account-main-heading-section {
   display: flex;
   height: 15rem;
-  padding:3rem 1rem 5rem 1rem;
+  padding: 3rem 1rem 5rem 1rem;
 }
-.left-header-section img{
+
+.left-header-section img {
   height: 5rem;
   width: 5rem;
   border-radius: 50%;
 }
-.right-header-section{
+
+.right-header-section {
   display: flex;
   flex-direction: column;
   color: #8f5206;
 }
-.right-header-section div{
+
+.right-header-section div {
   display: flex;
 }
 
-.right-header-div1 h5{
+.right-header-div1 h5 {
   font-size: 1rem;
   font-weight: 550;
 }
-.right-header-div1 img{
+
+.right-header-div1 img {
   height: 1.7rem;
   width: 4rem;
 }
-.right-header-div3{
+
+.right-header-div3 {
   display: flex;
   justify-content: space-between;
   font-size: .75rem;
   width: 97%;
 }
 
-.right-header-div2{
+.right-header-div2 {
   background-color: #755323;
   border-radius: 1rem;
   font-size: .9rem;
@@ -3002,162 +3061,191 @@ Checkbox {
   height: 1.6rem;
   display: flex;
   justify-content: space-between;
-  padding:.2rem .5rem;
+  padding: .2rem .5rem;
   color: white;
-  margin:.3rem .4rem;
+  margin: .3rem .4rem;
 }
-.balance-container{
+
+.balance-container {
   background-color: #3e3e3e;
-  margin:.6rem;
+  margin: .6rem;
   margin-top: -5rem;
   border-radius: 10px;
-  display:  flex;
+  display: flex;
   flex-direction: column;
-  color:#d9ac4f;
-  padding:.8rem .2rem;
+  color: #d9ac4f;
+  padding: .8rem .2rem;
 }
-.transaction-name-container{
+
+.transaction-name-container {
   display: flex;
   flex-wrap: wrap;
   margin: .9rem;
   margin-top: 2.4rem;
 }
-.transaction-firstdiv:nth-child(2n+1){
+
+.transaction-firstdiv:nth-child(2n+1) {
   margin-right: .9rem;
 }
-.transaction-firstdiv{
+
+.transaction-firstdiv {
   background-color: #3d3c3c;
   border-radius: 10px;
   width: 48%;
-  height: 5rem;  
+  height: 5rem;
   margin-bottom: .8rem;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   padding: .5rem;
 }
-.transaction-firstdiv img{
+
+.transaction-firstdiv img {
   width: 3rem;
   height: 3rem;
 }
-.div-texts{
+
+.div-texts {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding-top: 1rem;
   color: white;
 }
-.div-texts h5{
+
+.div-texts h5 {
   font-size: 1rem;
   margin: 0;
 }
-.div-texts p{
+
+.div-texts p {
   font-size: .9rem;
   color: rgb(128, 127, 125);
-  margin:0
+  margin: 0
 }
-.setting-pannel-container{
-  margin:.7rem;
+
+.setting-pannel-container {
+  margin: .7rem;
   background-color: #404040;
   border-radius: .5rem;
   display: flex;
   flex-direction: column;
 }
-.setting-pannel-container hr{
+
+.setting-pannel-container hr {
   height: 2px;
   margin: 0;
 }
-.setting-pannel-div{
+
+.setting-pannel-div {
   display: flex;
   justify-content: space-between;
-  margin:.2rem .6rem;
-  padding:.6rem .2rem
+  margin: .2rem .6rem;
+  padding: .6rem .2rem
 }
-.left-setting-pannel{
+
+.left-setting-pannel {
   width: 50%;
   display: flex;
   align-items: center;
 }
-.right-setting-pannel{
+
+.right-setting-pannel {
   display: flex;
   width: 25%;
   justify-content: space-between;
 }
-.right-setting-pannel h5{
+
+.right-setting-pannel h5 {
   font-size: 1rem;
   color: white;
 }
-.left-setting-pannel h5{
+
+.left-setting-pannel h5 {
   color: white;
   font-size: 1rem;
 }
-.left-setting-pannel img{
+
+.left-setting-pannel img {
   width: 2rem;
   height: 2rem;
   margin-right: .6rem;
 }
-.service-center-container{
-  margin:1rem .7rem;
+
+.service-center-container {
+  margin: 1rem .7rem;
   border-radius: .5rem;
   background-color: #3e3e3e;
-  padding:.5rem
+  padding: .5rem
 }
-.service-center-container h5{
+
+.service-center-container h5 {
   color: white;
   font-size: 1.3rem;
   font-weight: 550;
   margin-left: .5rem;
 }
-.sevice-center-opration-container{
+
+.sevice-center-opration-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
-.service-center-divs{
+
+.service-center-divs {
   width: 32%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color:white;
-  margin:.8rem .1rem;
+  color: white;
+  margin: .8rem .1rem;
 }
-.service-center-divs img{
+
+.service-center-divs img {
   width: 1.8rem;
   height: 1.8rem;
 }
-.service-center-divs p{
+
+.service-center-divs p {
   font-size: .9rem;
   margin: 0;
 }
-.logout img{
+
+.logout img {
   height: 1.5rem;
   width: 1.5rem;
 }
+
 /****VIP Section ******/
-.vip-header-section{
+.vip-header-section {
   display: flex;
   padding: .5rem .8rem 4rem .8rem;
 }
-.right-header-vip{
+
+.right-header-vip {
   margin-left: .7rem;
   color: #8f5206;
 }
-.right-header-vip img{
+
+.right-header-vip img {
   height: 1.5rem;
   margin-top: .6rem;
   width: 3rem;
 }
-.right-header-vip h5{
-  margin-top:.6rem;
+
+.right-header-vip h5 {
+  margin-top: .6rem;
   font-size: 1.2rem;
   font-family: inter;
 }
-.experience-container-vip{
+
+.experience-container-vip {
   display: flex;
   margin-top: -3rem;
 }
-.experience-div{
+
+.experience-div {
   background-color: #404040;
   border-radius: .5rem;
   width: 48%;
@@ -3167,181 +3255,213 @@ Checkbox {
   color: #8f8e8e;
   font-family: inter;
 }
-.experience-div div{
+
+.experience-div div {
   font-size: .95rem;
 }
-.experience-div h5{
-  color:#d9ac4f;
+
+.experience-div h5 {
+  color: #d9ac4f;
   font-size: 1.2rem;
-  margin-top:.8rem;
-  margin:0;
+  margin-top: .8rem;
+  margin: 0;
 }
-.vip-texts{
+
+.vip-texts {
   color: rgb(150, 148, 148);
   border: 1px solid rgb(228, 226, 226);
   font-size: .8rem;
   font-family: inter;
   padding: .4rem .5rem;
   border-radius: 5px;
-  margin:1rem .7rem;
+  margin: 1rem .7rem;
 }
-.vip-card-container{
-  margin:.8rem;
+
+.vip-card-container {
+  margin: .8rem;
   border-radius: 5px;
   background: url(https://bdggame.in/assets/png/bg1-7ff97a99.png) no-repeat center, linear-gradient(117.29deg, #a6b7d0 21.85%, #889ebe 67.02%);
   box-shadow: 0 0.02667rem #7991b6, inset 0 0.02667rem #bdcadc;
-  color:white;
-  padding:1rem 1rem;
+  color: white;
+  padding: 1rem 1rem;
   font-family: inter;
 }
-.vip-card-div1{
+
+.vip-card-div1 {
   display: flex;
   justify-content: space-between;
 }
-.vip-card-left{
-  display:flex;
+
+.vip-card-left {
+  display: flex;
   flex-direction: column;
   font-family: inter;
 }
-.vip-card-left-div1{
+
+.vip-card-left-div1 {
   display: flex;
   color: white;
 }
-.vip-card-left-div1 img:first-child{
+
+.vip-card-left-div1 img:first-child {
   height: 2rem;
   width: 2rem;
 }
-.vip-card-lock-img{
+
+.vip-card-lock-img {
   height: 1.3rem;
   width: 1.3rem;
   margin: .2rem .5rem;
 }
-.vip-card-left-div1 h3{
+
+.vip-card-left-div1 h3 {
   font-size: 1.8rem;
   font-weight: 550;
   margin-left: .4rem;
 }
 
-.vip-card-left-div1 p{
+.vip-card-left-div1 p {
   font-size: .9rem;
 }
-.vip-card-left p{
+
+.vip-card-left p {
   font-size: .95rem;
   font-weight: 550;
   padding: 0;
   margin: 0;
 }
-.vip-card-logo-img{
+
+.vip-card-logo-img {
   height: 5rem;
   width: 5rem;
 }
-.vip-card-div2{
-  border:1px solid white;
+
+.vip-card-div2 {
+  border: 1px solid white;
   width: 4.2rem;
   font-size: .75rem;
   border-radius: 3px;
-  padding:0;
-  margin-top:1rem
+  padding: 0;
+  margin-top: 1rem
 }
-.vip-card-div3{
+
+.vip-card-div3 {
   display: flex;
   justify-content: space-between;
 }
-.vip-card-div3 p{
+
+.vip-card-div3 p {
   margin: 0;
   font-weight: 550;
 }
-.vip-card-div4{
+
+.vip-card-div4 {
   background-color: rgb(116, 138, 170);
   height: 9px;
   border-radius: 2rem;
   box-shadow: 0 0.01333rem #b1c4e1, inset 0 0.05333rem 0.05333rem #607596;
-  margin:0
+  margin: 0
 }
-.vip-card-div5{
+
+.vip-card-div5 {
   display: flex;
   justify-content: space-between;
 }
-.vip-card-div5 p{
+
+.vip-card-div5 p {
   font-size: .8rem;
   background: linear-gradient(90deg, #899fbf 0%, #6f85a5 92.31%);
   border-radius: 1rem;
   padding: 0rem 1rem;
-  margin:.1rem
+  margin: .1rem
 }
-.vip-card-div5 div{
+
+.vip-card-div5 div {
   font-size: .9rem;
 }
-.vip-benefite-container{
+
+.vip-benefite-container {
   margin: .7rem;
   background-color: #464545;
   border-radius: 10px;
-  padding:.7rem .3rem;
+  padding: .7rem .3rem;
   font-family: inter;
 }
-.vip-benefite-container h4{
+
+.vip-benefite-container h4 {
   font-weight: 550;
   font-family: Inter;
   color: white;
 }
-.vip-benefite-container h4 img{
-  height: 2.4rem ;
+
+.vip-benefite-container h4 img {
+  height: 2.4rem;
   width: 2.4rem;
   margin-right: .4rem;
 }
-.benefite-lists{
+
+.benefite-lists {
   display: flex;
   justify-content: space-between;
 }
-.benefite-lists img{
+
+.benefite-lists img {
   height: 4rem;
   width: 4rem;
   border-radius: 7px;
   margin-right: .5rem;
 }
-.benefite-list-mid{
+
+.benefite-list-mid {
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 60%;
 
 }
-.benefite-list-mid h5{
+
+.benefite-list-mid h5 {
   font-size: 1.2rem;
   font-weight: 530;
   color: white;
   margin-bottom: .1rem;
 }
-.benefite-list-mid p{
+
+.benefite-list-mid p {
   font-size: .85rem;
   color: rgb(167, 166, 166);
 }
-.benefite-list-end{
+
+.benefite-list-end {
   display: flex;
   flex-direction: column;
 
 }
-.benefite-list-end div{
+
+.benefite-list-end div {
   border: 1px solid rgb(238, 195, 75);
   font-size: .9rem;
   border-radius: 10px;
   margin: .2rem;
-  color:#D2A753;
+  color: #D2A753;
   width: 5.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.benefite-list-end img{
+
+.benefite-list-end img {
   height: 1.2rem;
   width: 1.2rem;
   margin-right: .4rem
 }
-.vip-switch-history{
+
+.vip-switch-history {
   display: flex;
   margin: 1.3rem .7rem;
 }
-.vip-switch-history div{
+
+.vip-switch-history div {
   cursor: pointer;
   background-color: #3d3c3c;
   color: #878888;
@@ -3354,9 +3474,10 @@ Checkbox {
   font-family: inter;
   font-weight: 550;
 }
-.vip-container-no-data{
+
+.vip-container-no-data {
   background-color: #464545;
-  color:rgb(163, 161, 161);
+  color: rgb(163, 161, 161);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -3365,19 +3486,22 @@ Checkbox {
   margin: .7rem;
   border-radius: .6rem;
 }
-.vip-container-no-data img{
+
+.vip-container-no-data img {
   height: 12rem;
   width: 12rem;
 }
+
 /***************** DEPOSITE HISTORY  ***************************/
-.scrollbar-container{
+.scrollbar-container {
   /* border: 1px dashed white; */
   border-radius: .5rem;
   display: flex;
   overflow-x: scroll;
   /* overflow-x */
 }
-.scrollbar-div{
+
+.scrollbar-div {
   background: linear-gradient(180deg, #FAE59F 0%, #C4933F 95.05%);
   color: #8f5206 !important;
   height: 3rem;
@@ -3388,17 +3512,20 @@ Checkbox {
   align-items: center;
   justify-content: space-evenly;
 }
-.scrollbar-div img{
+
+.scrollbar-div img {
   height: 1.8rem;
   width: 1.7rem;
   margin: .3rem;
 }
-.scrollbar-div h5{
+
+.scrollbar-div h5 {
   font-size: 1.2rem;
   font-weight: 550;
   font-family: inter;
 }
-.no-data-deposite{
+
+.no-data-deposite {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -3406,55 +3533,412 @@ Checkbox {
   height: 16rem;
   margin-bottom: 0;
 }
-.no-data-deposite img{
+
+.no-data-deposite img {
   height: 10rem;
   width: 10rem;
 }
-.no-data-deposite h5{
+
+.no-data-deposite h5 {
   font-size: 1.2rem;
   font-weight: 550;
   color: #cac9c9;
 }
+
 /************** Activity => Attendence Section  **************/
-.attendence-container{
+.attendence-container {
   background-image: url("https://bdggame.in/assets/png/headerBg-ca048249.png");
   background-repeat: no-repeat;
-  background-position:bottom;
+  background-position: bottom;
   height: 18rem;
   background-size: cover;
   background-color: #404040;
-  padding:.5rem;
-  color:white;
+  padding: .5rem;
+  color: white;
   display: flex;
-  justify-content: space-between;    vertical-align: baseline;
+  justify-content: space-between;
+  vertical-align: baseline;
 }
-.attendence-container div:first-child{
+
+.attendence-container div:first-child {
   width: 60%;
 }
-.hero-header{
+
+.hero-header {
   display: inline-block;
-    width: 75%;
-    margin: .8rem .1rem;
-    padding: 0.4rem 0.9rem 0.4rem 0.3rem;
-    color: #8f5206;
-    font-size: 1rem;
-    line-height: 1.5rem;
-    background: #D9AC4F;
-    -webkit-clip-path: polygon(100% 0, 90% 50%, 100% 100%, 0 100%, 0 0);
-    clip-path: polygon(100% 0, 90% 50%, 100% 100%, 0 100%, 0 0);
-    word-break: break-all;
+  width: 75%;
+  margin: .8rem .1rem;
+  padding: 0.4rem 0.9rem 0.4rem 0.3rem;
+  color: #8f5206;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  background: #D9AC4F;
+  -webkit-clip-path: polygon(100% 0, 90% 50%, 100% 100%, 0 100%, 0 0);
+  clip-path: polygon(100% 0, 90% 50%, 100% 100%, 0 100%, 0 0);
+  word-break: break-all;
 }
-.attendance-header-btn{
+
+.attendance-header-btn {
   width: 10rem;
-    height: 2rem;
-    padding: 0.4rem 0;
-    margin-top: 1.3rem;
+  height: 2rem;
+  padding: 0.4rem 0;
+  margin-top: 1.3rem;
+  text-align: center;
+  color: #8f5206;
+  font-size: 1rem;
+  line-height: 1rem;
+  border: none;
+  border-radius: 9rem;
+  background: linear-gradient(180deg, #FAE59F 0%, #C4933F 100%);
+  cursor: pointer;
+}
+
+.attendence-body {
+  margin: .7rem .1rem 0rem .3rem;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 1.5rem;
+}
+
+.attendence-divs {
+  background-color: #454444;
+  border-radius: 7px;
+  padding: 0;
+  margin: .4rem;
+  padding-bottom: .3rem;
+  width: 30%;
+  height: 7.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: white
+}
+
+.attendence-divs img {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-top: -.3rem;
+}
+
+.attendence-divs h5 {
+  font-size: 1rem;
+}
+
+.upper-attendence img {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 2rem;
+}
+
+.upper-attendence p {
+  text-align: center;
+  color: #8f5206;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-top: -1.9rem;
+}
+
+.attendence-full-divs {
+  width: 95%;
+  background-color: #454444;
+  border-radius: 7px;
+  padding: 0;
+  margin: .4rem;
+  padding-bottom: .3rem;
+  height: 7.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  background-image: url("https://bdggame.in/assets/png/day7Bg-2dc29da0.png");
+  background-size: cover;
+}
+
+.upper-attendence-last {
+  margin: 0;
+  padding: 0;
+}
+
+.upper-attendence-last p {
+  text-align: center;
+  /* margin-top: -1.7rem; */
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.lower-attendence {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 1rem;
+}
+
+.lower-attendence div img {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: -.5rem 0 .5rem 0;
+}
+
+.lower-attendence div h5 {
+  font-size: 1.16rem;
+  color: white;
+}
+
+/***************  Lottery Result 5D section   **************/
+.lottery-result-container {
+  background-color: #434343;
+  width: 100%;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: .7rem 0;
+}
+
+.lottery-result {
+  color: #bebdbd
+}
+
+.result-bolls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.result-bolls div {
+  margin-top: 1.2rem;
+  background-color: #aaabab;
+  color: #000000;
+  border-radius: 50%;
+  padding: .6rem;
+  text-align: center;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.result-bolls p {
+  color: #b6b5b5
+}
+
+.timmer-container-5d {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  border-radius: 7px;
+}
+
+.result-history-section {
+  display: flex;
+
+}
+
+.history-row-content-5d {
+  padding: .1rem;
+  border-radius: 50%;
+  color: white;
+  border: 1px solid white;
+  height: 1.2rem;
+  width: 1.2rem;
+  margin: 1rem .2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.betting-section-5d {
+  background-color: #3e3e3e;
+  height: 34rem;
+}
+
+.tab-betting-5d {
+  border-bottom: 1px solid black;
+  padding: 0;
+  display: flex;
+  margin: .55rem .45rem;
+}
+
+.tab-betting-5d div::after {
+  background: radial-gradient(circle at 100% 0, rgba(204, 0, 0, 0) 0.26667rem, #D9AC4F 0.26667rem);
+  content: "";
+  display: flex;
+  /* bottom: 0;
+  right: -0.26667rem; */
+  z-index: 9;
+  height: .3rem;
+  width: 3.3rem;
+}
+  .tab-betting-5d div {
+    background-color: #eab65c;
+    color: #76501a;
+    border-radius: 50% 50% 0 0;
+    padding: 0.5rem 0 0rem 0rem;
+    width: 3rem;
+    margin: 0 .3rem;
     text-align: center;
-    color: #8f5206;
-    font-size: 1rem;
-    line-height: 1rem;
-    border: none;
-    border-radius: 9rem;
-    background: linear-gradient(180deg, #FAE59F 0%, #C4933F 100%);
-    cursor: pointer;
+    font-size: 1.15rem;
+    font-weight: 800;
+  }
+
+  .option-betting-5d {
+    display: flex;
+    justify-content: space-evenly;
+    margin: .7rem 0;
+  }
+
+  .option-betting-5d div {
+    background-color: #2c2c2c;
+    border-radius: 4px;
+    color: #d0cfcf;
+    padding: .6rem .4rem;
+  }
+  .number-betting-5d {
+    padding: .3rem .9rem;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .number-betting-5d div {
+    margin: 0rem .8rem;
+    padding: 0;
+    color: #a6a5a5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .number-betting-5d div div {
+    border-radius: 50%;
+    width: 2.6rem;
+    height: 2.6rem;
+    border: 1px solid #a6a5a5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin: 0
+  }
+  .number-betting-5d div p{
+    margin-bottom: .4rem;
+  }
+/****************** Slot Machine  *******************/
+@import url('https://fonts.googleapis.com/css?family=Cairo');
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg)
+  }
+}
+
+body { 
+  background-color: #292929;
+}
+
+#repeatButton {
+  appearance: none;  
+  border: none;
+  background: url(https://andyhoffman.codes/random-assets/img/slots/repeat.png) transparent 0 0 no-repeat;
+  background-size: cover;
+  width: 48px;
+  height: 48px;
+  position: relative; 
+  cursor: pointer;
+  animation: 6s linear infinite spin;
+}
+
+h1 {  
+  font-size: 150%;  
+  font-family: 'Cairo', sans-serif;
+}
+
+h1 span {
+  color: aliceblue;
+  border: 1px solid hsla(208, 100%, 97.1%, .1);
+  display: inline-block;
+  padding: 0.75rem 1rem;
+}
+
+.icons { 
+  display: inline-block;
+  width: 128px;
+  /* height: 564px; */
+  overflow: hidden;
+  background: #fff url(C:\Users\SHREYANSH\Desktop\Projects\bdgGame\bdggame\src\Assets\numsPic.jpg) repeat-y;
+  will-change: backgroundPosition;
+  background-position: center;
+  transition: 0.3s background-position ease-in-out;
+  /* padding: 0 80px; */
+  transform: translateZ(0);
+  /* margin-left: .4rem; */
+  border: 5px solid #d29c3e;
+}
+/* 
+.icons:nth-child(2) {
+  margin: 0 10px;
+}
+.icons:nth-child(4) {
+  margin: 0 10px;
+} */
+
+* { box-sizing: border-box; }
+
+.spinner-container {
+  overflow: hidden;
+  border:3px solid #D2A753;
+  /* height: 632px;   */
+  width: 35rem;
+  padding: 0;
+  transform: translate(-50%, -50%) scale(.62, .62);
+  position: relative;
+  top:5rem;
+  left: 50%;
+  display: flex;
+  transition: 0.3s transform;
+}
+
+.app-wrap.winner-false {
+  animation: linear 1s spin;
+}
+
+.spinner-container::after {
+  position:relative;
+  content: '';
+  display: block;
+  height: 180px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 30px;
+  left: 30px;
+  background: rgba(255, 0, 0, .1);  
+}
+
+.gradient-fade {
+  /* position: relative; */
+  top: 32px;
+  right: 32px;
+  bottom: 32px;
+  left: 32px;
+  background: linear-gradient(
+    to bottom, 
+    rgba(64,64,64,1) 0%, 
+    rgba(64,64,64,0) 7%, 
+    rgba(64,64,64,0) 93%, 
+    rgba(64,64,64,1) 100%
+  );
+}
+
+@media screen and (max-width: 1000px) {
+  .spinner-container {
+    transform: translate(-50%, -50%) scale(.55, .55);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .spinner-container {
+    transform: translate(-50%, -50%) scale(.4, .4);
+  }
 }
