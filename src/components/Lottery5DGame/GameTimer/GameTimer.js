@@ -2,8 +2,8 @@ import { useState } from "react"
 import { TimmerBetSection } from "./TimerBetSection";
 import { LotteryResult } from "../LotteryResult";
 import { BetClaim } from "./BetClaim";
-// import  SlotMachine  from "../SlotMachine";
-import SlotMachines from "../SlotMachine";
+import SlotMachine from "./SlotMachine";
+// import SlotMachine from "../SlotMachine";
 
 export const GameList5DLottery=()=>{
     const [timerDuration,setTimerDuration] = useState(60);
@@ -75,7 +75,7 @@ export const GameList5DLottery=()=>{
         <LotteryResult />
         <div className="betting-section-5d">
         <TimmerBetSection duration={timerDuration} timeLefts={timeLefts}/>
-        <SlotMachines />
+        <SlotMachine />
         <BetClaim />
         </div>
     </>)

@@ -411,7 +411,7 @@ Checkbox {
   }
 }
 
-@keyframes autoplay1 {
+/* @keyframes autoplay1 {
   0% {
     visibility: visible
   }
@@ -419,7 +419,7 @@ Checkbox {
   33.33% {
     visibility: hidden
   }
-}
+} */
 
 .text-carousel-container>*:nth-child(1) {
   animation-delay: 0s
@@ -1985,6 +1985,7 @@ Checkbox {
   font-size: .9rem;
   color: #faf446;
   margin: 0;
+  cursor: pointer;
 }
 
 .payment-gold-card {
@@ -3826,7 +3827,7 @@ Checkbox {
     margin-bottom: .4rem;
   }
 /****************** Slot Machine  *******************/
-@import url('https://fonts.googleapis.com/css?family=Cairo');
+/* @import url('https://fonts.googleapis.com/css?family=Cairo');
 
 @keyframes spin {
   to {
@@ -3865,31 +3866,30 @@ h1 span {
 .icons { 
   display: inline-block;
   width: 128px;
-  /* height: 564px; */
+  height: 564px;
   overflow: hidden;
   background: #fff url(C:\Users\SHREYANSH\Desktop\Projects\bdgGame\bdggame\src\Assets\numsPic.jpg) repeat-y;
   will-change: backgroundPosition;
   background-position: center;
   transition: 0.3s background-position ease-in-out;
-  /* padding: 0 80px; */
+  padding: 0 80px;
   transform: translateZ(0);
-  /* margin-left: .4rem; */
+  margin-left: .4rem;
   border: 5px solid #d29c3e;
 }
-/* 
+
 .icons:nth-child(2) {
   margin: 0 10px;
 }
 .icons:nth-child(4) {
   margin: 0 10px;
-} */
+} 
 
 * { box-sizing: border-box; }
 
 .spinner-container {
   overflow: hidden;
   border:3px solid #D2A753;
-  /* height: 632px;   */
   width: 35rem;
   padding: 0;
   transform: translate(-50%, -50%) scale(.62, .62);
@@ -3917,7 +3917,6 @@ h1 span {
 }
 
 .gradient-fade {
-  /* position: relative; */
   top: 32px;
   right: 32px;
   bottom: 32px;
@@ -3941,4 +3940,114 @@ h1 span {
   .spinner-container {
     transform: translate(-50%, -50%) scale(.4, .4);
   }
+} */
+.slot-outer-div{
+  display: flex;
+}
+.slot-outer-div::after{
+  content: "";
+    display: block;
+    width: .4rem;
+    height: 2rem;
+    border-top-right-radius: 1.4rem;
+    border-bottom-right-radius: 1.4rem;
+    position: relative;
+    margin-top: 3.5rem;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    background: #8F5206;
+    z-index: 0;
+}
+.slot-outer-div::before{
+  content: "";
+    display: block;
+    border-top-left-radius: 1.4rem;
+    border-bottom-left-radius: 1.4rem;
+    width: .4rem;
+    height: 2rem;
+    position: relative;
+    margin-top: 3.5rem;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    background: #8F5206;
+    z-index: 0;
+}
+/* .slot-machine-container::before{
+  content:"";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  margin: 2rem;
+  border-top: 3rem solid transparent; 
+  border-bottom: 3rem solid transparent; 
+  border-left: 1rem solid #D2A753; 
+  z-index: 2;
+} */
+.slot-machine-container {
+  padding:.5rem;
+  display: flex;
+  justify-content:space-evenly;
+  align-items: center;
+  /* flex-direction: column; */
+  background-color: black;
+  opacity: 80%;
+  width: 21rem;
+  height: 6rem;
+  border:.4rem solid #a5600b;
+  /* border-radius: 10px; */
+  z-index: 1;
+}
+.slot-column {
+  border:.2rem solid #b56c12;
+  position: relative;
+  animation: 1.4s autoplay2 infinite ease-in-out;
+  animation-delay: 5s;
+  z-index: 1;
+}
+@keyframes autoplay2 {
+  0% {
+    top: 400%
+  }
+
+  100% {
+    top: -400%
+  }
+}
+.slot-number {
+ font-size: 1.6rem;
+ font-weight: 600;
+ color: #000000;
+ border: 1px solid #ffffff;
+ background-color: #A6A9AE;
+ border-radius: 50%;
+ width: 3.4rem;
+ height: 3.4rem;
+ margin:1rem .2rem;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+  /* position: absolute;
+  bottom: 0;
+  width: 100%;
+  transition: 0.3s background-position ease-in-out;
+  padding: 0 80px;
+  transform: translateZ(0);
+  margin-left: .4rem;
+  border: 5px solid #d29c3e; */
+  /* transition: bottom 2s ease-in-out; Adjust timing as needed */
+}
+.spin-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.spin-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }

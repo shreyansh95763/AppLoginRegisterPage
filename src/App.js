@@ -65,7 +65,13 @@ function App() {
         <Route path="/AppLoginRegisterPage/Wallet/Withdraw" element={<Withdrawal />} />
         <Route path="/AppLoginRegisterPage/Account/Withdraw" element={<Withdrawal />} />
         <Route path="AppLoginRegisterPage/Account/Withdraw/withdraw-history" element={<WithHistoryMain />} />
+        <Route path="AppLoginRegisterPage/Wallet/Withdraw/withdraw-history" element={<WithHistoryMain />} />
+        <Route path="AppLoginRegisterPage/Wallet/withdraw-history" element={<WithHistoryMain />} />
+        <Route path="AppLoginRegisterPage/Account/withdraw-history" element={<WithHistoryMain />} />
+        <Route path="AppLoginRegisterPage/Account/deposite-history" element={<DepositeHistoryMain />} />
         <Route path="AppLoginRegisterPage/Account/Deposite/deposite-history" element={<DepositeHistoryMain />} />
+        <Route path="AppLoginRegisterPage/Wallet/Deposite/deposite-history" element={<DepositeHistoryMain />} />
+        <Route path="AppLoginRegisterPage/Wallet/deposite-history" element={<DepositeHistoryMain />} />
       </Routes>
     </BrowserRouter>
       {/* <Body /> */}

@@ -5,6 +5,12 @@ export const TransactionName=()=>{
     const navToBetHistory=()=>{
         navigate("bet-history");
     }
+    const navToDepositHistory=()=>{
+        navigate('deposite-history')
+    }
+    const navToWithdrawHistory=()=>{
+        navigate('withdraw-history')
+    }
     return(<>
         <div className="transaction-name-container">
             <div className="transaction-firstdiv" onClick={()=>{navToBetHistory()}}>
@@ -21,14 +27,14 @@ export const TransactionName=()=>{
                     <p>My transaction history</p>
                 </div>
             </div>
-            <div className="transaction-firstdiv">
+            <div className="transaction-firstdiv" onClick={navToDepositHistory}>
                 <img alt="logo" src="https://bdggame.in/assets/png/rechargeHistory-a584338d.png" />
                 <div className="div-texts">
                     <h5>Deposite</h5>
                     <p>My deposite history</p>
                 </div>
             </div>
-            <div className="transaction-firstdiv">
+            <div className="transaction-firstdiv" onClick={navToWithdrawHistory}>
                 <img alt="logo" src="https://bdggame.in/assets/png/myWithdrawHistory-4b3f11ea.png" />
                 <div className="div-texts">
                     <h5>Withdraw</h5>

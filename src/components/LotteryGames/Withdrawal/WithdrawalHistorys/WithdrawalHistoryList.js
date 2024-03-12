@@ -28,7 +28,7 @@ export const WithdrawalHistoryList=()=>{
     }, []);
 
     return (<>
-        { withdrawHistory.statu===200 &&<>
+        { withdrawHistory.status===200 &&<>
             {withdrawHistory.map(val=>(
                 <WithHistoryContent balance={withdrawHistory.amount} time={withdrawHistory.data} />
             ))}

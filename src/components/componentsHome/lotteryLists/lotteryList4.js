@@ -6,7 +6,7 @@ export const LotteryLists4=()=>{
         setRedirectToWinGo(true);
     }
     if (redirectToWinGo) {
-        return <Navigate to="/AppLoginRegisterPage/WinGo" />;
+        return <Navigate to="Lottery-5D" />;
       }
     return(<>
         <div className="display-flex lotteryList-container">
