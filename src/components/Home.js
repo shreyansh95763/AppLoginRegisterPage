@@ -16,10 +16,13 @@ import { PVC } from './componentsHome/PVR/pvr';
 import { Fishing } from './componentsHome/Fishing/Fishing';
 import { useState } from 'react';
 import { Popular } from './componentsHome/popular/popular';
+import { useNavigate } from 'react-router-dom';
 export const Home = () => {
     const [getIndex , setIndex] = useState('lottery');
+    const navigate = useNavigate();
     const handleEvents=(newPage)=>{
         setIndex(newPage);
+        return navigate(`#lottery`)
     }
    
     return (  
@@ -29,10 +32,10 @@ export const Home = () => {
                 <div className='main-body'>
                 <CarouselHome />
                 <UpSlider />
-                <MenuBox1 handleEvents={handleEvents}/>
+                <MenuBox1 handleEvents={handleEvents} />
                 <MenuBox2 handleEvents={handleEvents}/>
                 <MenuBox3 handleEvents={handleEvents}/>
-
+                <div id="lottery">
                 {getIndex==='lottery' &&  <Lottery />}
                 {getIndex==='original' &&  <MiniGame />}
                 {getIndex==='slots' &&  <Slots />}
@@ -41,6 +44,7 @@ export const Home = () => {
                 {getIndex==='casino' &&   <Casino />}
                 {getIndex==='pvc' &&  <PVC />}
                 {getIndex==='fishing' &&  <Fishing />}
+                </div>
                
 
                 <WinningInfo />

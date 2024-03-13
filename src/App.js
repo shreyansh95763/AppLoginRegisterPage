@@ -28,6 +28,9 @@ import WithHistoryMain from './components/LotteryGames/Withdrawal/WithdrawalHist
 import { BetHistory } from './components/Accounts/BetHistory';
 import { Attendence } from './components/Activity/Attendence/Attendence';
 import { Main5DLottery } from './components/Lottery5DGame/Main5DLottey';
+import { AddBanks } from './components/LotteryGames/Withdrawal/AddBank/AddBanks';
+import { HolderList } from './components/LotteryGames/Withdrawal/HolderList';
+import { AccountHolderDetail } from './components/LotteryGames/Withdrawal/AddBank/AccountHolderDetail';
 
 function App() {
   return (<>
@@ -64,6 +67,12 @@ function App() {
         <Route path="/AppLoginRegisterPage/WinGo/Withdraw" element={<Withdrawal />} />
         <Route path="/AppLoginRegisterPage/Wallet/Withdraw" element={<Withdrawal />} />
         <Route path="/AppLoginRegisterPage/Account/Withdraw" element={<Withdrawal />} />
+        <Route path="/AppLoginRegisterPage/Wallet/Withdraw/Add-bank" element={<AddBanks />} />
+        <Route path="/AppLoginRegisterPage/Account/Withdraw/Add-bank" element={<AddBanks />} />
+        <Route path="/AppLoginRegisterPage/Wallet/Withdraw/Holder-Detail" element={<AccountHolderDetail />} />
+        <Route path="/AppLoginRegisterPage/Account/Withdraw/Holder-Detail" element={<AccountHolderDetail />} />
+
+
         <Route path="AppLoginRegisterPage/Account/Withdraw/withdraw-history" element={<WithHistoryMain />} />
         <Route path="AppLoginRegisterPage/Wallet/Withdraw/withdraw-history" element={<WithHistoryMain />} />
         <Route path="AppLoginRegisterPage/Wallet/withdraw-history" element={<WithHistoryMain />} />

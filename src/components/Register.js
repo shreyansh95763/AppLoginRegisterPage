@@ -46,8 +46,6 @@ export const Register = () => {
         formData.append('password', data.password);
         formData.append('confirmed_password', data.confirmPassword);
 
-        // const { mobile, email, password, confirmPassword } = data;}
-
         try {
             const response = await axios.post(
                 "http://tcdaman.foundercode.org/admin/index.php/Mahajongapi/register",
@@ -58,24 +56,42 @@ export const Register = () => {
                     }
                 }
             );
+            console.log(response);
 
-            console.log(response.data);
-
-            if (response.data.success === '200') {
+            if (response.data.status === '200') {
                 toast.success("Registration Successful!");
                 setTimeout(() => {
                     setRedirectToLogin(true);
-                }, 1000)
+                }, 1000);
             } else {
                 toast.error(response.data.msg);
             }
         } catch (error) {
             console.error("Error:", error);
-            toast.error("Registration failed!", {
-                position: "top-right",
-            });
+            // Check if error.response exists to access response details
+            if (error.response) {
+                // Request made and server responded with a status code
+                console.error("Server responded with status code:", error.response.status);
+                console.error("Response data:", error.response.data);
+                toast.error("Registration failed: " + error.response.data.message, {
+                    position: "top-right",
+                });
+            } else if (error.request) {
+                // The request was made but no response was received
+                console.error("No response received:", error.request);
+                toast.error("No response received from the server", {
+                    position: "top-right",
+                });
+            } else {
+                // Something else happened in making the request that triggered an error
+                console.error("Error during request:", error.message);
+                toast.error("Error during request: " + error.message, {
+                    position: "top-right",
+                });
+            }
         }
-    }
+    };
+
     if (redirectToLogin) {
         return <Navigate to="/AppLoginRegisterPage/login" />;
     }
@@ -90,16 +106,16 @@ export const Register = () => {
                 </div>
             </div>
             <form>
-                {/* <div className='input-section '>
-                <div className='inputName-section display-flex'><PersonIcon style={{ color: "rgb(210, 184, 37)" }} /><h3>User name</h3></div>
-                <input
-                    type='text'
-                    name="name"
-                    value={data.name}
-                    onChange={handleInput}
-                    placeholder='Please Enter name'
-                    required />
-            </div> */}
+                <div className='input-section '>
+                    <div className='inputName-section display-flex'><PersonIcon style={{ color: "rgb(210, 184, 37)" }} /><h3>User name</h3></div>
+                    <input
+                        type='text'
+                        name="name"
+                        value={data.name}
+                        onChange={handleInput}
+                        placeholder='Please Enter name'
+                        required />
+                </div>
                 <div className='input-section'>
                     <div className='inputName-section display-flex'><PhoneIphoneIcon style={{ color: "rgb(210, 184, 37)" }} /><h3>Phone number</h3></div>
                     <input
@@ -174,7 +190,7 @@ export const Register = () => {
     )
 }
 
-                {/* <div className='input-section '>
+{/* <div className='input-section '>
                     <div className='inputName-section display-flex'><PersonIcon style={{ color: "rgb(210, 184, 37)" }} /><h3>Invite code</h3></div>
                     <input 
                     type='number' 

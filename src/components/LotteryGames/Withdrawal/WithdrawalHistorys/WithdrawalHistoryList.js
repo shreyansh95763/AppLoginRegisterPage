@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { WithHistoryContent } from './WithHistoryContent';
 
-export const WithdrawalHistoryList=()=>{
-    const[withdrawHistory,setWithdrawHistory]=useState([]);
+export const WithdrawalHistoryList = () => {
+    const [withdrawHistory, setWithdrawHistory] = useState([]);
 
     useEffect(() => {
         const fetchData = async (id) => {
@@ -10,11 +10,12 @@ export const WithdrawalHistoryList=()=>{
                 const response = await fetch(`https://tcdaman.foundercode.org/admin/index.php/Mahajongapi/withdraw_history?id=${id}`);
                 if (response.ok) {
                     const data = await response.json();
+                    console.log('Response Data', data)
                     if (data.data && data.data.length > 0) {
-                        console.log("Depositewallets",data);
-                        setWithdrawHistory(data,data);
+                        console.log("Deposite wallets", data.data);
+                        setWithdrawHistory(data);
                     }
-                    console.log("Wallet", data.data[0].wallet);
+                    console.log("Wallet", data.data);
                 } else {
                     setWithdrawHistory(await response.json());
                     console.log("Not history")
@@ -28,9 +29,9 @@ export const WithdrawalHistoryList=()=>{
     }, []);
 
     return (<>
-        { withdrawHistory.status===200 &&<>
-            {withdrawHistory.map(val=>(
-                <WithHistoryContent balance={withdrawHistory.amount} time={withdrawHistory.data} />
+        {withdrawHistory.status ==='200' && <>
+            {withdrawHistory.data.map(val => (
+                <WithHistoryContent balance={val.amount} status={val.status} />
             ))}
         </>}
     </>)

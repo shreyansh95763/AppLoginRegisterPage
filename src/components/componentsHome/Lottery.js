@@ -20,7 +20,7 @@ export const Lottery=()=>{
     }
     
     return(<>
-        <h5 className="nav-heading" >Lottery</h5>
+        <h5 className="nav-heading">Lottery</h5>
         <div className="lottery-section">
             <div className="lottery-section-navigator">
                 <div className="lottery-nav-btn" style={buttonStyle.list0} onClick={()=>{handleEvents('list0')}}>

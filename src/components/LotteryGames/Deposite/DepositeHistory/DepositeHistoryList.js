@@ -13,7 +13,7 @@ export const DepositeHistoryList = () => {
                     const data = await response.json();
                     if (data.data && data.data.length > 0) {
                         console.log("Depositewallets",data);
-                        setDepositeHistory(data,data);
+                        setDepositeHistory(data);
                     }
                     console.log("Wallet", data.data[0].wallet);
                 } else {
@@ -29,9 +29,9 @@ export const DepositeHistoryList = () => {
     }, []);
 
     return (<>
-        { depositHistory.statu===200 &&<>
-            {depositHistory.map(val=>(
-                <DeHistoryContent balance={val.amount} date={val.data} time={val.time} />
+        { depositHistory.status==='200' &&<>
+            {depositHistory.data.map(val=>(
+                <DeHistoryContent balance={val.amount} status={val.status} time={val.created_at} orderNumber={val.orderid} />
             ))}
         </>}
     </>)

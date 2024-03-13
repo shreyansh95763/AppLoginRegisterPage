@@ -6,7 +6,9 @@ export const DeHistoryContent=(props)=>{
          <div className="channel-container deposit-history-section" style={{fontFamily:"sans-serif",fontWeight:550}} >
             <div className='deposite-history-div'>
                 <div  style={{ width:"25%",fontSize: "1rem",textAlign:"center",borderRadius: ".3rem",padding:".1rem .7rem .1rem .7rem",color: "#fae59f",background: "#8F5206",fontWeight:"550" }} >Deposit</div>
-                <div style={{color:"#f95959",fontSize:"1.1rem"}}>Failed</div>
+                { (props.status==='0') && <div style={{color:"#f95959",fontSize:"1.1rem"}}>Failed</div>}
+                { (props.status==='1') && <div style={{color:"yellow",fontSize:"1.1rem"}}>Pending</div>}
+                { (props.status==='2') && <div style={{color:"green",fontSize:"1.1rem"}}>Success</div>}
             </div>
             <hr size="36px"style={{color:"white"}}></hr>
             <div className='deposite-history-div'>
@@ -19,12 +21,13 @@ export const DeHistoryContent=(props)=>{
             </div>
             <div className='deposite-history-div' style={{margin:".7rem 0"}}>
                 <div >Time</div>
-                {/* <div>{props.data}{props.time}</div> */}
-                <div>2024-2-22 18:10:07</div>
+                <div>{props.data}{props.time}</div>
+                {/* <div>2024-2-22 18:10:07</div> */}
             </div>
             <div className='deposite-history-div' style={{margin:".7rem 0"}}>
                 <div >Order number</div>
-                <div>20240128160259775678 <ContentCopyIcon style={{height:"1.2rem",marginTop:0}}/></div>
+                <div>{props.orderNumber} <ContentCopyIcon style={{height:"1.2rem",marginTop:0}}/></div>
+                {/* <div>20240128160259775678 <ContentCopyIcon style={{height:"1.2rem",marginTop:0}}/></div> */}
             </div>
             <br></br>
         </div>

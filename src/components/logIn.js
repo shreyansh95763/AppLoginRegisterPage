@@ -39,14 +39,6 @@ export const Login = () => {
   };
   const handleChange = (e) => {
     const { name, value } = e.target;
-    // var a= 5;
-    // console.log(a);
-    // a = true;
-    // console.log(a);
-    let a= 5;
-    console.log(a);
-    a = true;
-    console.log(a);
     setData((prev) => ({
       ...prev,
       [name]: value,

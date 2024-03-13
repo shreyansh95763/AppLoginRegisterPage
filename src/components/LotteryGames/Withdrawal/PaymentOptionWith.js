@@ -3,6 +3,7 @@ import { AddBank } from "./AddBank"
 import { WithdrawByBank } from "./WithdrawByBank"
 import { WithdrawHistory } from "./WithdrawHistory"
 import { USDTWithdraw } from "./USDTmethodWith"
+import { HolderList } from "./HolderList"
 
 export const WithdrawPaymentOption=()=>{
     const [gridStyle,setGridStyle] = useState({
@@ -28,7 +29,9 @@ export const WithdrawPaymentOption=()=>{
         </div>
         {
             page===1 ?
-             <><AddBank text="Add a bank Account Number"/>
+             <>
+            <HolderList />
+            <AddBank text="Add a bank Account Number"/>
             <WithdrawByBank />
             <WithdrawHistory /></>
             :

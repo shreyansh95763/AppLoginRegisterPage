@@ -4051,3 +4051,96 @@ h1 span {
   opacity: 0.5;
   cursor: not-allowed;
 }
+/**************  Add Bank Section  **************/
+.add-bank-container{
+  margin:0 1rem;
+  padding-bottom: 1rem;
+}
+.add-bank-worn{
+  background-color: #3d3c3c;
+  color:#e8ab42;
+  font-size: .9rem;
+  border-radius: 1rem;
+  margin:.4rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: bahnschrift;
+  padding:.3rem;
+}
+.add-bank-worn img{
+  height: 1.8rem;
+  width: 1.8rem;
+  margin:0 .7rem;
+}
+
+.add-bank-details div{
+  margin-top: 2rem;
+}
+.add-bank-details div div{
+  display: flex;
+  align-items: center;
+  margin-bottom: .4rem;
+}
+.add-bank-details div div img{
+height: 1.7rem;
+width: 1.7rem;
+}
+.add-bank-details div div h3{
+  color: #fae59f;
+  font-family: bahnschrift;
+  margin-top: .4rem;
+}
+.add-bank-details div input::placeholder{
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+.holder-details{
+  background-color: #404040;
+  border-radius: 10px;
+  margin:1rem .7rem 0 .7rem;
+  padding-bottom: .5rem;
+}
+.holder-details h3{
+  background: radial-gradient(circle at 100% 0, rgba(204, 0, 0, 0) 0.26667rem, #D9AC4F 0.26667rem);
+  color: #a5600b;
+  font-family: bahnschrift;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding:.5rem;
+  font-size: 1.4rem;
+}
+.holder-details div{
+  background: #151515;
+  margin: .4rem .5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5rem .3rem;
+}
+.holder-details div h5{
+  color:white;
+  font-size: 1rem;
+}
+/***Holder Lists ****/
+.ac_holder-list{
+  background-color: #404040;
+  border-radius: 12px;
+  margin:.3rem 0;
+  padding:0 .5rem;
+  height: 4rem;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ac_holder-list h5{
+  color: rgb(229, 227, 227);
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+.ac_holder-list div{
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 40%;
+}
