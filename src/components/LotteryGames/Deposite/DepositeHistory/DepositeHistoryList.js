@@ -30,7 +30,7 @@ export const DepositeHistoryList = () => {
 
     return (<>
         { depositHistory.status==='200' &&<>
-            {depositHistory.data.map(val=>(
+            {depositHistory.data.slice().reverse().map(val=>(
                 <DeHistoryContent balance={val.amount} status={val.status} time={val.created_at} orderNumber={val.orderid} />
             ))}
         </>}

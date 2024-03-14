@@ -1,5 +1,30 @@
 import Historys from "./HistoryContent.json"
+import { useEffect, useState } from "react"
+import axios from "axios"
 export const BetHistoryRow = () => {
+    const [data, setData] = useState(null);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await axios.get("https://tcdaman.foundercode.org/admin/api/game_result.php?limit=9");
+                if (response.status === 200) {
+                    console.log(response.data);
+                    setData(response.data);
+                } else {
+                    console.error("Failed to fetch data:", response.statusText);
+                }
+            } catch (error) {
+                console.error("Error fetching data:", error);
+            }
+        };
+
+        const intervalId = setInterval(fetchData, 1000); // Fetch data every second
+
+        return () => {
+            clearInterval(intervalId); // Cleanup the interval on component unmount
+        };
+    }, []);
     return (<>
 
         {Historys.contents.map((rows) =>

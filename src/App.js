@@ -64,8 +64,13 @@ function App() {
         <Route path="/AppLoginRegisterPage/WinGo/Deposite" element={<Deposite />} />
         <Route path="/AppLoginRegisterPage/Account/Deposite" element={<Deposite />} />
         <Route path="/AppLoginRegisterPage/Wallet/Deposite" element={<Deposite />} />
-        <Route path="/AppLoginRegisterPage/WinGo/Withdraw" element={<Withdrawal />} />
         <Route path="/AppLoginRegisterPage/Wallet/Withdraw" element={<Withdrawal />} />
+
+        <Route path="/AppLoginRegisterPage/Lottery-5D/Deposite" element={<Deposite />} />
+        <Route path="/AppLoginRegisterPage/Lottery-5D/Withdraw" element={<Withdrawal />} />
+        <Route path="/AppLoginRegisterPage/Lottery-5D/Withdraw/withdraw-history" element={<WithHistoryMain />} />
+        <Route path="/AppLoginRegisterPage/Lottery-5D/Deposite/deposite-history" element={<DepositeHistoryMain />} />
+
         <Route path="/AppLoginRegisterPage/Account/Withdraw" element={<Withdrawal />} />
         <Route path="/AppLoginRegisterPage/Wallet/Withdraw/Add-bank" element={<AddBanks />} />
         <Route path="/AppLoginRegisterPage/Account/Withdraw/Add-bank" element={<AddBanks />} />

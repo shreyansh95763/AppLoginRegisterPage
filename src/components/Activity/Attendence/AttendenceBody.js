@@ -15,7 +15,7 @@ export const AttendenceBody = () => {
                     <p>{'₹'}10.35</p>
                 </div>
                 <img alt="coin icon" src="https://bdggame.in/assets/png/coin-91b2f52b.png" />
-                <h5>1 Day</h5>
+                <h5>2 Day</h5>
             </div>
             <div className="attendence-divs">
                 <div className="upper-attendence">
@@ -23,7 +23,7 @@ export const AttendenceBody = () => {
                     <p>{'₹'}10.35</p>
                 </div>
                 <img alt="coin icon" src="https://bdggame.in/assets/png/coin-91b2f52b.png" />
-                <h5>1 Day</h5>
+                <h5>3 Day</h5>
             </div>
             <div className="attendence-divs">
                 <div className="upper-attendence">
@@ -31,7 +31,7 @@ export const AttendenceBody = () => {
                     <p>{'₹'}10.35</p>
                 </div>
                 <img alt="coin icon" src="https://bdggame.in/assets/png/coin-91b2f52b.png" />
-                <h5>1 Day</h5>
+                <h5>4 Day</h5>
             </div>
             <div className="attendence-divs">
                 <div className="upper-attendence">
@@ -39,7 +39,7 @@ export const AttendenceBody = () => {
                     <p>{'₹'}10.35</p>
                 </div>
                 <img alt="coin icon" src="https://bdggame.in/assets/png/coin-91b2f52b.png" />
-                <h5>1 Day</h5>
+                <h5>5 Day</h5>
             </div>
             <div className="attendence-divs">
                 <div className="upper-attendence">
@@ -47,7 +47,7 @@ export const AttendenceBody = () => {
                     <p>{'₹'}10.35</p>
                 </div>
                 <img alt="coin icon" src="https://bdggame.in/assets/png/coin-91b2f52b.png" />
-                <h5>1 Day</h5>
+                <h5>6 Day</h5>
             </div>
 
 
@@ -61,7 +61,7 @@ export const AttendenceBody = () => {
                     <div></div>
                     <div>
                         <img alt="coin icon" src="https://bdggame.in/assets/png/coin-91b2f52b.png" />
-                        <h5>1 Day</h5>
+                        <h5>7 Day</h5>
                     </div>
                 </div>
             </div>

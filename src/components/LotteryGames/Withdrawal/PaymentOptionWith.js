@@ -6,6 +6,7 @@ import { USDTWithdraw } from "./USDTmethodWith"
 import { HolderList } from "./HolderList"
 
 export const WithdrawPaymentOption=()=>{
+    const [Ac_Id,setAcId] = useState(null);
     const [gridStyle,setGridStyle] = useState({
         grid1:{background: "linear-gradient(90deg,#C4933F -2.95%,#FAE59F 100%)", color: "#8f5206" }
     })
@@ -30,9 +31,9 @@ export const WithdrawPaymentOption=()=>{
         {
             page===1 ?
              <>
-            <HolderList />
+            <HolderList setId={setAcId} />
             <AddBank text="Add a bank Account Number"/>
-            <WithdrawByBank />
+            <WithdrawByBank acIds={Ac_Id} />
             <WithdrawHistory /></>
             :
             <>

@@ -10,7 +10,7 @@ export const AttendenceHeader = () => {
                 <div className="attendance-header-btn">Games Rules</div>
             </div>
             <div>
-            <div className="attendance-header-btn" style={{marginTop:"14.7rem",width:"10rem"}}>Attendance history</div>
+            <div className="attendance-header-btn" style={{marginTop:"14.8rem",width:"10rem"}}>Attendance history</div>
             </div>
         </div>
     </>)

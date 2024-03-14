@@ -30,7 +30,7 @@ export const WithdrawalHistoryList = () => {
 
     return (<>
         {withdrawHistory.status ==='200' && <>
-            {withdrawHistory.data.map(val => (
+            {withdrawHistory.data.reverse().map(val => (
                 <WithHistoryContent balance={val.amount} status={val.status} />
             ))}
         </>}

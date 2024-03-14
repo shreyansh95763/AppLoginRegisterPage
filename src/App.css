@@ -2024,6 +2024,7 @@ Checkbox {
   align-items: center;
   background: #363535;
   color: #b5b2b2;
+  cursor:default;
 }
 
 .qr-section {
@@ -2164,6 +2165,9 @@ Checkbox {
 .input-amount-section div input::placeholder {
   color: rgb(212, 212, 212);
   padding-left: -1rem;
+  font-size: 1.5rem;
+  font-weight: 550;
+  color: #C4933F;
 }
 
 .input-amount-section div input:focus {
@@ -2188,6 +2192,7 @@ Checkbox {
   height: 2.5rem;
   border-radius: 5rem;
   background: linear-gradient(180deg, #F6E3A3 0%, #D2A753 100%);
+  cursor: pointer;
 }
 
 .recharge-instruction-container {
@@ -4001,11 +4006,11 @@ h1 span {
 .slot-column {
   border:.2rem solid #b56c12;
   position: relative;
-  animation: 1.4s autoplay2 infinite ease-in-out;
+  animation: 1.4s autoplay1 infinite ease-in-out;
   animation-delay: 5s;
   z-index: 1;
 }
-@keyframes autoplay2 {
+@keyframes autoplay1 {
   0% {
     top: 400%
   }
@@ -4138,9 +4143,42 @@ width: 1.7rem;
   font-size: 1rem;
   letter-spacing: 1px;
 }
-.ac_holder-list div{
+.ac_holder-list div:last-child{
   display:flex;
   justify-content: space-around;
   align-items: center;
   width: 40%;
+}
+/**************   Add button radio button *****************/
+.ac_holder-list div:first-child{
+ position: relative;
+ left: .5rem;
+}
+/* .custom-radio input{
+  margin-right: .8rem;
+  width: 3rem;
+  height: 3rem;
+} */
+.custom-radio input[type="radio"] {
+  /* Increase width and height of the radio button */
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: .6rem;
+  margin-right: 0.5rem;
+  margin-left: .3rem;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #fff;
+  border: 2px solid #6c757d;
+  border-radius: 50%; 
+}
+.custom-radio input[type="radio"]:checked::before {
+  content: "";
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  margin: -0.48rem; 
+  background-color: #eda426;
+  border-radius: 50%; 
 }

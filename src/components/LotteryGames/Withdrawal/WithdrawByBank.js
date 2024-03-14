@@ -1,12 +1,45 @@
 import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
 
-export const WithdrawByBank=()=>{
+export const WithdrawByBank=(props)=>{
     const [amount , setAmount] = useState('');
     const handleChange = (e) => {
         setAmount (
             [e.target.value]
         )
     }
+    const submitWithdraw = async () => {
+        try {
+            if(props.acIds !== "" && amount !==""){
+            const response = await fetch('https://tcdaman.foundercode.org/admin/index.php/Mobile_app/withdraw_add', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    user_id: `${JSON.parse(localStorage.getItem("token"))}`, // Assuming user_id is static
+                    account_id: props.acIds, // Pass account_id from props
+                    amount: parseInt(amount), // Use the amount state variable
+                }),
+            });
+    
+            if (response.ok) {
+                console.log("UserIds:",`${JSON.parse(localStorage.getItem("token"))}`," AccountIds:",props.acIds," Amount : ",amount)
+                console.log('Withdrawal successful',response);
+                toast.success("Successfully Withdrawal ");
+                setAmount("");
+            } else {
+                console.error('Withdrawal failed:', response.statusText);
+                toast.success(response.data.msg);
+            }}
+        } catch (error) {
+            console.error('Error:', error);
+            toast.error(error.response.data.msg, {
+                position: "top-right",
+              });
+            
+                                                                                                                                }
+    };
     return(<>
         <div className="channel-container">
         <div className="input-amount-section" style={{height:"3rem",marginBottom:"2rem"}}>
@@ -30,8 +63,14 @@ export const WithdrawByBank=()=>{
                 <div>Withdrawal Amount Recieved</div>
                 <div style={{color:"#d9ac4f", marginRight:"1rem",fontSize:"1rem"}}>{'₹'}{amount ? amount:"0.00"}</div>
             </div>
-            <div style={{fontFamily: "Georgia, serif",margin:"2.4rem auto",latterSpacing:".5rem",color:"white",fontWeight:"660", background: "linear-gradient(180deg, #A9AAB5 0%, #6F7381 100%)"}} className="deposite-amount-button">Withdraw</div>
-       
+            <div onClick={()=>{submitWithdraw()}} style={{cursor:"pointer" ,fontFamily: "Georgia, serif",margin:"2.4rem auto",latterSpacing:".5rem",color:"white",fontWeight:"660", background: "linear-gradient(180deg, #A9AAB5 0%, #6F7381 100%)"}} className="deposite-amount-button">Withdraw</div>
+            <ToastContainer
+            autoClose={3000}
+            theme="colored"
+            closeOnClick
+            draggable
+          />
+
             <div className="recharge-instruction-container">
                 <p>Need to bet <span className="colorChange">₹0.00</span> to be able to withdraw</p>
                 <p>Withdraw time <span className="colorChange">00:00-23:59</span></p>

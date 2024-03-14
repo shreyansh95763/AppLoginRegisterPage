@@ -3,10 +3,13 @@ import axios from 'axios';
 import { ToastContainer, toast } from "react-toastify";
 import PersonIcon from '@mui/icons-material/Person';
 import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
+import { useNavigate } from 'react-router-dom';
+
 
 export const BankDetails = () => {
+    const navigate = useNavigate();
     const [data, setData] = useState({
-        "user_id": "4",
+        "user_id": `${JSON.parse(localStorage.getItem("token"))}`,
         "name": "",
         "bank_name": "",
         "ifsc": "",
@@ -24,7 +27,6 @@ export const BankDetails = () => {
 
     const addAccount = async (e) => {
         e.preventDefault();
-
         try {
             const response = await axios.post(
                 'https://tcdaman.foundercode.org/admin/index.php/Mahajongapi/add_account',
@@ -36,6 +38,9 @@ export const BankDetails = () => {
             // Handle successful response
             console.log('API response:', response.data);
             toast.success(response.data.msg);
+            setTimeout(() => {
+                navigate("..",{relative:"path"})
+              }, 1000);
         } catch (error) {
             // Handle error
             console.error('Error:', error);
@@ -63,16 +68,6 @@ export const BankDetails = () => {
                         required />
                 </div>
                 <div className='input-section'>
-                    <div className='inputName-section display-flex'><AccountBalanceIcon style={{ color: "#f1c271", fontSize: "1.9em" }} /><h3>Bank Name</h3></div>
-                    <input
-                        type='text'
-                        name="bank_name"
-                        value={data.bank_name}
-                        onChange={handleInput}
-                        placeholder='Please enter your bank name'
-                        required />
-                </div>
-                <div className='input-section'>
                     <div className='inputName-section display-flex'><h3>Bank Account number</h3></div>
                     <input
                         type='text'
@@ -84,6 +79,28 @@ export const BankDetails = () => {
                         required />
                 </div>
                 <div className='input-section'>
+                    <div className='inputName-section display-flex'><h3>IFSC Code </h3></div>
+                    <input
+                        type='text'
+                        name="ifsc"
+                        value={data.ifsc.toUpperCase()}
+                        onChange={handleInput}
+                        maxLength={11}
+                        placeholder='Please enter bank ifsc code'
+                        required />
+                </div>
+                <div className='input-section'>
+                    <div className='inputName-section display-flex'><AccountBalanceIcon style={{ color: "#f1c271", fontSize: "1.9em" }} /><h3>Bank Name</h3></div>
+                    <input
+                        type='text'
+                        name="bank_name"
+                        value={data.bank_name.toUpperCase()}
+                        onChange={handleInput}
+                        placeholder='Please enter your bank name'
+                        required />
+                </div>
+                
+                <div className='input-section'>
                     <div className='inputName-section display-flex'><h3>Bank branch name</h3></div>
                     <input
                         type='text'
@@ -93,18 +110,8 @@ export const BankDetails = () => {
                         placeholder='Please enter your branch name'
                         required />
                 </div>
-                <div className='input-section'>
-                    <div className='inputName-section display-flex'><h3>IFSC Code </h3></div>
-                    <input
-                        type='text'
-                        name="ifsc"
-                        value={data.ifsc}
-                        onChange={handleInput}
-                        placeholder='Please enter bank ifsc code'
-                        required />
-                </div>
             </div>
-            <div style={{ color: "white", background: "linear-gradient(180deg, #A9AAB5 0%, #6F7381 100%)", margin: "2rem 0 0 0" }} className="deposite-amount-button" onClick={addAccount}>Deposit</div>
+            <div style={{ fontWeight:650,cursor:"pointer",fontSize:"1.4rem", margin: "2rem 0 0 0" }} className="deposite-amount-button" onClick={addAccount}>Deposit</div>
             <ToastContainer
             autoClose={3000}
             theme="colored"
