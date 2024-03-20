@@ -13,8 +13,10 @@ import VisibilityIcon from '@mui/icons-material/Visibility';
 import { Checkbox } from '@mui/material';
 import { HeaderRegister } from "./headerRegister"
 import axios from "axios"
+import { Loading } from "./Loading/Loading";
 
 export const Register = () => {
+    const [loading,setLoading] = useState(false);
     const [showPassword, setShowPassword] = useState(true);
     const [showPasswordConfirm, setShowPasswordConfirm] = useState(true);
     const [redirectToLogin, setRedirectToLogin] = useState(false);
@@ -40,6 +42,7 @@ export const Register = () => {
     };
     const submitRegister = async (e) => {
         e.preventDefault();
+        setLoading(true)
         const formData = new FormData();
         formData.append('mobile', data.mobile);
         formData.append('email', data.email);
@@ -90,6 +93,9 @@ export const Register = () => {
                 });
             }
         }
+        finally {
+            setLoading(false); // Set loading to false after API response is received
+          }
     };
 
     if (redirectToLogin) {
@@ -100,6 +106,7 @@ export const Register = () => {
         <HeaderRegister />
         <div className='body-section'>
             <div className="grid" style={{ color: "#C4933F" }}>
+      {loading && <Loading />}
                 <div className='icon-sections'>
                     <div><PhoneIphoneIcon className='icons' style={{ fontSize: 30 }} /></div>
                     <h3>Register with phone</h3>

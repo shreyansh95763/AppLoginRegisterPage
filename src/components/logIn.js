@@ -16,9 +16,11 @@ import { LoginByPhone } from "./loginByPhone";
 import { LoginByEmail } from "./loginByEmail";
 import { useBalance } from "../redux/store";
 import axios from "axios";
+import { Loading } from "./Loading/Loading";
 
 export const Login = () => {
   const bals = useBalance();
+  const [loading,setLoading] = useState(false);
   const [redirectToHome, setRedirectToHome] = useState(false);
   const [data, setData] = useState({
     email: "",
@@ -46,10 +48,9 @@ export const Login = () => {
   };
   const submitlogin = async (e) => {
     e.preventDefault();
+    setLoading(true);
     const formData = new FormData();
-    {loginMethod ?
-    (formData.append('identity', data.mobile))
-    : (formData.append('identity', data.email))}
+    {loginMethod ? (formData.append('identity', data.mobile)): (formData.append('identity', data.email))}
     formData.append('password', data.password);
 
     try {
@@ -58,12 +59,8 @@ export const Login = () => {
         "https://tcdaman.foundercode.org/admin/index.php/Mahajongapi/login",
         formData,
         {
-          headers: {
-              'Content-Type': 'multipart/form-data',
-             
-          }
-      }
-      );
+          headers: { 'Content-Type': 'multipart/form-data',}
+        });
       // Handle successful login response
       console.log(response.data);
     //   props.history.push('/dashboard');
@@ -89,42 +86,9 @@ export const Login = () => {
         position: "top-right",
       });
     }
-
-    //     const storedData = JSON.parse(localStorage.getItem("userData"));
-    //     if(storedData){
-    //         const {email:storedemail,password:storedpassword,phone:storedphone}=storedData;
-    //         const {email, phone, password} = data;
-
-    //         console.log(email);
-    //         if(email){
-    //                 if(email===storedemail && password===storedpassword){
-    //                     setRedirectToHome(true);
-    //                     toast.success("Success Notification !");
-    //                 }
-    //                 else{
-
-    //                     toast.worn("Email or Password not matched !");
-    //                 }
-    //         }
-    //         else if(phone){
-    //             if(phone===storedphone && password===storedpassword){
-    //                 setRedirectToHome(true);
-    //                 toast.success("Success Notification !");
-    //             }
-    //             else{
-    //                 toast.warn("Phone or Password not matched !");
-    //             }
-    //         }
-    //         else{
-    //             toast.error("Please Enter the properties !")
-    //         }
-    //     }
-    //     else{
-    //         toast.error("Invalid credencial or You are Not User", {
-    //             position: "top-right",
-    //           });
-    //     }
-    // }
+    finally {
+      setLoading(false); // Set loading to false after API response is received
+    }
   };
   if (redirectToHome) {
     return <Navigate to="/AppLoginRegisterPage/" />;
@@ -133,6 +97,7 @@ export const Login = () => {
     <>
       <HeaderLogIn />
       <div className="body-section">
+      {loading && <Loading />}
         <div className="grid grid-two-cols">
           <div
             className={`icon-sections ${loginMethod ? "clicked" : ""}`}
