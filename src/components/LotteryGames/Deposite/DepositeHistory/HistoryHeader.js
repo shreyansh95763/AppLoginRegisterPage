@@ -7,11 +7,11 @@ export const HistoryHeader=(props)=>{
     const handleBackButton=()=>{ setRedirectToHome(true) }
     if (redirectToHome) {
         // window.history.back();
-        navigate("..", { relative: "path" });
+        navigate(-1);
     }
     return(<>
         <div className='heading-payment'>
-        <ArrowBackIosIcon onClick={()=>{handleBackButton()}} style={{fontSize:20}}/>
+        <ArrowBackIosIcon onClick={()=>{handleBackButton()}} style={{fontSize:20,cursor:"pointer"}}/>
         <h5 style={{fontWeight:570}}>{props.name}</h5>
         <div></div>
         </div>

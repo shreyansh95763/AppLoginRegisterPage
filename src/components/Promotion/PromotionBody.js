@@ -1,13 +1,30 @@
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-export const PromotionBody = () => {
+export const PromotionBody = ({total_commission,user_count}) => {
+    const id = 765489765789;
+    const copyFunction=()=>{
+        // Copy the text inside the text field
+ navigator.clipboard.writeText(id);
+// Show a custom alert
+const customAlert = document.createElement('div');
+customAlert.classList.add('custom-alert');
+customAlert.innerText = "Copied";
+document.body.appendChild(customAlert);
+
+// Remove the custom alert after a certain time
+setTimeout(() => {
+    document.body.removeChild(customAlert);
+}, 1500);
+ // Alert the copied text
+//   alert("Copied  ");
+   }
     return (<>
         <div className='promotion-body-container'>
             <div className='promotion-left-body'>
                 <img alt="promotion-options" src="https://bdggame.in/assets/png/copy_code-eda53ba2.png" />
                 <h5>Copy invitation code</h5>
             </div>
-            <div className='promotion-right-body'>
-                <p>765489765789</p>
+            <div className='promotion-right-body' onClick={()=>copyFunction()} >
+                <p>{id}</p>
                 <ArrowForwardIosIcon style={{ fontSize: 16, color: "#979595" }} />
             </div>
         </div>
@@ -59,7 +76,7 @@ export const PromotionBody = () => {
                     <div>This Week</div>
                 </div>
                 <div>
-                    <div>0</div>
+                    <div>{total_commission ? total_commission : 0}</div>
                     <div>Total Commission</div>
                 </div>
                 <div>
@@ -67,7 +84,7 @@ export const PromotionBody = () => {
                     <div>Direct subordinate</div>
                 </div>
                 <div>
-                    <div>0</div>
+                    <div>{user_count}</div>
                     <div>Total number or</div>
                     <div>subordinate in the team</div>
                 </div>

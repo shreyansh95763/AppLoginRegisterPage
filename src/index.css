@@ -1,2 +1,16 @@
-
-
+.custom-alert {
+    position: fixed;
+    top: 0%;
+    left: 50%;
+    width: 26rem;
+    height: 7rem;
+    transform: translate(-50%, -50%);
+    background-color: rgba(56, 210, 29, 0.887);
+    color: rgb(21, 65, 15);
+    padding:4rem 10px 10px 20px;
+    border-radius: 5px;
+    font-size: 25px;
+    font-weight: 650;
+    font-family: inter;
+    z-index: 9999;
+}

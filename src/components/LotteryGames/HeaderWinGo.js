@@ -15,7 +15,7 @@ export const HeaderWinGo = (props) => {
         setRedirectToWithdraw(true);
     }
     if (redirectToWithdraw) {
-        return <Navigate to="Withdraw" />;
+        return <Navigate to="/AppLoginRegisterPage/Lottery-5D/Withdraw" />;
         // props.history.push('/Withdraw');
     }
     return (<>

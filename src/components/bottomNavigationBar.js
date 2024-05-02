@@ -9,8 +9,9 @@ export const BottomNavigationBar = () => {
   return (<>
     
     <nav className="bottom-navbar">
-      <NavLink className="bottom-navlink" to= "/AppLoginRegisterPage" ><HomeIcon style={{ fontSize: 41, color: "#D2A753" }} />home</NavLink>
+      <NavLink className="bottom-navlink" to= "/AppLoginRegisterPage" ><HomeIcon style={{ fontSize: 41, color: "#D2A753" }} />Home</NavLink>
       <NavLink className="bottom-navlink" to={localStorage.getItem('token') ? "/AppLoginRegisterPage/Activity" : "/AppLoginRegisterPage/login"}><EmojiEventsIcon style={{ fontSize: 41, color: "#D2A753" }} />Activity</NavLink>
+      {/* <NavLink className="bottom-navlink" to={localStorage.getItem('token') ? "/AppLoginRegisterPage/Aviator" : "/AppLoginRegisterPage/login"}><EmojiEventsIcon style={{ fontSize: 41, color: "#D2A753" }} />Aviator</NavLink> */}
       <NavLink className="bottom-navlink" to={localStorage.getItem('token') ? "/AppLoginRegisterPage/Promotion" : "/AppLoginRegisterPage/login"}><DiamondIcon style={{ fontSize: 85, color: "#D2A753", clipPath: "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)", padding: "0rem .5rem .4rem .5rem", marginTop: "-2rem", backgroundColor: "#333", borderRadius: "5px" }} /> Promotion</NavLink>
       <NavLink className="bottom-navlink" to={localStorage.getItem('token') ? "/AppLoginRegisterPage/Wallet" : "/AppLoginRegisterPage/login"}><WalletIcon style={{ fontSize: 41, color: "#D2A753" }} />Wallet</NavLink>
       <NavLink className="bottom-navlink" to={localStorage.getItem('token') ? "/AppLoginRegisterPage/Account" : "/AppLoginRegisterPage/login"}><PersonIcon style={{ fontSize: 41, color: "#D2A753" }} />Account</NavLink>

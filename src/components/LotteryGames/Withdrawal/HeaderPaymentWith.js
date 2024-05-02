@@ -7,7 +7,8 @@ export const HeaderPaymentWith=(props)=>{
     const handleBackButton=()=>{ setRedirectToHome(true) }
     if (redirectToHome) {
         // window.history.back();
-        navigate("..", { relative: "path" });
+        navigate(-1 );
+        // navigate("..", { relative: "path" });
     }
     // const key = props.key;
    

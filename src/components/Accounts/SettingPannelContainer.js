@@ -1,9 +1,11 @@
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { useNavigate } from 'react-router-dom';
 export const SettingPannelContainer=()=>{
+    const Navigate = useNavigate();
     return(<>
         <div className='setting-pannel-container'>
-            <div className='setting-pannel-div'>
-                <div className='left-setting-pannel'>
+            <div className='setting-pannel-div' onClick={()=>{Navigate("/AppLoginRegisterPage/Account/Notification")}} >
+                <div className='left-setting-pannel' >
                     <img alt="images" src="https://bdggame.in/assets/png/notifyIcon-eb7c8400.png" />
                     <h5>Notification</h5>
                 </div>
@@ -14,7 +16,7 @@ export const SettingPannelContainer=()=>{
                 </div>
             </div>
             <hr></hr>
-            <div className='setting-pannel-div'>
+            <div className='setting-pannel-div' onClick={()=>{Navigate("/AppLoginRegisterPage/Gift")}}>
                 <div className='left-setting-pannel'>
                     <img alt="images" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAMOSURBVHgB7ZrPThNBHMe/s+0ifw42mNiDkmyNgD0A9cZBY3v0YrYRjTd5A8Ij+ASNTyDcTIzp+gCGesOTVQ5NJMiSQCIHSA9GhLI7zq40QmDame0u6S7zSZp0O7+d3c/89s9MZwCFQqGIEQQhUTEzGaQOqqC0yGqtQ9fKi2//2AhAxRw0kKJvTupagjO8uGg1mwiBUIT9E9TcFfbVOPWzjQGtJCt9YV1eAzrDpTCkexbmyLaRku5YV0jSPQl3kW0jJC1UVwjSGnqhuyz88iN3pfJikBsn2HAARQGp3yvogcDClbnBIrrLtuFKC8u2YdIVc6SAgPSWYTnOSUvLtkk7GQSk6z28WTUzx8coOBoKxMWZA200NhZcx5U6uH5Nt41xY9n7bq/bL1uHLSPo/qdhmauNP7Nq3fbvKPy9ahaoQ70MBG7RS4XAJg4pTzy36vwQDo2qaWgO/YK4yP6nOZAiuVzZuvBJzr2H2eVrIn6yHpnDY8zzCvnCoI8QX4q8Ar4wJXHMro9G6HVuGa4YSjjpcIUpsIWY4oJ+5ZVxhV3KBt4xhVLN4pVxhfNeN43SZcQMCvo636GL2bUv3XhvzqcoFlhFgUcol0CTgNQdguX8U2upU6DQHwAn3cxNSPBtdQ3bP7YRhOnZady+c0tmF3ty7kNOJFA9pZOOEk46SjjpKOGko4STjhJOOmlERFo/X3V6QEdu0kDunoHWUYsNLnawvrZ+Lk7XdUR2XogIT2p3ZxcHvw787dHsDczMTmFoZOjfgVmDjE/d9UdFqx8/n4nLjt1EVEQm7Ik9fPwAez/3oLPMjmZHuXGlJ0Xs7+7727y4sIhM2K+cZTE7lhWKjVq0jXpKJx0lnHSEhPNly0ZCkMlwKCvhIkL43BIhTCkRnhaSECaf0L/URAOFhft5rommYYnGCgv78zUENvoMQsiSzENV6rVENFJGP93LLAGOhlcyu0gJT5Stupsi9/sh02zyrOZqpCT7ygy8mrbxziwSApO12AybWTQgu3xQHptdv3VKscU+Vl5g1Z1CoVDEnr+42gd6kDDMugAAAABJRU5ErkJggg==" />
                     <h5>Gifts</h5>

@@ -1,4 +1,7 @@
 import { useEffect, useState } from "react";
+import axios from "axios";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 // import { navigate } from "react-router-dom";
 export const ToggleBetAmount = (props) => {
 
@@ -60,8 +63,50 @@ export const ToggleBetAmount = (props) => {
     value = Math.min(value, 9999);
     // if(value<9999){
       setCount (value)
-  
-}
+} 
+const placeBet = async () => {
+  const token = localStorage.getItem("token");
+  const nums = props.nums;
+  const gameId = props.gameId;
+  console.log("Token",token);
+  console.log("Numbers Clicked    ",nums);
+  console.log("GameId : ",gameId);
+  const data = {
+    userid: {token},
+    amount: {balance},
+    number: {nums},
+    gameid: {gameId}
+  };
+
+  try {
+    console.log("alkjfhhui")
+    const response = await axios.post(
+      "https://tcdaman.foundercode.org/admin/api/bet.php",
+      data,
+      {
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${token}` // assuming token is used for authorization
+        }
+      }
+    );
+    
+    // Handle response
+    console.log("Message" , response.data.msg); // Assuming you want to log the response data
+    const resData = response.data;
+    if(resData.error==="200"){
+    toast.success("Bet placed successfully!");
+    }
+    else{
+      toast.warn(resData.msg);
+    }
+  } catch (error) {
+    console.error("Error:", error);
+    toast.error("Failed to place bet. Please try again.");
+    // Handle error
+  }
+};
+
 
   return (<>
     <div className="model">
@@ -121,10 +166,11 @@ export const ToggleBetAmount = (props) => {
         </div>
         <div className="bottom-btn-toggle">
           <div className="btn-toggle" style={{ cursor: "pointer" }} onClick={props.toggleModal} >Cancel</div>
-          <div className="btn-toggle">Total Amount {'₹ '}{balance}.00</div>
+          <div className="btn-toggle" onClick={placeBet} >Total Amount {'₹ '}{balance}.00</div>
         </div>
 
       </div>
+      <ToastContainer />
     </div>
   </>)
 }

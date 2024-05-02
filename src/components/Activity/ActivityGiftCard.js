@@ -13,7 +13,7 @@ export default function ActionAreaCard() {
   }
 
   return (<><div style={{display:"grid",gridTemplateColumns:"repeat(2,1fr)"}} >
-    <Card sx={{height:"14rem", maxWidth: "94%",background:"#404040" }}>
+    <Card sx={{height:"14rem", maxWidth: "94%",background:"#404040" }} onClick={()=>{Navigate("/ApploginRegisterPage/Gift")}}>
       <CardActionArea>
         <CardMedia
           component="img"

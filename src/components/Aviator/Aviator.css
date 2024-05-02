@@ -1,0 +1,347 @@
+.Aviator-main-div{
+    background-color: #181717;
+    /* height:75vh; */
+    width: 100%;
+    border-radius: 7px;
+}
+.small-btns-div{
+    width: 100%;
+    overflow:hidden;
+}
+.aviator-h-div{
+    color:#43CEED;
+    font-family: "mukta";
+}
+.aviator-h-div p{
+    font-size: 16px;
+    font-weight: 500;
+}
+.small-g-btn{
+  background-color:  #0a5b6d;
+  height: 25px;
+  width: 50px;
+  border-radius: 13px;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+
+
+}
+.small-v-btn{
+
+    background-color:  rgb(141 77 181);
+    height: 25px;
+    width: 50px;
+    border-radius: 13px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.canvas-main-div{
+    width: 100%;
+    border: 1px solid rgb(44, 43, 43);
+    height: 18rem;
+    border-radius: 20px;
+    position:relative;
+    overflow: hidden;
+    /* animation: rotateBackground 20s linear infinite;  */
+    width: 70%;
+    left: 15%;
+    border: 1px solid rgb(44, 43, 43);
+    height: 18rem;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    top: 73%;
+    margin-top: 10rem;
+}
+.canvas-main-div::before {
+    content: "";
+    background: url('../../Assets/Aviator/bg-rotate-old.svg'); /* Replace 'your-image.jpg' with the URL or path to your image */
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%; /* Make sure the background covers the whole area even when rotated */
+    height: 200%;
+    z-index: -1;
+    /* animation: rotateBackground 20s linear infinite;  */
+  }
+  
+  .content {
+    /* Your content styling */
+  }
+  
+  @keyframes rotateBackground {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+.bet-btn-main-div{
+    width: 100%;
+    border: 1px solid rgb(44, 43, 43);
+    height: 8.7rem;
+    border-radius: 20px;
+    background: url(../../Assets/Aviator/grey-texture-bg.png); 
+    /* background-size: 100% 100%;   */
+    background-repeat:repeat;
+    background-size:auto;
+    /* margin-top: .5rem; */
+
+
+
+
+}
+.counter-div{
+    background-color: black;
+    width: 100px;
+    border-radius: 20px;
+    height:35px;
+    border: 1px solid rgb(63, 62, 62);
+    margin-left: -14px;
+}
+.p-icon{
+    height: 20px;
+    font-size: 20px;
+    background-color:rgb(63, 62, 62) ;
+    border-radius: 12px;
+    color: black;
+
+    
+
+}
+.m-icon{
+    height:20px;
+    font-size: 20px;
+    background-color:rgb(63, 62, 62) ;
+    border-radius: 12px;
+    color:black
+}
+.count-div{
+    font-size: 20px;
+    width: 70%;
+    color:wheat
+
+}
+.Amount-btn{
+    background-color:rgb(58, 57, 57) ;
+    height: 1.7rem;
+    width: 40%;
+    border-radius: 9px;
+    color: white;
+    font-size: 15px;
+    font-family: "mukta";
+    border:none;
+}
+.Amount-btn:hover{
+    background-color: rgb(73, 71, 71);
+}
+.bet-button{
+    height: 90%;
+    width: 15rem;
+    border-radius: 20px;
+    /* background-color:   #25c321 ; */
+    
+    border: none;
+    font-size: 2rem;
+    color: white;
+    font-weight: 560;
+}
+.cashOut{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+}
+.cancel-button{
+  height: 70%;
+    width: 15rem;
+  border-radius: 20px;
+  background-color:   #f90202 ;
+  border: none;
+
+  color: white;
+  font-weight: 600;
+
+}
+@media screen and (max-width: 490px){
+    .bet-button{
+        height:70%;
+        width: 12rem;
+        border-radius: 20px;
+        background-color:   #25c321 ;
+        border: none;
+      
+        color: white;
+        font-weight: 600;
+    
+    }
+    .cancel-button{
+      height: 25px;
+      width: 170px;
+      border-radius: 20px;
+      background-color:   #f90202 ;
+      border: none;
+    
+      color: white;
+      font-weight: 600;
+  
+  }
+    .counter-div{
+        background-color: black;
+        width: 130px;
+        border-radius: 20px;
+        height:35px;
+        border: 1px solid rgb(63, 62, 62)
+    }
+    .Amount-btn{
+        background-color:rgb(58, 57, 57) ;
+        height: 23px;
+        width: 55px;
+        border-radius: 9px;
+        color: white;
+        font-size: 15px;
+        font-family: "mukta";
+        border:none;
+    }
+   
+
+
+}
+
+
+
+
+/*************************   Aviator Section ***********************/
+.aviator-container::before {
+    content: '';
+    position: absolute;
+    top: -60rem;
+    left: -81.8rem;
+    width: 165rem;
+    height: 165rem;
+    background-image: url('../../Assets/Aviator/bg-rotate-old.svg');
+    background-size: cover;
+    /* Adjust as needed */
+    z-index: 0;
+    /* Ensure the image is above the background color */
+    animation: rotateAnimation 20s infinite linear;
+  }
+  
+   .aviator-container::after {
+    content: '';
+    position: absolute;
+    top: 15%;
+    left: 18%;
+    width: 68%;
+    height: 75%;
+    /* background: linear-gradient(to bottom right,red, transparent 70%) ; */
+   
+  } 
+  
+  @keyframes rotateAnimation {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .marquee-left {
+    position:absolute;
+    z-index: 20;
+    top: 7rem;
+    left: -15rem;
+    width: 4rem;
+    background-color: #000000;
+  }
+  
+  .marquee-bottom {
+    position: absolute;
+    z-index: 20;
+    top: 85%;
+    left: 5%;
+    width: 90%;
+  }
+  
+  .dot-marquee-bottom {
+    /* margin:1.8rem; */
+    margin: 1.8rem 3rem;
+    height: .5rem;
+    width: .5rem;
+    border-radius: 50%;
+    background-color: blue;
+  }
+  
+  .dot-marquee {
+    margin: 3.8rem;
+    height: .5rem;
+    width: .5rem;
+    border-radius: 50%;
+    background-color: white;
+    margin-left: 0px;
+  }
+  .result-bet{
+    color: white;
+    font-weight: 750;
+    font-size: 4.5rem;
+    position:absolute;
+    margin-top: 12%;
+    margin-left: 33%;
+    z-index: 20;
+  }
+
+
+/* =================++++++++++++++++++++++++++================== */
+
+
+
+
+
+/* =============================progress css============================== */
+
+
+.progress-rotator{
+  animation: rotateAnimation 2s infinite linear;
+  /* transform: rotate(360deg); */
+}
+.indexs{
+  z-index: 2;
+}
+.line-loader {
+  margin: auto;
+  width: 250px;
+  height: 7px;
+  background: #262830;
+  position: relative;
+  overflow: hidden;
+  border-radius: 7px;
+}
+
+.fill-line {
+  
+  height: 7px;
+  background: #E50539;
+  animation: line-fill 5s linear;
+}
+
+
+.center-loading svg {
+  animation: loading-spinner 2s linear infinite;
+}
+
+.plane-static {
+  width: 150px;
+}
+
+/* =============================progress css============================== */

@@ -31,6 +31,11 @@ import { Main5DLottery } from './components/Lottery5DGame/Main5DLottey';
 import { AddBanks } from './components/LotteryGames/Withdrawal/AddBank/AddBanks';
 import { HolderList } from './components/LotteryGames/Withdrawal/HolderList';
 import { AccountHolderDetail } from './components/LotteryGames/Withdrawal/AddBank/AccountHolderDetail';
+import { Notification } from './components/Accounts/Notification';
+import { Gift } from './components/Accounts/Gift';
+import { Feedback } from './components/Accounts/Feedback';
+import { AboutUs } from './components/Accounts/AboutUs';
+import { AttendenceHistory } from './components/Activity/Attendence/AttendenceHistory';
 
 function App() {
   return (<>
@@ -49,6 +54,7 @@ function App() {
         <Route path='/AppLoginRegisterPage/Activity/Rebate' element={<ActivityRebate />} />
         <Route path='/AppLoginRegisterPage/Activity/Jackpot' element={<JackpotMain />} />
         <Route path='/AppLoginRegisterPage/Activity/Attendence' element={<Attendence />} />
+        <Route path='/AppLoginRegisterPage/Activity/Attendence/History' element={<AttendenceHistory />} />
         <Route path='/AppLoginRegisterPage/Activity/FirstRecharge' element={<GamePage1 />} />
         <Route path='/AppLoginRegisterPage/Activity/ActivityDetail2' element={<ActivityDetaile2 />} />
         <Route path='/AppLoginRegisterPage/Activity/ActivityDetail3' element={<ActivityDetaile3 />} />
@@ -86,6 +92,11 @@ function App() {
         <Route path="AppLoginRegisterPage/Account/Deposite/deposite-history" element={<DepositeHistoryMain />} />
         <Route path="AppLoginRegisterPage/Wallet/Deposite/deposite-history" element={<DepositeHistoryMain />} />
         <Route path="AppLoginRegisterPage/Wallet/deposite-history" element={<DepositeHistoryMain />} />
+      
+        <Route path="ApploginRegisterPage/Account/Notification" element={<Notification />} />
+        <Route path="ApploginRegisterPage/Gift" element={<Gift />} />
+        <Route path="AppLoginRegisterPage/Account/Feedback" element={<Feedback />} />
+        <Route path="AppLoginRegisterPage/Account/AboutUs" element={<AboutUs />} />
       </Routes>
     </BrowserRouter>
       {/* <Body /> */}

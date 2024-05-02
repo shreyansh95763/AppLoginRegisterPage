@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { TimmerSection } from "./TimerSection";
 
-export const GameListWingo=()=>{
+export const GameListWingo=(props)=>{
     const [timerDuration,setTimerDuration] = useState(60);
     const [timeLefts,setTimeLefts] = useState(60);
     const [getIndex , setIndex] = useState('min1');
@@ -11,8 +11,9 @@ export const GameListWingo=()=>{
     })
     
     
-    const handleEvents=(newPage,duration)=>{
-        setIndex(newPage)
+    const handleEvents=(newPage,duration,id)=>{
+        setIndex(newPage);
+        props.setGameId(id);
         setTimerDuration(duration);
         const now = new Date();
         const Livemin = now.getMinutes();
@@ -52,19 +53,19 @@ export const GameListWingo=()=>{
     }
     return(<>
         <div className="Game-timing-container">
-            <div className="Game-list" style={buttonStyle.divmin1} onClick={()=>{handleEvents('min1',60)}}>
+            <div className="Game-list" style={buttonStyle.divmin1} onClick={()=>{handleEvents('min1',60,1)}}>
                 <img alt="clock-logo" src={getIndex==='min1'? "https://www.bdggame.in/assets/png/time_a-a8df1213.png" : "https://www.bdggame.in/assets/png/time-5d4e96a3.png"} />
                 <div style={buttonStyle.textmin1}>Win Go <br /> 1 Min</div>
             </div>
-            <div className="Game-list" style={buttonStyle.divmin3} onClick={()=>{handleEvents('min3',180)}}>
+            <div className="Game-list" style={buttonStyle.divmin3} onClick={()=>{handleEvents('min3',180,2)}}>
                 <img alt="clock-logo" src={getIndex==='min3'? "https://www.bdggame.in/assets/png/time_a-a8df1213.png" :  "https://www.bdggame.in/assets/png/time-5d4e96a3.png"} />
                 <div style={buttonStyle.textmin3}>Win Go <br /> 3 Min</div>
             </div>
-            <div className="Game-list" style={buttonStyle.divmin5} onClick={()=>{handleEvents('min5',300)}}>
+            <div className="Game-list" style={buttonStyle.divmin5} onClick={()=>{handleEvents('min5',300,3)}}>
                 <img alt="clock-logo" src={getIndex==='min5'? "https://www.bdggame.in/assets/png/time_a-a8df1213.png" :  "https://www.bdggame.in/assets/png/time-5d4e96a3.png"} />
                 <div style={buttonStyle.textmin5}>Win Go <br /> 5 Min</div>
             </div>
-            <div className="Game-list" style={buttonStyle.divmin10} onClick={()=>{handleEvents('min10',600)}}>
+            <div className="Game-list" style={buttonStyle.divmin10} onClick={()=>{handleEvents('min10',600,4)}}>
                 <img alt="clock-logo" src={getIndex==='min10'? "https://www.bdggame.in/assets/png/time_a-a8df1213.png" :  "https://www.bdggame.in/assets/png/time-5d4e96a3.png"} />
                 <div style={buttonStyle.textmin10}>Win Go <br /> 10 Min</div>
             </div>

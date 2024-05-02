@@ -5,10 +5,11 @@
 }
 .center {
     position:absolute;
+    color:#c816167e;
     /* top:0%; */
     height: 100vh;
-    width: 29.8vw;
-    margin-left: -2rem;
+    width: 26rem;
+    margin-left: -1.7rem;
     display: flex;
     justify-content: center;
     align-items: center;

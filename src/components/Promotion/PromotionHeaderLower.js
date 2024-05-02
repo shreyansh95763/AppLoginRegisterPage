@@ -1,9 +1,10 @@
 import PersonIcon from '@mui/icons-material/Person';
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
-export const PromotionHeaderLower=()=>{
+export const PromotionHeaderLower=({total_commission})=>{
     return(<>
         <div className='promotion-header-section'>
-            <h5>0</h5>
+            <h5>{total_commission ? total_commission : 0 } </h5>
+            {console.log("null",total_commission)}
             <div className='total-commission'>Yeasterday's total commission</div>
             <p>Upgrade the level to increase commission income</p>
         <div className='subordinate-body'>
